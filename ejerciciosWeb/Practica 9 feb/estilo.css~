@@ -1,0 +1,56 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+
+#menuprincipal {
+	position: fixed;
+	height: 50px;
+	top: 0px;
+	border: 1px solid orange;
+	width: 100%;
+}
+
+#menuprincipal h2, .derecha{
+	margin: 0;
+	display: inline-block;
+	
+}
+
+#menuprincipal h2{
+	left: 0px;
+	width: 34.5%;	
+	}
+
+.derecha{
+	min-width: 54.5%;
+	text-align: right;	
+	margin: 0;
+	}
+
+#content {
+	margin-top: 55px;	
+	top: 50px;
+	}
+
+nav{
+	border: 1px solid black;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+}
+
+#slider, nav, .tip, .full, #quizz{
+	width:100%;
+}
+
+section{
+	width: 50%;
+}
+
+
+.tip div{
+	float:left;
+	width:50%;
+}
