@@ -1,0 +1,29 @@
+header { 
+	border-collapse: collapse;
+	border: .5em solid black;
+	padding: 7px;
+}
+
+section {
+      border-collapse: collapse;
+	border: .2em solid black;
+	padding: 7px;
+}
+
+div {
+      border-collapse: collapse;
+	border: .2em solid black;
+	padding: 7px;
+}
+
+aside {
+      border-collapse: collapse;
+	border: .2em solid black;
+	padding: 4px;
+}
+
+aside li{
+      border-collapse: collapse;
+	border: .09em solid black;
+	padding: 4px;
+}
