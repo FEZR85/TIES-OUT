@@ -2,6 +2,9 @@ header {
 	border-collapse: collapse;
 	border: .5em solid black;
 	padding: 7px;
+      background-color: #ffb061;
+      border-radius: 2em;
+      font-family: sans-serif;
 }
 
 section {
@@ -10,7 +13,7 @@ section {
 	padding: 7px;
 }
 
-div {
+article {
       border-collapse: collapse;
 	border: .2em solid black;
 	padding: 7px;
@@ -26,4 +29,10 @@ aside li{
       border-collapse: collapse;
 	border: .09em solid black;
 	padding: 4px;
+}
+
+header div nav{
+      min-width: 50%;
+      text-align: right;      
+      margin: 10;
 }
