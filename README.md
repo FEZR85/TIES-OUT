@@ -1,29 +1,67 @@
-##TIE OUT
+##TIES-OUT
 
-Plataforma de aprendizaje para entrevistas. 
+Plataforma de entrevistas para el área de sistemas computacionales.
 
 ###Tabla de contenidos
 
+* [www.ties-out.com](www.ties-out.com)
 * [Objetivo](#objetivo)
-* [Descripción](#descripcion-de-la-plataforma)
+* [Descripción](#descripción-de-la-plataforma)
 * [Partes del Sistema](#partes-del-sistema)
 * [Colaboradores](#colaboradores)
 
 ##Objetivo
 
-Poner a disposición de los usuarios: material, información, tutoriales, etc. en formato de cursos. Relacionado con las entrevistas de trabajo y temas relacionados en el área de computación e informática.
-
+Proporcionar a los usuarios los temas más frecuentes en las entrevistas técnicas del área de sistemas computacionales, así como ofrecer algunas plataformas de empleo donde el usuario pueda subir su currículum, tales como, LinkIn, OCC México, CompuTrabajo, entre otras.
+    
 ##Descripción de la plataforma
 
 Consiste en la gestión en línea de cursos enfocados a la orientación en temas introductorios al ámbito laboral de la ingeniería en computación e informática principalmente.
 
-Permitiendo a los usuarios acceder como alumnos y registrarse a cursos según los temás que deseen aprender.
+Permitiendo a los usuarios acceder como alumnos y registrarse a cursos según los temas que deseen aprender del listado dentro de la plataforma, también será posible realizar exámenes rápidos para reforzar lo aprendido durante el curso. Además podrás llevar un control de los cursos a los cuales te has inscrito y como va tu avance
 
 ##Partes del sistema
 
+Las distintas secciones del sistema son:
+
+* Página principal
+* Catálogo de Cursos
+ * Muestra de enlaces de todos los cursos disponibles
+
+* Registro de cuenta  
+ * Formulario de información del usuario para crear una nueva cuenta, con opción de crearla con redes sociales (Facebook y Twitter).
+
+* Inicio de Sesión
+ * Formulario para llenar con _Nombre de Usuario_ y _Contraseña_ para iniciar sesión, con opción de iniciar con redes sociales (Facebook y Twitter).
+
+* Portada del Curso
+ * Descripción de lo que se presenta en el curso seleccionado, así como la opción de inscribirse a usuarios que han iniciado sesión
+
+* Contenido del Curso
+ * Toda la información proporcionada en los temas del curso
+
+* Administración de Cursos
+ * Sección donde se lleva a cabo la gestión de los cursos creados así como la consulta de quienes están inscritos
+
+* Contacto
+ * Directorio de los colaboradores del proyecto
+
+
+* Buscar Empleo
+ * Lista de enlaces a sitios web que se dedican a mostrar una bolsa de trabajo.
+
 ##Colaboradores
-* Flor Edith Zarate Rodríguez
+* Flor Edith Zárate Rodríguez
 * Noel Vela Larios
 * Daniel Alfonso Caballero Cruz
 
-[Url de prueba]: http://www.google.com
+
+##Instalación del sistema (Colaborar y/o descargar el repositorio)
+
+###Colabora con nosotros!
+Para poder colaborar en nuestro proyecto será necesario que primero clones nuestro repositorio en tu equipo.
+
+$ git clone https://github.com/FEZR85/TIES-OUT
+una vez en tu computadora podrás jugar con las ramas y archivos que se te proporcionan para poder colaborar con lo que gustes. Si aún no conoces de los comandos de git, te recomendamos visitar la siguiente página que te ayudará a realizar tus commits!
+
+Para el funcionamiento del sistema será necesario que cuentes con un servidor web donde te permita montar la página completa, APACHE es el servidor donde se trabaja este proyecto y el que recomendamos instalar para el uso del sistema.
