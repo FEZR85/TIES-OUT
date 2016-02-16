@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*generales*/
 * {	
 	margin: 0;
@@ -70,10 +71,42 @@ header {
 	list-style-type: none;	
 	}
 
+=======
+header { 
+	border-collapse: collapse;
+	border: .2em solid black;
+	padding: 0em .3em .3em 1em;
+      margin: 10;
+		position: fixed;
+		top: 0px;
+      background-color: #FFF;
+      border-radius: 2em;
+		border-color: #51782f;
+      font-family: URW Gothic L;
+		width: 95%;
+      text-align: left;
+}
+
+#menu_principal {
+      border-collapse: collapse;
+      border: .2em solid black;
+      padding: .5em 1em .5em 1em;
+      margin: 10;
+		position: fixed;
+		width: 95%;
+      background-color: #414141;
+      opacity: 0.75;
+      border-radius: 2em;
+		top: 140px;
+      font-family: URW Gothic L;
+}
+
+>>>>>>> tempMaquetado
 #menu_principal nav a{
       color: white;
 }
 
+<<<<<<< HEAD
 #menu_principal ul li.nivel1 {
     float: left;
     margin-right: 1px;
@@ -81,6 +114,8 @@ header {
 
 
 
+=======
+>>>>>>> tempMaquetado
 #slider {
       border-collapse: collapse;
       border: .1em solid black;
@@ -106,7 +141,11 @@ header {
       width: 95%;
 }
 
+<<<<<<< HEAD
 /*section, article {
+=======
+section, article {
+>>>>>>> tempMaquetado
       border-collapse: collapse;
 	border: .2em solid black;
 	padding: 7px;
@@ -145,9 +184,21 @@ header div nav{
       min-width: 50%;
       text-align: right;      
       margin: 10;
+<<<<<<< HEAD
 }*/
+=======
+}
+>>>>>>> tempMaquetado
 
 .content {
 	padding-top: 200px;
 	top: 200px;	
+<<<<<<< HEAD
 	}
+=======
+	}
+
+h1 {
+      color: #3b3b3b;
+}
+>>>>>>> tempMaquetado
