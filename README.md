@@ -25,6 +25,5 @@ Permitiendo a los usuarios acceder como alumnos y registrarse a cursos según lo
 * Flor Edith Zarate Rodríguez
 * Noel Vela Larios
 * Daniel Alfonso Caballero Cruz
-* Nancy Michelle Torres Villanueva
 
 [Url de prueba]: http://www.google.com
