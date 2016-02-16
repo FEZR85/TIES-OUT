@@ -13,15 +13,16 @@ html, body {
 
 
 header { 
-	border: .2em solid black;
+   border-top: .2em solid black;
+   border-bottom: .2em solid black;
 	padding: 0em .3em .3em 1em;
-   margin: 10;
-   background-color: #FFF;
+   
+   background-color: #a8eb7a;
 	border-color: #51782f;
-   border-radius: 2em;
+   
 	position: fixed;
 	top: 0px;
-	width: 95%;	
+	width: 100%;	
    font-family: URW Gothic L;
    text-align: left;
 	}
@@ -53,15 +54,16 @@ header {
 
 /*menu principal*/
 #menu_principal {
-   border: .2em solid black;
+   border-top: .2em solid black;
+   border-bottom: .2em solid black;
    padding: .5em 1em .5em 1em;
-   margin: 10;
+   
 	position: fixed;
-	width: 70%;
-	left: 12.5%;
+	width: 100%;
+	
    background-color: #414141;
-   opacity: 0.75;
-   border-radius: 2em;
+   opacity: .90;   
+   
 	top: 72px;
    font-family: URW Gothic L;
 }
@@ -86,31 +88,26 @@ header {
       padding: 10em 10em 10em 10em;
       margin: 10;
       border-radius: 2em;
+
 }
 
 .seccion {
       border-collapse: collapse;
       border: .1em solid black;
-      padding: .3em .3em .3em .3em;
+      padding: .5em .5em .5em .5em;
       margin: 10;
 
       border-radius: 2em;
-      width:50%;
+      width:60%;
       display: inline-block;
 
       font-family: URW Gothic L;
+      font-size: 90%;
 }
 
 .seccion article {
       width: 95%;
 }
-
-/*section, article {
-      border-collapse: collapse;
-	border: .2em solid black;
-	padding: 7px;
-}
-
 
 aside {
       border-collapse: collapse;
@@ -119,10 +116,11 @@ aside {
       margin: 10;
 
       border-radius: 2em;
-      width: 45%;
+      width: 33%;
 
 
       float: right;
+      position: absolute;
       display: inline-block;
 
       font-family: URW Gothic L;
@@ -131,14 +129,21 @@ aside {
 aside li{
       border-collapse: collapse;
       
-      padding: 1em 1em 3em 1em;
+      padding: .5em .5em .5em .5em;
       margin: 10;
 
       border-radius: 2em;
 
       font-family: URW Gothic L;
-      font-size: 130%;
+      font-size: 90%;
 }
+
+/*section, article {
+      border-collapse: collapse;
+	border: .2em solid black;
+	padding: 7px;
+}
+
 
 header div nav{
       min-width: 50%;
