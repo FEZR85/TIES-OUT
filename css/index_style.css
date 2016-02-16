@@ -3,12 +3,13 @@ header {
 	border: .2em solid black;
 	padding: 0em .3em .3em 1em;
       margin: 10;
-
-      background-color: #ffb061;
+		position: fixed;
+		top: 0px;
+      background-color: #FFF;
       border-radius: 2em;
-
+		border-color: #51782f;
       font-family: URW Gothic L;
-
+		width: 95%;
       text-align: left;
 }
 
@@ -17,10 +18,12 @@ header {
       border: .2em solid black;
       padding: .5em 1em .5em 1em;
       margin: 10;
-
-      background-color: #141414;
+		position: fixed;
+		width: 95%;
+      background-color: #414141;
+      opacity: 0.75;
       border-radius: 2em;
-
+		top: 140px;
       font-family: URW Gothic L;
 }
 
@@ -33,9 +36,7 @@ header {
       border: .1em solid black;
       padding: 10em 10em 10em 10em;
       margin: 10;
-
       border-radius: 2em;
-      
 }
 
 .seccion {
@@ -46,8 +47,6 @@ header {
 
       border-radius: 2em;
       width:50%;
-
-      float: absolute;
       display: inline-block;
 
       font-family: URW Gothic L;
@@ -57,17 +56,12 @@ header {
       width: 95%;
 }
 
-section {
+section, article {
       border-collapse: collapse;
 	border: .2em solid black;
 	padding: 7px;
 }
 
-article {
-      border-collapse: collapse;
-	border: .2em solid black;
-	padding: 7px;
-}
 
 aside {
       border-collapse: collapse;
@@ -102,6 +96,11 @@ header div nav{
       text-align: right;      
       margin: 10;
 }
+
+.content {
+	padding-top: 200px;
+	top: 200px;	
+	}
 
 h1 {
       color: #3b3b3b;
