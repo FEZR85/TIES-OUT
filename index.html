@@ -2,49 +2,97 @@
 	<head>
 		<title>TIES-OUT</title>
 		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="img/logoTieOut.ico" type="image/x-icon" /> 
     	<link rel="stylesheet" href="css/index_style.css">
+    	<link rel="stylesheet" href="css/slider.css">
+    	<link rel="stylesheet" href="css/reset.css">
+    	
+    	<script src="js/modernizr.js"></script> 
+      <script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+      <script>var $j = jQuery.noConflict(true);</script>
+      <script type="text/javascript" src="js/script.js"></script>
 	</head>
 	<body>
 		<header>
 			<img class="imgTitle" src="img/logoTieOut.png" alt="TIES-OUT" >
 			<h1 id="title">TIES-OUT</h1>
-		   <div id="login">
+            <a href="#" class="slider">
+            	<img id="imgMenu" src="img/arriba.png" alt="Menú">
+            </a>
+		   	<div id="login">
 				<a href="INICIO">Iniciar sesi&oacute;n</a>
 				<span>|</span>
 				<a href="TIPS">Registrarse</a>
 		    </div>
 		</header>
-
-
-		<section id="menu_principal">
-			<nav>
-				<ul>
-					<li class="nivel1">
-						<a href="#" onblur=""="index.html" >HOME</a><span>|</span>
-					</li>
-					<li class="nivel1">
-						<a href="#" onblur="#" >TIPS</a><span>|</span>
-					</li>
-					<li class="nivel1">
-						<a href="#" onblur="#">CURSOS</a><span>|</span>
-					</li>
-					<li class="nivel1">
-						<a href="#" onblur="#" >BUSCAR EMPLEO</a><span>|</span>
-					</li>
-					<li class="nivel1">
-						<a href="#" onblur="#" >CONTACTO</a><span>|</span>
-					</li>
-				</ul>
-			</nav> 
-		</section>
+      
+      <div id="menu">
+        <ul id="nav">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">TIPS</a></li>
+            <li><a href="#">CURSOS</a></li>
+            <li><a href="#">BUSCAR EMPLEO</a></li>
+            <li><a href="#">CONTACTO</a></li>
+        </ul>
+     	</div>	
+		
 		
 		<div class="content">
-			<section id="slider">
-				<!-- POSICION DEL SLIDER DE LA PAGINA -->
-			</section>
+			
+			<!-- slider -->			
+			<section class="cd-slider-wrapper">
+				<ul class="cd-slider">
+					<li class="visible">
+						<div>
+							<h4>Animated SVG Hero Slider</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo.</p>
+						</div>
+					</li>
+						
+					<li>
+						<div>
+							<h2>Slide #2 Title</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur.</p>
+						</div>
+					</li>
 		
-			<section class="seccion ">
+					<li>
+						<div>
+							<h2>Slide #3 Title</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, distinctio!.</p>
+						</div>
+					</li>
+		
+					<li>
+						<div>
+							<h2>Slide #4 Title</h2>
+							<p>Lorem ipsum dolor sit amet.</p>
+							<a href="http://codyhouse.co/?p=854" class="cd-btn">Learn more</a>
+						</div>
+					</li>
+				</ul> <!-- .cd-slider -->
+			
+				<ol class="cd-slider-navigation">
+					<li class="selected"><a href="#0"><em>Item 1</em></a></li>
+					<li><a href="#0"><em>Item 2</em></a></li>
+					<li><a href="#0"><em>Item 3</em></a></li>
+					<li><a href="#0"><em>Item 4</em></a></li>
+				</ol> <!-- .cd-slider-navigation -->
 				
+				<div class="cd-svg-cover" data-step1="M1402,800h-2V0.6c0-0.3,0-0.3,0-0.6h2v294V800z" data-step2="M1400,800H383L770.7,0.6c0.2-0.3,0.5-0.6,0.9-0.6H1400v294V800z" data-step3="M1400,800H0V0.6C0,0.4,0,0.3,0,0h1400v294V800z" data-step4="M615,800H0V0.6C0,0.4,0,0.3,0,0h615L393,312L615,800z" data-step5="M0,800h-2V0.6C-2,0.4-2,0.3-2,0h2v312V800z" data-step6="M-2,800h2L0,0.6C0,0.3,0,0.3,0,0l-2,0v294V800z" data-step7="M0,800h1017L629.3,0.6c-0.2-0.3-0.5-0.6-0.9-0.6L0,0l0,294L0,800z" data-step8="M0,800h1400V0.6c0-0.2,0-0.3,0-0.6L0,0l0,294L0,800z" data-step9="M785,800h615V0.6c0-0.2,0-0.3,0-0.6L785,0l222,312L785,800z" data-step10="M1400,800h2V0.6c0-0.2,0-0.3,0-0.6l-2,0v312V800z">
+					<svg height='100%' width="100%" preserveAspectRatio="none" viewBox="0 0 1400 800">
+						<title>SVG cover layer</title>
+						<desc>an animated layer to switch from one slide to the next one</desc>
+						<path id="cd-changing-path" d="M1402,800h-2V0.6c0-0.3,0-0.3,0-0.6h2v294V800z"/>
+					</svg>
+				</div> <!-- .cd-svg-cover -->
+			</section> 
+			
+			<!-- slider -->
+			
+			<hr>
+			
+			<section class="seccion">
 				<h2>Los cursos m&aacute;s nuevos</h2>
 				<article class="seccion">
 					<h2>Titulo del curso 1</h2>
@@ -61,21 +109,49 @@
 			</section>
 			
 			<aside>	
-				<li><a href="PERFIL">Actualiza tu perfil y cuentanos que buscas para tener mas. </a></li>
-				<li><a href="CURRICULUM">Elabora un Curriculum. Es basico tener uno. </a></li>
-				<li><a href="https://moqups.com/fzarater@gmail.com/lC2mRqEi">
-				Consulta el repertorio de cursos que ofrecemos y toma el que mas te pueda ayudar! </a></li>	
+				<div>			
+					<p class="enlace">Actualiza tu perfil y cu&eacute;ntanos que buscas para tener m&aacute;s oportunidades!. </p>
+					<img class="imgContent" src="img/user.png" alt="usuario" >	
+				</div>
+				<div>
+					<p class="enlace">Elabora un Curriculum. Es b&aacute;sico tener uno. </p>	
+					<img class="imgContent" src="img/check.png" alt="Verificar" >				
+				</div>
+				<div>	
+					<p class="enlace">
+						Consulta el repertorio de cursos que ofrecemos y toma el que m&aacute;s te pueda ayudar!
+					</p> 
+					<img class="imgContent" src="img/find.png" alt="Buscar" >
+				</div>	
 			</aside>
 	
-			<section class="seccion">
-				<h4>Tip del dia</h4>
-				<p>When you do things right, people won't be sure you've done anything at all. -Futurama</p>
+			<section id="tip">
+				<div id="divTip">
+					<h4>Tip del dia</h4><br>
+					<p>When you do things right, people won't be sure you've done anything at all.</p><p>-Futurama</p>
+				</div>			
 			</section>
 	
-			<aside>
-				<h4>Top 10 de cursos</h4>
-				<p>Informaci&oacute;n de los cursos m&aacute;s tomados por los usuarios</p>
-			</aside>
+			
 		</div>
 	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/snap.svg-min.js"></script>
+	<script src="js/slider.js"></script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  	ga('create', 'UA-48014931-1', 'codyhouse.co');
+	  	ga('send', 'pageview');
+	
+	  	jQuery(document).ready(function($){
+	  		$('.close-carbon-adv').on('click', function(event){
+	  			event.preventDefault();
+	  			$('#carbonads-container').hide();
+	  		});
+	  	});
+	</script>
 </html>
