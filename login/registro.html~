@@ -18,12 +18,12 @@
 			<img class="imgTitle" src="../img/logoTieOut.png" alt="TIES-OUT" >
 			<h1 id="title">TIES-OUT</h1>
             <a href="#" class="slider">
-            	<img id="imgMenu" src="../img/arriba.png" alt="Menu">
+            	<img id="imgMenu" src="../img/arriba.png" alt="MenÃº">
             </a>
 		   	<div id="login">
-				<a href="#">Iniciar sesi&oacute;n</a>
+				<a href="login.html">Iniciar sesi&oacute;n</a>
 				<span>|</span>
-				<a href="registro.html">Registrarse</a>
+				<a href="#">Registrarse</a>
 		    </div>
 		</header>
       
@@ -37,21 +37,31 @@
         </ul>
      	</div>
 		<!--Termina header y menu-->
-		<!--Contenido de la página de Login-->
+		<!--Contenido de la página registro-->
 		<section class="acceso">
-				<h3>Iniciar Sesión<br></br></h3>
-				<section class="formulario">					
+				<h3>Registro<br></br></h3>
+				<section class="formulario">
+					<p>Nombre </p>
+						<input type="text"placeholder="Juan López Ortega" maxlength="50"  />
 					<p>Usuario </p>					
-						<input type="text" placeholder="Usuario" maxlength="20" />					
-					<p id="contrasena">Contraseña </p>
-						<input type="password" placeholder="Contraseña" />					
+						<input type="text" placeholder="usuario" maxlength="20" />					
+					<p>Contraseña </p>
+						<input type="password" placeholder="contraseña" />
+					<p>E-mail </p>
+						<input type="email" placeholder="alguien@ejemplo.com" maxlength="100" />
+					<!--<p>Foto</p>
+						<input type="text" />-->
+					<p>Descripción </p>
+						<textarea placeholder="E.j. Amante de la programación web (js, php) de frameworks como bootstrap y angular)" maxlength="500"></textarea>
+					<p>Ocupación </p>
+						<input type="text" placeholder="E.j. Ing. en computación" />
 				</section>
 				<section class="opciones">
-					<button type="submit">Iniciar Sesión</button>
+					<button type="submit">Registrarse</button>
 					<p>
-						 | ¿No tienes cuenta?
+						 | ¿Ya estás registrado?
 					</p>
-					<a href="registro.html">Registrate</a>
+					<a href="login.html">Inicia Sesión</a>
 				</section>
 		</section>
 </body>
