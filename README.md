@@ -55,13 +55,3 @@ Las distintas secciones del sistema son:
 * Noel Vela Larios
 * Daniel Alfonso Caballero Cruz
 
-
-##Instalación del sistema (Colaborar y/o descargar el repositorio)
-
-###Colabora con nosotros!
-Para poder colaborar en nuestro proyecto será necesario que primero clones nuestro repositorio en tu equipo.
-
-$ git clone https://github.com/FEZR85/TIES-OUT
-una vez en tu computadora podrás jugar con las ramas y archivos que se te proporcionan para poder colaborar con lo que gustes. Si aún no conoces de los comandos de git, te recomendamos visitar la siguiente página que te ayudará a realizar tus commits!
-
-Para el funcionamiento del sistema será necesario que cuentes con un servidor web donde te permita montar la página completa, APACHE es el servidor donde se trabaja este proyecto y el que recomendamos instalar para el uso del sistema.
