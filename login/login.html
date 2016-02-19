@@ -29,9 +29,14 @@
       
       <div id="menu">
         <ul id="nav">
-            <li><a href="#">HOME</a></li>
+            <li><a href="../index.html">HOME</a></li>
             <li><a href="#">TIPS</a></li>
-            <li><a href="#">CURSOS</a></li>
+            <li>
+            	<a href="#">CURSOS</a>
+					<ul>
+						<a href="../formularios/content1.html">Árboles</a>
+					</ul>            
+            </li>
             <li><a href="#">BUSCAR EMPLEO</a></li>
             <li><a href="#">CONTACTO</a></li>
         </ul>
@@ -41,16 +46,17 @@
 		<section class="acceso">
 				<h3>Iniciar Sesión<br></br></h3>
 				<section class="formulario">					
-					<p>Usuario </p>					
-						<input type="text" placeholder="Usuario" maxlength="20" />					
-					<p id="contrasena">Contraseña </p>
-						<input type="password" placeholder="Contraseña" />					
+					<label for="" id="correo">Correo</label>		<!--label-->			
+					<input type="text" placeholder="alguien@ejemplo.com" />					
+					<label id="contrasena" for="">Contraseña </label>
+					<input type="password" placeholder="Contraseña" />					
 				</section>
 				<section class="opciones">
 					<button type="submit">Iniciar Sesión</button>
-					<p>
+					<a href="#" >Recuperar contraseña</a><br></br>
+					<span>
 						 | ¿No tienes cuenta?
-					</p>
+					</span>
 					<a href="registro.html">Registrate</a>
 				</section>
 		</section>
