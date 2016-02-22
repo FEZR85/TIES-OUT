@@ -13,4 +13,5 @@
 <script type="text/javascript" src="<?php echo ROOTPATH ?>/js/jQuery/jquery-1.5.2.min.js"></script>
 <script>var $j = jQuery.noConflict(true);</script>
 <script type="text/javascript" src="<?php echo ROOTPATH ?>/js/menu.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 

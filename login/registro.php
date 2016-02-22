@@ -1,38 +1,54 @@
 <html>
-<head>
-		<title>TIES-OUT</title>
-		<link rel="stylesheet" type="" href="../css/registro.css">
-		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
-		<?php include_once("../imports.php"); ?>
-</head>
-<body>
-		<?php include_once('../header.php'); ?>
-		<!--Contenido de la página registro-->
-		<section class="acceso">
-				<h3>Registro<br></br></h3>
-				<section class="formulario">
-					<p>Nombre </p>
-						<input type="text"placeholder="Juan López Ortega" maxlength="50"  />
-					<p>Usuario </p>					
-						<input type="text" placeholder="usuario" maxlength="20" />					
-					<p>Contraseña </p>
-						<input type="password" placeholder="contraseña" />
-					<p>Correo </p>
-						<input type="email" placeholder="alguien@ejemplo.com" maxlength="100" />
-					<!--<p>Foto</p>
-						<input type="text" />-->
-					<p>Descripción </p>
-						<textarea placeholder="E.j. Amante de la programación web (js, php) de frameworks como bootstrap y angular" maxlength="500"></textarea>
-					<p>Ocupación </p>
-						<input type="text" placeholder="E.j. Ing. en computación" />
-				</section>
-				<section class="opciones">
-					<button type="submit">Registrarse</button>
-					<p>
-						 | ¿Ya estás registrado?
-					</p>
-					<a href="login.html">Inicia Sesión</a>
-				</section>
-		</section>
-</body>
+	<head>
+			<title>TIES-OUT</title>
+			<link rel="stylesheet" type="" href="../css/registro.css">
+			<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
+			<?php include_once("../imports.php"); ?>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+			<?php include_once('../header.php'); ?>
+			<!--Contenido de la página registro-->
+			<div class="content">
+				<h3>Registro</h3><br>
+				
+				<form class="form-horizontal" role="form">
+				
+					<div class="form-group">
+						<label for="nombre" class="col-md-2 control-label">Nombre </label>
+						<div class="col-md-4">
+							<input id="nombre" class="form-control" type="text"placeholder="Juan López Ortega"  />	
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="correo" class="col-md-2 control-label">Correo </label>
+						<div class="col-md-4">
+							<input id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />			
+						</div>	
+					</div>
+					<div class="form-group">							
+						<label for="password" class="col-md-2 control-label">Contraseña </label>
+						<div class="col-md-4">
+							<input class="form-control" type="password" placeholder="contraseña" />		
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="Rptpassword" class="col-md-2 control-label">Repetir contraseña </label>
+						<div class="col-md-4">						
+							<input class="form-control" type="Rptpassword" placeholder="contraseña" />
+						</div>
+					</div>
+					
+					
+					<div class="form-group">
+						<div class="col-md-offset-2 col-md-4">
+							<button id="registro" class="btn btn-default" type="submit">Registrarse</button>
+							<span> | ¿Ya estás registrado?</span>
+							<a class="btn btn-link" href="<?php echo ROOTPATH ?>/login/login.php">Inicia Sesión</a>
+						</div>
+					</div>
+					
+				</form>
+			</div>
+	</body>
 </html>
