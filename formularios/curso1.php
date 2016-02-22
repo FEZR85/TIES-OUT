@@ -1,44 +1,12 @@
 <html>
-	<head>
+<head>
 		<title>TIES-OUT</title>
-		<meta charset="UTF-8">
+		<link rel="stylesheet" type="" href="../css/curso1.css">
 		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
-    	<link rel="stylesheet" href="../css/index_style.css">
-    	<link rel="stylesheet" href="../css/curso1.css">
-      <script type="text/javascript" src="../js/jquery-1.5.2.min.js"></script>
-      <script>var $j = jQuery.noConflict(true);</script>
-      <script type="text/javascript" src="../js/script.js"></script>
-	</head>
-
-	<body>
-		<header>
-			<img class="imgTitle" src="../img/logoTieOut.png" alt="TIES-OUT" >
-			<h1 id="title">TIES-OUT</h1>
-            <a href="#" class="slider">
-            	<img id="imgMenu" src="../img/arriba.png" alt="MenÃº">
-            </a>
-		   	<div id="login">
-				<a href="../login/login.html">Iniciar sesi&oacute;n</a>
-				<span>|</span>
-				<a href="../login/registro.html">Registrarse</a>
-		    </div>
-		</header>
-      
-      <div id="menu">
-        <ul id="nav">
-            <li><a href="../index.html">HOME</a></li>
-            <li><a href="#">TIPS</a></li>
-            <li>
-            	<a href="#">CURSOS</a>
-            	<ul>
-            		<a href="#" >Árboles</a>
-            	</ul>
-            </li>
-            
-            <li><a href="#">BUSCAR EMPLEO</a></li>
-            <li><a href="#">CONTACTO</a></li>
-        </ul>
-     	</div>	
+		<?php include_once("../imports.php"); ?>
+</head>
+<body>
+		<?php include_once('../header.php'); ?>
 
 		<section id="inscribete"><!--aside-->
 				<p>¿No est&aacute;s registrado en &eacute;ste curso? Inscr&iacute;bete</p><br />
