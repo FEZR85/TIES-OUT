@@ -42,6 +42,7 @@
 	          <li><a href="#"></a></li>
 	        </ul>
 	      </li>
+	      <li><a class="head" href="<?php echo ROOTPATH ?>/formularios/contacto.php">CONTACTO</a></li>
 	    </ul>
 	    
 	 	 <ul class="nav navbar-nav navbar-right login">
