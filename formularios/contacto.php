@@ -1,7 +1,6 @@
 <html>
 	<head>
 			<title>TIES-OUT::Contacto</title>
-			<link rel="stylesheet" type="" href="../css/curso1.css">
 			<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
 			<?php include_once("../imports.php"); ?>
 	</head>
