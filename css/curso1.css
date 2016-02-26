@@ -6,13 +6,13 @@ h1 {
  
 .contenido {
    border-right: .1em solid #4b4b4b;
-   padding: .5em .5em .5em .5em;
+   padding: .5em .9em .5em .5em;
    margin: 10;
 
    display: inline-block;
  
    border-radius: 2em;
-   width:70%;
+   width:80%;
    display: inline-block;
  
  
@@ -21,7 +21,7 @@ h1 {
 
  }
  
-+#titulo_contenido {
+#titulo_contenido {
    border-collapse: collapse;
  
    padding: .5em .5em .5em .5em;
@@ -38,12 +38,18 @@ h1 {
 }
  
 #inscribete {
-   padding-top: 120px;
-   padding-right: 20px;
-  top: 100px;    
-   
-   float: right;
+   right: 2em; 
+   padding-top: 7.5em;
+   padding-right: 2.5em;
+   top: 2.25em;
+   position: fixed;
+   opacity: 0.9;
+
+   background-color: #ebebeb;
    font-family: URW Gothic L;
+   text-align: right;
+   
+   
 }
  
  
