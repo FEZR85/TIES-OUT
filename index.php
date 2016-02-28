@@ -51,7 +51,7 @@
 			
 			<div class="container marketing">
 				<div class="row">
-					<div class="col-lg-12 text-center">
+					<div class="col-xs-10 text-center center-block">
 						<img class="img-circle" width="180" height="180" alt="Logo TIES-OUT" src="img/logoTieOut.png">
 						<h1><b>¡Ya estás dentro!</b></h1>
 						<p class="parrafo">
@@ -132,33 +132,6 @@
 					</div>
 				</div>
 			</div>
-			
-			<!--div class="inline">
-				<section id="extras" class="form-group">
-					<div>			
-						<p class="enlace text-info">Actualiza tu perfil y cuéntanos que buscas para tener más oportunidades!. </p>
-						<img class="imgContent img-circle" src="img/user.png" alt="usuario" >	
-					</div>
-					<div>
-						<p class="enlace">Elabora tu Currículum. Es básico tener uno. </p>	
-						<img class="imgContent" src="img/check.png" alt="Verificar" >				
-					</div>
-					<div>	
-						<p class="enlace">
-							Consulta el repertorio de cursos que ofrecemos y toma el que más te pueda ayudar!
-						</p> 
-						<img class="imgContent" src="img/find.png" alt="Buscar" >
-					</div>	
-				</section>
-			
-				<section id="tip" class="form-group">
-					<div id="divTip">
-						<h3>Tip del dia</h3><br>
-						<span>When you do things right, people won't be sure you've done anything at all.</span><br>
-						<span>-Futurama</span>
-					</div>			
-				</section>
-			</div-->
 			
 		</div>
 	</body>
