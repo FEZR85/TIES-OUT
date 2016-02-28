@@ -4,7 +4,7 @@ Plataforma de entrevistas para el área de sistemas computacionales.
 
 ###Tabla de contenidos
 
-* [www.ties-out.com](www.ties-out.com)
+* [www.ties-out.com](http://www.ties-out.com)
 * [Objetivo](#objetivo)
 * [Descripción](#descripción-de-la-plataforma)
 * [Partes del Sistema](#partes-del-sistema)
