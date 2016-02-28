@@ -6,10 +6,10 @@
 			
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<?php include_once("imports.php"); ?>
-			<?php  include_once("header.php"); ?>
 			<link rel="stylesheet" type="text/css" href="css/repertorio.css">
 	</head>
 <body>	
+			<?php  include_once("header.php"); ?>
 		<div class="content repertorio">
 			<div class="row ">
 				<div class="col-md-12">

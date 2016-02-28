@@ -8,9 +8,9 @@
 <body>
 		<?php include_once('../header.php'); ?>
 				
-		<aside id="inscribete"><!--aside-->
-			<p>¿No est&aacute;s registrado en &eacute;ste curso? Inscr&iacute;bete</p><br />
-			<button type="submit">Reg&iacute;strate</button><br />
+		<aside id="inscribete">
+			<span>¿No est&aacute;s registrado en &eacute;ste curso?</span><br />
+			<button class="btn btn-warning btn-lg" type="submit">Reg&iacute;strate</button><br />
 		</aside>
 
 		<div class="content">		

@@ -3,6 +3,7 @@
 		<title>TIES-OUT</title>
 		<?php include_once("imports.php")?>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/repertorio.css">
 </head>
 <body>
 		<?php  include_once("header.php"); ?>
@@ -18,19 +19,19 @@
 			  <!-- Wrapper for slides -->
 			  <div class="carousel-inner">
 			    <div class="item">
-			      <img src="http://placehold.it/1200x315/379C06/fff/?text=Registrate!" alt="...">
+			      <img src="http://placehold.it/1200x400/379C06/fff/?text=Registrate!" alt="...">
 			      <div class="carousel-caption">
 			          <h3>Ahora tus cursos en tus redes sociales</h3>
 			      </div>
 			    </div>
 			    <div class="item">
-			      <img src="http://placehold.it/1200x315/095272/fff/?text=Buscar+empleo" alt="...">
+			      <img src="http://placehold.it/1200x400/095272/fff/?text=Buscar+empleo" alt="...">
 			      <div class="carousel-caption">
 			          <h3>Busca el trabajo que siempre estuviste esperando</h3>
 			      </div>
 			    </div>
 			    <div class="item active">
-			      <img src="http://placehold.it/1200x315/B43807/fff/?text=¡NUEVO+CURSO!" alt="...">
+			      <img src="http://placehold.it/1200x400/B43807/fff/?text=¡NUEVO+CURSO!" alt="...">
 			      <div class="carousel-caption">
 			          <h3>Algoritmos y estructuras de árboles</h3>
 			      </div>
@@ -47,23 +48,92 @@
 			</div> <!-- Carousel -->
 		
 			<hr>
-			<section class="form-group">
-				<h2>Los cursos más nuevos</h2>
-				<article class="seccion">
-					<h4>Algoritmos de árboles</h4>
-					<p>Descripción de este curso en esta sección</p>
-				</article>
-				<article class="seccion">
-					<h4>Métodos de ordenamiento</h4>
-					<p>Descripcion de este curso en esta seccion</p>
-				</article>
-				<article class="seccion">
-					<h4>Algoritmos de búsqueda</h4>
-					<p>Descripcion de este curso en esta seccion</p>
-				</article>
-			</section>
 			
-			<div class="inline">
+			<div class="container marketing">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<img class="img-circle" width="180" height="180" alt="Logo TIES-OUT" src="img/logoTieOut.png">
+						<h1><b>¡Ya estás dentro!</b></h1>
+						<p class="parrafo">
+							Te damos la bienvenida a la plataforma de auto-aprendizajes para entrevistas en el área
+							de informática y computación. Ofrecemos una gran variedad de cursos para que ¡postules por el mejor puesto! En Ties-out
+							te brindamos la oportunidad de experimentar tu primer entrevista. ¿Vas por otro puesto? no te preocupes tenemos lo
+							que necesitas para esa entrevista.<br><br> Y recuerda, Relájate...¡ya estás dentro! 
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<hr>			
+			
+			<!--cursos-->
+			<div class="repertorio">
+				<div class="row ">
+					<div class="col-md-12">
+						<h1 class="text-center"><span class="glyphicon glyphicon-book"></span>  Los cursos más vistos</h1>
+					</div>
+				</div>
+				<div class="row cursos">
+					<div class="col-md-4 verde"  >
+						<article>					
+							<h3>Árboles</h3>
+							<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
+							<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
+						</article>
+					</div>
+					<div class="col-md-4 cafe">
+						<article>					
+							<h3>Árboles</h3>
+							<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
+							<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
+						</article>
+					</div>
+					<div class="col-md-4 azul" >
+						<article>					
+							<h3>Árboles</h3>
+							<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
+							<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
+						</article>
+					</div>
+					<div class="col-md-4 naranja" >
+						<article>					
+							<h3>Árboles</h3>
+							<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
+							<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
+						</article>
+					</div>
+					<div class="col-md-4 verde" >
+						<article>					
+							<h3>Árboles</h3>
+							<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
+							<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
+						</article>
+					</div>
+					<div class="col-md-4 cafe" >
+						<article>					
+							<h3>Árboles</h3>
+							<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
+							<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
+						</article>
+					</div>
+					<div class="col-md-4 azul" >
+						<article>					
+							<h3>Árboles</h3>
+							<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
+							<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
+						</article>
+					</div>
+					<div class="col-md-4 naranja" >
+						<article>					
+							<h3>Árboles</h3>
+							<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
+							<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
+						</article>
+					</div>
+				</div>
+			</div>
+			
+			<!--div class="inline">
 				<section id="extras" class="form-group">
 					<div>			
 						<p class="enlace text-info">Actualiza tu perfil y cuéntanos que buscas para tener más oportunidades!. </p>
@@ -88,7 +158,7 @@
 						<span>-Futurama</span>
 					</div>			
 				</section>
-			</div>
+			</div-->
 			
 		</div>
 	</body>

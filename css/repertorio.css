@@ -3,11 +3,50 @@
 	padding-right: 1em;
 }
 
-.content.repertorio{
-	padding-bottom: 3em;	
+.repertorio{
+	padding-bottom: 3em;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;	
 }
 
 .content.repertorio p, .content.repertorio h3, a{
 	color:white;
 }
 
+.cursos div{
+	 height: 15em;	
+	}
+	
+.verde{
+	background-color: #138F60;
+	color: white;
+	text-align: center;
+}
+
+.cafe{
+	background-color: #E39C48;
+	color: white;
+	text-align: center;
+}
+
+.naranja{
+	background-color: #E37848;
+	color: white;
+	text-align: center;
+}
+
+.azul{
+	background-color: #337090;
+	color: white;	
+	text-align: center;
+	}
+	
+.azul h3, .verde h3, .naranja h3, .cafe h3{
+	font-weight: bold;	
+	}
+	
+h1.text-center {
+	margin: 1.5em;
+	font-size: 4em;
+}

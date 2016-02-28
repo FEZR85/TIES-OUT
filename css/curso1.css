@@ -39,17 +39,16 @@ h1 {
  
 #inscribete {
    right: 2em; 
-   padding-top: 7.5em;
-   padding-right: 2.5em;
-   top: 2.25em;
+   padding:2em;
+   top: 5em;
    position: fixed;
    opacity: 0.9;
 
    background-color: #ebebeb;
    font-family: URW Gothic L;
-   text-align: right;
-   
-   
+   text-align: center;
+   font-size: 1.4em;
+  	font-weight: bold;
 }
  
  
