@@ -56,6 +56,20 @@ html, body {
 	color: #FFF;		
 		}
 
+.profile-img{/*imagen de perfil*/
+    margin-top: -5px;
+    margin-right: 5px;
+    float: left;
+    background: url("../img/logoTieOut.png") 50% 50% no-repeat; /* 50% 50% centers image in div */
+    background-size: auto 100%; /* Interchange this value depending on prefering width vs. height */
+    width: 30px;
+    height: 30px;
+}
+
+#infoUser, #confPerfil, #salir, #miscursos{
+	display: none;
+}
+
 
 /*contenido*/
 .content {
@@ -157,3 +171,9 @@ div.marketing, div.container{
 	
 	width: 100%;	
 	}
+	
+	
+	
+	
+	/*----------------------*/
+	
