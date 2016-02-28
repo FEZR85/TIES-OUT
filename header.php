@@ -24,7 +24,7 @@
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
 	    <ul class="nav navbar-nav">
 	      <li><a class="head" href="#">TIPS</a></li>
-	      <li><a class="head" href="#">BUSCAR EMPLEO</a></li>
+	      <li><a class="head" href="<?php echo ROOTPATH ?>/formularios/buscarTrabajo.php">BUSCAR EMPLEO</a></li>
 	      <li class="dropdown">
 	        <a class="head" href="#" class="dropdown-toggle" data-toggle="dropdown">
 	          CURSOS <b class="caret"></b>
@@ -38,11 +38,24 @@
 	        </ul>
 	      </li>
 	      <li><a class="head" href="<?php echo ROOTPATH ?>/formularios/contacto.php">CONTACTO</a></li>
+	      <li id="miscursos"><a class="head" href="#">MIS CURSOS</a></li>
 	    </ul>
-	    
+	   
 	 	 <ul class="nav navbar-nav navbar-right login">
-	      <li><a href="<?php echo ROOTPATH ?>/login/registro.php">Registrate</a></li>
-	      <li><a id="sesion" href="<?php echo ROOTPATH ?>/login/login.php" >Iniciar sesión</a></li>
+	      <li id="registro"><a href="<?php echo ROOTPATH ?>/login/registro.php">Registrate</a></li>
+	      <li id="entrar"><a id="sesion" href="<?php echo ROOTPATH ?>/login/login.php" >Iniciar sesión</a></li>
+	      <li id="infoUser">
+	           <a class="dropdown-toggle" data-toggle="dropdown" role="button">
+                <div class="img-circle profile-img"></div>
+                User Name
+              </a>
+         </li>
+	      <li id="confPerfil">
+            <a href="<?php echo ROOTPATH ?>/formularios/configurarPerfil.php">
+	               <span class="glyphicon glyphicon-cog"></span>
+	      	</a>
+	      </li>
+	      <li id="salir"><a class="sesion" href="<?php echo ROOTPATH ?>/index.php" >Salir</a></li>
 	    </ul>
 	    
 	    <form class="navbar-form navbar-right" role="search">
