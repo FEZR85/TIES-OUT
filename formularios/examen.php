@@ -13,55 +13,57 @@
 			<section class="titulo" style="padding-top: 2em;">
 				<h2 class="text-center">Examen del curso "Árboles"</h2>
 			</section>
-			<section class="preguntas">
+			<section class="preguntas" style="padding-left: 5em; padding-right: 5em;">
 				<div class="row" style="padding:0.5em 0em 0em 3em;">
 					<article class="pregunta">
-						<div class="col-md-12 text-center">
+						<div class="col-md-12 ">
 							<h4>¿Qué es un árbol de búsqueda?</h4>
-								<label for="Opcion1">Opción 1 </label>
-							<input type="radio" name="respuesta1" id="Opcion1"></input><br>
-								<label for="Opcion2">Opción 2 </label>
-							<input type="radio" name="respuesta1" id="Opcion2"></input><br>
-								<label for="Opcion3">Opción 3 </label>
-							<input type="radio" name="respuesta1" id="Opcion3"></input><br>
+								
+							<input type="radio" name="respuesta1" id="Opcion1"></input>
+								<label for="Opcion1">Opción 1 </label><br>								
+							<input type="radio" name="respuesta1" id="Opcion2"></input>
+								<label for="Opcion2">Opción 2 </label><br>								
+							<input type="radio" name="respuesta1" id="Opcion3"></input>
+								<label for="Opcion3">Opción 3 </label><br>
 						</div>
 					</article>
 					<article class="pregunta">
-						<div class="col-md-12 text-center">
-							<h4>¿Qué es un árbol de búsqueda?</h4>
-								<label for="Opcion1">Opción 1 </label>
-							<input type="radio" name="respuesta2" id="Opcion1"></input><br>
-								<label for="Opcion2">Opción 2 </label>
-							<input type="radio" name="respuesta2" id="Opcion2"></input><br>
-								<label for="Opcion3">Opción 3 </label>
-							<input type="radio" name="respuesta2" id="Opcion3"></input><br>
+						<div class="col-md-12 ">
+							<h4>¿Qué es un árbol de búsqueda?</h4>								
+							<input type="radio" name="respuesta2" id="Opcion1"></input>
+								<label for="Opcion1">Opción 1 </label><br>								
+							<input type="radio" name="respuesta2" id="Opcion2"></input>
+								<label for="Opcion2">Opción 2 </label><br>								
+							<input type="radio" name="respuesta2" id="Opcion3"></input>
+								<label for="Opcion3">Opción 3 </label><br>
 						</div>
 					</article>
 					<article class="pregunta">
-						<div class="col-md-12 text-center">
-							<h4>¿Qué es un árbol de búsqueda?</h4>
-								<label for="Opcion1">Opción 1 </label>
-							<input type="radio" name="respuesta3" id="Opcion1"></input><br>
-								<label for="Opcion2">Opción 2 </label>
-							<input type="radio" name="respuesta3" id="Opcion2"></input><br>
-								<label for="Opcion3">Opción 3 </label>
-							<input type="radio" name="respuesta3" id="Opcion3"></input><br>
+						<div class="col-md-12 ">
+							<h4>¿Qué es un árbol de búsqueda?</h4>								
+							<input type="radio" name="respuesta3" id="Opcion1"></input>
+								<label for="Opcion1">Opción 1 </label><br>								
+							<input type="radio" name="respuesta3" id="Opcion2"></input>
+								<label for="Opcion2">Opción 2 </label><br>								
+							<input type="radio" name="respuesta3" id="Opcion3"></input>
+								<label for="Opcion3">Opción 3 </label><br>
 						</div>
 					</article>
 					<article class="pregunta">
-						<div class="col-md-12 text-center">
+						<div class="col-md-12 ">
 							<h4>¿Qué es un árbol de búsqueda?</h4>
-								<label for="Opcion1">Opción 1 </label>
-							<input type="radio" name="respuesta4" id="Opcion1"></input><br>
-								<label for="Opcion2">Opción 2 </label>
-							<input type="radio" name="respuesta4" id="Opcion2"></input><br>
-								<label for="Opcion3">Opción 3 </label>
-							<input type="radio" name="respuesta4" id="Opcion3"></input><br>
+								
+							<input type="radio" name="respuesta4" id="Opcion1"></input>
+								<label for="Opcion1">Opción 1 </label><br>								
+							<input type="radio" name="respuesta4" id="Opcion2"></input>
+								<label for="Opcion2">Opción 2 </label><br>								
+							<input type="radio" name="respuesta4" id="Opcion3"></input>
+								<label for="Opcion3">Opción 3 </label><br>
 						</div>
 					</article>
 				</div>				
 			</section>
-			<section class="enviar" style="padding:3.5em 0em 0em 40%;">
+			<section class="enviar" style="padding:3.5em 0em 0em 5em;">
 				<button class="btn btn-default" type="submit" >Enviar Respuestas</button>				
 			</section>
 
