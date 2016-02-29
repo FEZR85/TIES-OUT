@@ -11,50 +11,51 @@
 <body>
 	<?php  include_once("header.php"); ?>
 	<div class="content misCursos">
-		<h2 class="text-center">Mis Cursos</h2>
-		<table class="table table-bordered">
-			<thead>
-				<th width="10%">#</th>
-				<th width="50%">Título</th>
-				<th width="20%">Avance</th>
-				<th width="20%">Acciones</th>
-			</thead>
-			<tbody>
-				<tr>
-					<th>1</th>
-					<td>Árboles</td>
-					<td>65%</td>
-					<td>
-						<a href="#">A</a>
-						<a href="#"></a>
-						<a href="#"></a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-
-		<section id="recomendaciones" style="padding-top: 2em; ">
+		<h2 class="text-center" style="padding-top: 2em;">Mis Cursos</h2>
+		<section class="cursos"style="padding:0em 3em 0em;">
+			<table class="table table-bordered">
+				<thead>
+					<th width="10%">#</th>
+					<th width="50%">Título</th>
+					<th width="20%">Avance</th>
+					<th width="20%">Acciones</th>
+				</thead>
+				<tbody>
+					<tr>
+						<th>1</th>
+						<td>Árboles</td>
+						<td>65%</td>
+						<td>
+							<a href="#">A</a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section id="recomendaciones" style="padding: 2em 3em 0em; ">
 			<h3 class="text-center">Otros cursos disponibles</h3>
 			<div class="row" style="padding:0 1em 0;">
-				<div class="col-md-4" style="background-color: #957FD4; height: 15em; padding-left: 2em;" >
+				<div class="col-md-4 verde" style="height: 15em; padding-left: 2em;" >
 					<article>					
 						<h3>Árboles</h3>
 						<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
-						<a href="formularios/curso1.php">Ver más...</a>
+						<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
 					</article>
 				</div>
-				<div class="col-md-4" style="background-color: #FF9D8D; height: 15em; padding-left: 2em;" >
+				<div class="col-md-4 cafe" style=" height: 15em; padding-left: 2em;" >
 					<article>					
 						<h3>Árboles</h3>
 						<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
-						<a href="formularios/curso1.php">Ver más...</a>
+						<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
 					</article>
 				</div>
-				<div class="col-md-4" style="background-color: #4AC181; height: 15em; padding-left: 2em;" >
+				<div class="col-md-4 naranja" style="height: 15em; padding-left: 2em;" >
 					<article>					
 						<h3>Árboles</h3>
 						<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
-						<a href="formularios/curso1.php">Ver más...</a>
+						<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
 					</article>
 				</div>
 			</div>
