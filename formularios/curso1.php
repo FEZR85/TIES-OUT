@@ -10,7 +10,7 @@
 				
 		<aside id="inscribete">
 			<span>¿No est&aacute;s registrado en &eacute;ste curso?</span><br />
-			<button class="btn btn-warning btn-lg" type="submit">Reg&iacute;strate</button><br />
+			<a class="btn btn-warning btn-lg" href="<?php echo ROOTPATH ?>/login/registro.php">Reg&iacute;strate</a><br />
 		</aside>
 
 		<div class="content">		
