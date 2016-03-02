@@ -51,7 +51,7 @@
 			
 			<div class="container marketing">
 				<div class="row">
-					<div class="col-xs-10 text-center center-block">
+					<div class="col-xs-12 text-center center-block">
 						<img class="img-circle" width="180" height="180" alt="Logo TIES-OUT" src="img/logoTieOut.png">
 						<h1><b>¡Ya estás dentro!</b></h1>
 						<p class="parrafo">

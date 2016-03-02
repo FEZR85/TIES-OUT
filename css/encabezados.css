@@ -6,5 +6,10 @@
 
 .subencabezado{
 	padding-left: 4em;
-	padding-right: 2em;
+	padding-right: 4em;
+	text-align: justify;
+}
+
+.subencabezado p{
+	font-size: 1.4em;
 }
