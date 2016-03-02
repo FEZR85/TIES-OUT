@@ -1,0 +1,10 @@
+.encabezado{
+	background-color: #2F7802; 
+	padding: 1em 1em 1em 1em; 
+	color: #FFF;
+}
+
+.subencabezado{
+	padding-left: 4em;
+	padding-right: 2em;
+}

@@ -4,6 +4,7 @@
 		<title>TIES-OUT::Mis Cursos</title>
 		<link rel="shortcut icon" href="/img/logoTieOut.ico" type="image/x-icon" /> 	
 		<link rel="stylesheet" type="text/css" href="css/repertorio.css">
+		<link rel="stylesheet" type="text/css" href="css/encabezados.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<?php include_once("imports.php"); ?>
 	
@@ -11,7 +12,7 @@
 <body>
 	<?php  include_once("header.php"); ?>
 	<div class="content misCursos">
-		<h2 class="text-center" style="padding-top: 2em;">Mis Cursos</h2>
+		<h2 class="text-center encabezado" >Mis Cursos</h2>
 		<section class="cursos"style="padding:0em 3em 0em;">
 			<table class="table table-bordered">
 				<thead>
@@ -60,6 +61,7 @@
 				</div>
 			</div>
 		</section>
+		<?php include_once('footer.php'); ?>
 	</div>
 </body>
 </html>

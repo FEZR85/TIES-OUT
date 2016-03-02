@@ -2,6 +2,7 @@
 	<head>
 			<title>TIES-OUT::Perfil</title>
 			<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
+			<link rel="stylesheet" type="text/css" href="../css/encabezados.css">
 			<?php include_once("../imports.php"); ?>
 			<link type="text/css" rel="stylesheet" href="../css/confPerfil.css">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +11,12 @@
 			<?php include_once('../header.php'); ?>
 			<!--Contenido de la página registro-->
 			<div class="content">
+<<<<<<< HEAD
 				<br><br>
-				<h3 class="col-xs-offset-2">Configurar perfil</h3><br>
+				<h3 class="col-xs-offset-2 encabezado">Configurar perfil</h3><br>
+=======
+				
+>>>>>>> bf26dd2831fd96983969bd4dc38910d78fd0e66a
 				
 				<form class="form-horizontal col-xs-offset-1" role="form">
 					<div class="inline" style="clear:both;">

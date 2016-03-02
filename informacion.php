@@ -3,13 +3,14 @@
 		<title>TIES-OUT::Quienes somos</title>
 		<link rel="stylesheet" type="" href="css/curso1.css">
 		<link rel="shortcut icon" href="img/logoTieOut.ico" type="image/x-icon" /> 
+		<link rel="stylesheet" type="text/css" href="css/encabezados.css">
 		<?php include_once("imports.php"); ?>
 	</head>
 	<body>
 		<?php include_once('header.php'); ?>
 		<div class="content">
 			<section>
-				<h2 id="titulo_contenido">QUIENES SOMOS</h2>
+				<h2 class="encabezado">QUIENES SOMOS</h2>
 			</section>
 
 			<section class="contenido">
@@ -20,7 +21,7 @@
 				</p>
 				
 			</section>
-
+			<?php include_once('footer.php'); ?>
 		</div>
 	</body>
 </html>>

@@ -3,6 +3,7 @@
 		<title>TIES-OUT::Árboles</title>
 		<link rel="stylesheet" type="" href="../css/curso1.css">
 		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
+		<link rel="stylesheet" type="text/css" href="../css/encabezados.css">
 		<?php include_once("../imports.php"); ?>
 </head>
 <body>
@@ -16,9 +17,7 @@
 		<div class="content">		
 			<!--todo dentro de un article despues del content, despues del article agregar section, y para los enlaces usar footer-->
 			<article>
-				<section id="titulo_contenido">
-					<h2>CONTENIDO DEL CURSO: ARBOLES</h2><br />				
-				</section>
+					<h2 class="encabezado">CONTENIDO DEL CURSO: ARBOLES</h2><br />	
 
 				<section class="contenido">
 					<h3>¿Qu&eacute; son los &aacute;rboles?</h3><br />
@@ -66,7 +65,8 @@
 
 				</section>
 				
-			</article>		
+			</article>	
+			<?php include_once('../footer.php'); ?>	
 		</div>
 
 	</body>

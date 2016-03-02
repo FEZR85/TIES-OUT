@@ -5,13 +5,14 @@
 			<?php include_once("../imports.php"); ?>
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<link rel="stylesheet" type="text/css" href="../css/login.css">
+			<link rel="stylesheet" type="text/css" href="../css/encabezados.css">
 	</head>
 	<body>
 			<?php include_once('../header.php'); ?>
 			<!--Contenido de la página registro-->
 			<div class="content">
 				<div class="center-block">
-					<h3>Registro</h3><br>
+					<h3 class="encabezado">Registro</h3><br>
 					
 					<form class="form-horizontal" role="form">
 					
@@ -52,6 +53,7 @@
 						
 					</form>
 				</div>
+				<?php include_once('../footer.php'); ?>
 			</div>
 	</body>
 </html>
