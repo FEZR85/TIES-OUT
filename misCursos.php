@@ -24,10 +24,20 @@
 				<tbody>
 					<tr>
 						<th>1</th>
-						<td>Árboles</td>
+						<td><a href="<?php echo ROOTPATH ?>/formularios/curso1.php" style="color:#000">Árboles</a></td>
 						<td>65%</td>
 						<td>
 							<a href="#">A</a>
+							<a href="#"></a>
+							<a href="#"></a>
+						</td>
+					</tr>
+					<tr>
+						<th>2</th>
+						<td><a href="<?php echo ROOTPATH ?>/formularios/curso2.php" style="color:#000">Metodos de ordenamiento</a></td>
+						<td>25%</td>
+						<td>
+							<a href="#">B</a>
 							<a href="#"></a>
 							<a href="#"></a>
 						</td>

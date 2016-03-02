@@ -10,28 +10,20 @@
 			display: none;
 		}
 	}
-
 h1 {
       width: 95%;
       color: #3b3b3b;
  }
  
  
-.contenido {
-   border-right: .1em solid #4b4b4b;
-   padding: .5em .9em .5em .5em;
-   margin: 10;
+.contenido {   
+   padding: 4em 6em .5em 6em;   
 
-   display: inline-block;
- 
-   border-radius: 2em;
-   width:80%;
-   display: inline-block;
- 
- 
-   font-family: URW Gothic L;
-   text-align: left;
+   width: 100%;
+   display: inline-block; 
 
+   text-align: center;
+   font-size: 120%;
  }
  
 #titulo_contenido {
@@ -46,7 +38,7 @@ h1 {
    width:60%;
    display: inline-block;
  
-   font-family: URW Gothic L;
+
    color: #ad5600;
 }
  
@@ -58,20 +50,23 @@ h1 {
    opacity: 0.9;
 
    background-color: #ebebeb;
-   font-family: URW Gothic L;
+
    text-align: center;
    font-size: 1.4em;
-  	font-weight: bold;
+   font-weight: bold;
 }
  
  
- 
 #fuente {
-   border-collapse: collapse;  
-   padding: .5em .5em .5em .5em;
-   margin: 10;
-   display: inline-block;
-   font-family: URW Gothic L;
+   padding: .5em 6em .5em 7em;
+   width: 100%;
+   display: inline-block; 
+ 
+   text-align: left;
+   
    color: #4b4b4b;
  }
  
+ #lista {
+      text-align: left;
+ }
