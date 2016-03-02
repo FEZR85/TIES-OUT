@@ -11,8 +11,7 @@
 			<?php include_once('../header.php'); ?>
 			<!--Contenido de la página registro-->
 			<div class="content">
-				<br><br>
-				<h3 class="col-xs-offset-2 encabezado">Configurar perfil</h3>
+				<h3 class=" encabezado">Configurar perfil</h3>
 				<form class="form-horizontal col-xs-offset-1" role="form">
 					<div class="inline" style="clear:both;">
 						<div class="form-group col-xs-6">
