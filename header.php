@@ -16,7 +16,7 @@
 	      <span class="icon-bar"></span>
 	    </button>
 	    <a class="navbar-brand" href="<?php echo ROOTPATH ?>/index.php"><img alt="Brand" src="<?php echo ROOTPATH ?>/img/logoTieOut.png"></a>
-	    <a class="navbar-brand" href="<?php echo ROOTPATH ?>/index.php">TIES-OUT</a>
+	    <a id="tiesOut" class="navbar-brand" href="<?php echo ROOTPATH ?>/index.php">TIES-OUT</a>
 	  </div>
 	 
 	  <!-- Agrupar los enlaces de navegación, los formularios y cualquier
@@ -42,20 +42,26 @@
 	    </ul>
 	   
 	 	 <ul class="nav navbar-nav navbar-right login">
-	      <li id="registro"><a href="<?php echo ROOTPATH ?>/login/registro.php">Registrate</a></li>
-	      <li id="entrar"><a class="btn" id="sesion" href="<?php echo ROOTPATH ?>/login/login.php" >Iniciar sesión</a></li>
-	      <li id="infoUser">
+	      	<li id="registro"><a href="<?php echo ROOTPATH ?>/login/registro.php">Registrate</a></li>
+	      	<li id="entrar">
+	      		<a class="btn" id="sesion" href="<?php echo ROOTPATH ?>/login/login.php" >Iniciar sesión</a>
+	      		<a class="btn" id="inicia" href="<?php echo ROOTPATH ?>/login/login.php" >
+	      			<span class="glyphicon glyphicon-log-in"></span>
+	      		</a>
+	      	</li>
+	      
+	      	<li id="infoUser">
 	           <a class="dropdown-toggle" data-toggle="dropdown" role="button">
                 <div class="img-circle profile-img"></div>
                 User Name
               </a>
-         </li>
-	      <li id="confPerfil">
-            <a href="<?php echo ROOTPATH ?>/formularios/configurarPerfil.php">
-	               <span class="glyphicon glyphicon-cog"></span>
-	      	</a>
-	      </li>
-	      <li id="salir"><a class="sesion" href="<?php echo ROOTPATH ?>/index.php" >Salir</a></li>
+         	</li>
+	      	<li id="confPerfil">
+            	<a href="<?php echo ROOTPATH ?>/formularios/configurarPerfil.php">
+	               	<span class="glyphicon glyphicon-cog"></span>
+	      		</a>
+	      	</li>
+	      	<li id="salir"><a class="sesion" href="<?php echo ROOTPATH ?>/index.php" >Salir</a></li>
 	    </ul>
 	    
 	    <form class="navbar-form navbar-right" role="search">

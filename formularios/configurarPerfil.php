@@ -1,6 +1,6 @@
 <html>
 	<head>
-			<title>TIES-OUT::Perfil</title>
+			<title>Configurar Perfil</title>
 			<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
 			<link rel="stylesheet" type="text/css" href="../css/encabezados.css">
 			<?php include_once("../imports.php"); ?>
@@ -15,7 +15,7 @@
 				<h3 class="col-xs-offset-2 encabezado">Configurar perfil</h3>
 				<form class="form-horizontal col-xs-offset-1" role="form">
 					<div class="inline" style="clear:both;">
-						<div class="form-group col-xs-6">
+						<div id="datos" class="form-group col-xs-6">
 							<div class="form-group">
 								<label for="nombre" class="col-xs-4 control-label">Nombre </label>
 								<div class="col-xs-7">
@@ -57,10 +57,10 @@
 								</div>	
 							</div>
 						</div>
-						<div class="form-group col-xs-6">
+						<div id="img" class="form-group col-xs-6">
 							<label for="foto" class="col-xs-4 control-label">Foto de perfil</label>
 							<figure>
-								<img id="avatar" alt="Sin Foto" src="<?php echo ROOTPATH ?>/img/linkedin.png">
+								<img id="avatar" alt="Sin Foto" src="<?php echo ROOTPATH ?>/img/noimg.png">
 								<figcaption class="col-xs-offset-3 col-xs-7 input-group">
 									<span class="input-group-btn">
 										<span class="btn btn-default btn-file">
