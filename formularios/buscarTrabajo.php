@@ -9,7 +9,7 @@
 	<body>
 			<?php include_once('../header.php'); ?>
 			<div class="content">
-				<div class="center-block"><h1>Buscar empleo</h1></div>
+				<div><h1 style="background-color: #2F7802; padding: 1em 1em 1em 1em; color: #FFF;">Buscar empleo</h1></div>
 				<div id="works" class="clearfix grid">
 					<figure class="effect fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
 						<img alt="OCC Mundial" src="<?php echo ROOTPATH ?>/img/occ.png">
@@ -71,6 +71,8 @@
 						</figcaption>
 					</figure>
 				</div>
+				<?php include_once('../footer.php'); ?>
 			</div>
 		</body>
+
 	</html>

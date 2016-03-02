@@ -66,7 +66,7 @@
 			<section class="enviar" style="padding:3.5em 0em 0em 5em;">
 				<button class="btn btn-default" type="submit" >Enviar Respuestas</button>				
 			</section>
-
+			<?php include_once('../footer.php'); ?>
 
 		</div>
 	</body>

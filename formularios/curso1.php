@@ -66,7 +66,8 @@
 
 				</section>
 				
-			</article>		
+			</article>	
+			<?php include_once('../footer.php'); ?>	
 		</div>
 
 	</body>
