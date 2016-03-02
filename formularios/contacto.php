@@ -11,8 +11,7 @@
 			<div class="content">
 				<div class="center-block">
 					<h3 class="encabezado">Contacto</h3>
-					<h4 class="text-muted subencabezado">Ponte en contacto con nosotros, resolveremos tus dudas, tomaremos en cuenta tus opiniones,
-						y haremos una retrospectiva a tus comentarios para mejorar este sitio.</h4><br>
+					<h4 class="text-muted subencabezado">Ponte en contacto con nosotros, resolveremos tus dudas, tomaremos en cuenta tus opiniones,y haremos una retrospectiva a tus comentarios para mejorar este sitio.</h4><br>
 					
 					<form class="form-horizontal" role="form">
 						

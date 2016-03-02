@@ -161,6 +161,7 @@ box-shadow: 0px 23px 25px -30px rgba(0,0,0,0.68);
 .parrafo{
 	font-size: 2em;
 	font-family: Helvetica;
+	text-align: justify;
 }
 
 .marketing .row{
