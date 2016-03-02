@@ -31,7 +31,7 @@
 	        </a>
 	        <ul class="dropdown-menu">
 	          <li><a href="<?php echo ROOTPATH ?>/formularios/curso1.php">Árboles</a></li>
-	          <li><a href="#">Métodos de ordenamiento</a></li>
+	          <li><a href="<?php echo ROOTPATH ?>/formularios/curso2.php">Métodos de ordenamiento</a></li>
 	          <li><a href="#">Algoritmos de búsqueda</a></li>
 	          <li class="divider"></li>
 	          <li><a href="#"></a></li>
