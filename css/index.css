@@ -57,6 +57,9 @@ html, body {
 		div.text-center .parrafo{
 			font-size:  1.7em;
 		}
+		#inscribete span
+		{ display: none;
+		}
 		#inscribete{
 			background-color: white;
 			padding: 0;
