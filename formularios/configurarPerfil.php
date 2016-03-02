@@ -3,15 +3,17 @@
 			<title>TIES-OUT::Perfil</title>
 			<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
 			<?php include_once("../imports.php"); ?>
+			<link type="text/css" rel="stylesheet" href="../css/confPerfil.css">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 			<?php include_once('../header.php'); ?>
 			<!--Contenido de la página registro-->
 			<div class="content">
-				<h3>Configurar perfil</h3><br>
+				<br><br>
+				<h3 class="col-xs-offset-2">Configurar perfil</h3><br>
 				
-				<form class="form-horizontal" role="form">
+				<form class="form-horizontal col-xs-offset-1" role="form">
 					<div class="inline" style="clear:both;">
 						<div class="form-group col-xs-6">
 							<div class="form-group">
@@ -27,13 +29,29 @@
 								</div>	
 							</div>
 							<div class="form-group">
-								<label for="ocupacion" class="col-xs-4 control-label">Ocupación</label>
+								<label for="nacimiento" class="col-xs-4 control-label">Fecha de nacimiento </label>
+								<div class="col-xs-7">
+									<input id="nacimiento" name="nacimiento" class="form-control" type="text">
+								</div>	
+							</div>
+							<div class="form-group">
+								<label for="sexo" class="col-xs-4 control-label">Sexo </label>
+								<div class="col-xs-7">
+									<select id="sexo" name="sexo" class="form-control" type="text">
+										<option value="0">Seleccionar</option>
+										<option value="1">Femenino</option>
+										<option value="2">Masculino</option>
+									</select>
+								</div>	
+							</div>
+							<div class="form-group">
+								<label for="ocupacion" class="col-xs-4 control-label">Ocupación </label>
 								<div class="col-xs-7">
 									<input id="ocupacion" name="ocupacion" class="form-control" type="text">
 								</div>	
 							</div>
 							<div class="form-group">
-								<label for="descripcion" class="col-xs-4 control-label">Descripción</label>
+								<label for="descripcion" class="col-xs-4 control-label">Descripción </label>
 								<div class="col-xs-7">
 									<textarea  id="descripcion" class="form-control" type="text"></textarea>
 								</div>	
@@ -41,11 +59,18 @@
 						</div>
 						<div class="form-group col-xs-6">
 							<label for="foto" class="col-xs-4 control-label">Foto de perfil</label>
-							<div id="kv-avatar-errors" class="center-block" style="width:800px;display:none"></div>
-							
-							    <div class="kv-avatar center-block" style="width:200px">
-							        <input id="avatar" name="avatar" type="file" class="file-loading">
-							    </div>
+							<figure>
+								<img id="avatar" alt="Sin Foto" src="<?php echo ROOTPATH ?>/img/linkedin.png">
+								<figcaption class="col-xs-offset-3 col-xs-7 input-group">
+									<span class="input-group-btn">
+										<span class="btn btn-default btn-file">
+											Examinar...
+											<input id="foto" size="1" name="foto" type="file" onclick="imagen.click(); ruta.value=imagen.value">
+										</span>
+									</span>
+									<input type="text" name="imagen" readonly="readonly" class="form-control" >
+								</figcaption>
+							</figure>
 						</div>
 					</div>
 					<div class="form-group">
@@ -55,6 +80,7 @@
 					</div>
 					
 				</form>
+				<?php include_once('../footer.php'); ?>
 			</div>
 	</body>
 </html>

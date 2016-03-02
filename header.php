@@ -43,7 +43,7 @@
 	   
 	 	 <ul class="nav navbar-nav navbar-right login">
 	      <li id="registro"><a href="<?php echo ROOTPATH ?>/login/registro.php">Registrate</a></li>
-	      <li id="entrar"><a id="sesion" href="<?php echo ROOTPATH ?>/login/login.php" >Iniciar sesión</a></li>
+	      <li id="entrar"><a class="btn" id="sesion" href="<?php echo ROOTPATH ?>/login/login.php" >Iniciar sesión</a></li>
 	      <li id="infoUser">
 	           <a class="dropdown-toggle" data-toggle="dropdown" role="button">
                 <div class="img-circle profile-img"></div>
