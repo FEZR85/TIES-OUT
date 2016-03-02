@@ -4,14 +4,15 @@
 		<title>TIES-OUT::Examen</title>
 		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 	
 		<link rel="stylesheet" type="text/css" href="../css/repertorio.css">
+		<link rel="stylesheet" type="text/css" href="../css/encabezados.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<?php include_once("../imports.php"); ?>
 	</head>
 	<body>
 		<?php  include_once("../header.php"); ?>
 		<div class="content">
-			<section class="titulo" style="padding-top: 2em;">
-				<h2 class="text-center">Examen del curso "Árboles"</h2>
+			<section class="titulo">
+				<h2 class="text-center encabezado">Examen del curso "Árboles"</h2>
 			</section>
 			<section class="preguntas" style="padding-left: 5em; padding-right: 5em;">
 				<div class="row" style="padding:0.5em 0em 0em 3em;">

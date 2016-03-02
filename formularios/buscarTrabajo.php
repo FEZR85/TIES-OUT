@@ -4,12 +4,13 @@
 			<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
 			<link rel="stylesheet" type="text/css" href="../css/login.css">
 			<link rel="stylesheet" type="text/css" href="../css/buscaTrabajo.css">
+			<link rel="stylesheet" type="text/css" href="../css/encabezados.css">
 			<?php include_once("../imports.php"); ?>
 	</head>
 	<body>
 			<?php include_once('../header.php'); ?>
 			<div class="content">
-				<div><h1 style="background-color: #2F7802; padding: 1em 1em 1em 1em; color: #FFF;">Buscar empleo</h1></div>
+				<div><h1 class="encabezado">Buscar empleo</h1></div>
 				<div id="works" class="clearfix grid">
 					<figure class="effect fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
 						<img alt="OCC Mundial" src="<?php echo ROOTPATH ?>/img/occ.png">

@@ -4,14 +4,15 @@
 		<title>TIES-OUT::Examen</title>
 		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 	
 		<link rel="stylesheet" type="text/css" href="../css/repertorio.css">
+		<link rel="stylesheet" type="text/css" href="../css/encabezados.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<?php include_once("../imports.php"); ?>
 	</head>
 	<body>
 		<?php  include_once("../header.php"); ?>
 		<div class="content">
-			<section class="resultado" style="padding-top: 2em;">
-				<h3 class="text-center">Tu calificación es:</h3>
+			<section class="resultado" >
+				<h3 class="text-center encabezado">Tu calificación es:</h3>
 				<h1 class="text-center">78</h1>
 			</section>
 			<section id="recomendaciones" style="padding:2em 3em 0em; ">

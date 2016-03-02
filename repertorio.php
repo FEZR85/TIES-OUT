@@ -3,7 +3,7 @@
 	<head>
 			<title>TIES-OUT::Cursos Disponibles</title>
 			<link rel="shortcut icon" href="/img/logoTieOut.ico" type="image/x-icon" /> 
-			
+			<link rel="stylesheet" type="text/css" href="css/encabezados.css">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<?php include_once("imports.php"); ?>
 			<link rel="stylesheet" type="text/css" href="css/repertorio.css">
@@ -11,11 +11,7 @@
 <body>	
 			<?php  include_once("header.php"); ?>
 		<div class="content repertorio">
-			<div class="row ">
-				<div class="col-md-12">
-					<h2 class="text-center">Cursos disponibles online</h2>
-				</div>
-			</div>
+			<h2 class="text-center encabezado">Cursos disponibles online</h2>
 			<div class="row">
 				<div class="col-md-4" style="background-color: #957FD4; height: 15em;" >
 					<article>					
@@ -74,7 +70,7 @@
 					</article>
 				</div>
 			</div>
-			<?php include_once('../footer.php'); ?>
+			<?php include_once('footer.php'); ?>
 		</div>
 </body>
 </html>
