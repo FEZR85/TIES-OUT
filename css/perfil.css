@@ -1,0 +1,27 @@
+.infoPersonal, .cursosCompletados{
+	padding-left: 3em; 
+	padding-right: 3em; 
+}
+
+.foto{	
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.listaInfo{
+	border-top: 1px solid black;
+
+}
+
+.listaInfo span{
+	font-size: 18px;
+}
+
+#fotoperfil{
+	max-width: 100%;
+}
+
+.actions{
+	border-top: 1px solid black;
+	text-align: center;
+}
