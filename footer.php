@@ -1,3 +1,3 @@
-<footer style="height: 8em; background-color: #FFF;">
+<footer>
 	<p>© 2016 Ties-out</p>
 </footer>
