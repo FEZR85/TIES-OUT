@@ -15,6 +15,11 @@
 	background-color: #FCFCFC;
 	}
 	
+.divider{
+	color:#CCC;
+	border-color: #CCC;
+}	
+	
 .contentSesion h2{
 	background-color: #00482D;
 	text-align: left;

@@ -10,29 +10,17 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a class="esconder" href="#">TIES-OUT</a>
-                    <a class="mostrar" href="#"><img src="<?php echo ROOTPATH ?>/img/logoTieOut.png" width="10%" alt="" ></a>
+                    <a class="esconder" title="Inicio" href="<?php echo ROOTPATH ?>/panel.php">TIES-OUT</a>
+                    <a class="mostrar" href="<?php echo ROOTPATH ?>/panel.php"><img src="<?php echo ROOTPATH ?>/img/logoTieOut.png" width="10%" alt="" ></a>
                 </li>
-                <hr>
+                <li class="divider"></li>
                 <li>
-                    <a class="esconder" href="#">Configurar empleos</a>
-                    <a class="mostrar glyphicon glyphicon-cog" title="Configurar empleos" href="#" ></a>
-                </li>
-                <li>
-                    <a class="esconder" href="#">Editar cursos</a>
-                    <a class="mostrar glyphicon glyphicon-pencil" title="Editar cursos" href="#" ></a>
+                    <a class="esconder" href="<?php echo ROOTPATH ?>/listas/cursos.php">Cursos</a>
+                    <a class="mostrar glyphicon glyphicon-book" title="Cursos" href="<?php echo ROOTPATH ?>/listas/cursos.php" ></a>
                 </li>
                 <li>
-                    <a class="esconder" href="#">Agregar cursos</a>
-                    <a class="mostrar glyphicon glyphicon-plus" title="Agregar cursos" href="#" ></a>
-                </li>
-                <li>
-                    <a class="esconder" href="#">Eliminar cursos</a>
-                    <a class="mostrar glyphicon glyphicon-remove" title="Eliminar cursos" href="#" ></a>
-                </li>
-                <li>
-                    <a class="esconder" href="#">Usuarios</a>
-                    <a class="mostrar glyphicon glyphicon-user" title="Usuarios" href="#" ></a>
+                    <a class="esconder" href="<?php echo ROOTPATH ?>/listas/usuarios.php">Usuarios</a>
+                    <a class="mostrar glyphicon glyphicon-user" title="Usuarios" href="<?php echo ROOTPATH ?>/listas/usuarios.php" ></a>
                 </li>
                 <li>
                 	<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
@@ -42,7 +30,7 @@
         <!-- /#sidebar-wrapper -->
 
     </div>
-	<script src="js/jQuery/jquery.js"></script>
+	<script src="<?php echo ROOTPATH ?>/js/jQuery/jquery.js"></script>
     <script>
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
