@@ -23,7 +23,6 @@
 	       otro elemento que se pueda ocultar al minimizar la barra -->
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
 	    <ul class="nav navbar-nav">
-	      <li><a class="head" href="#">TIPS</a></li>
 	      <li><a class="head" href="<?php echo ROOTPATH ?>/formularios/buscarTrabajo.php">BUSCAR EMPLEO</a></li>
 	      <li class="dropdown">
 	        <a class="head" href="#" class="dropdown-toggle" data-toggle="dropdown">
