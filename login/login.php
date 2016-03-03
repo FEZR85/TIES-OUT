@@ -5,6 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="../css/login.css">
 		<link rel="stylesheet" type="text/css" href="../css/encabezados.css">
+		<link rel="stylesheet" type="text/css" href="../js/social/bootstrap-social.css">
+		<link rel="stylesheet" href="../js/social/assets/css/font-awesome.css">
 		<?php include_once("../imports.php"); ?>
 	</head>
 	<body>
@@ -34,6 +36,18 @@
 											<span><a class="btn-link" href="<?php echo ROOTPATH ?>/login/recuperar.php" >Haz clic aquí</a>
 											para cambiar tu contraseña</span>
 								</div>
+
+								<div class="form-group text-center">
+								<a class="btn btn-block btn-social btn-twitter">
+	    							<span class="fa fa-twitter">    									
+	    							</span> Inicia Sesión con Twitter
+  								</a>
+
+  								<a class="btn btn-block btn-social btn-facebook">
+	    							<span class="fa fa-facebook">    									
+	    							</span> Inicia Sesión con Facebook
+  								</a>
+							</div>
 							</form>
 						</div>
 					</div>

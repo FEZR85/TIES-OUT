@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>TIES-OUT::Árboles</title>
+		<title>TIES-OUT::Métodos de Ordenamiento</title>
 		<link rel="stylesheet" type="" href="../css/curso1.css">
 		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
 		<link rel="stylesheet" type="text/css" href="../css/encabezados.css">
@@ -19,17 +19,17 @@
 			
 			<ol id="temas">
 				<li>
-					<a href="#introduccion">
+					<a href="#introduccion" class="tema">
 						Introducción
 					</a>
 				</li>
 				<li>
-					<a href="#clasificacion">
+					<a href="#clasificacion"class="tema">
 						Clasificación
 					</a>
 				</li>
 				<li>
-					<a href="#estabilidad">
+					<a href="#estabilidad"class="tema">
 						Estabilidad
 					</a>
 				</li>
@@ -57,7 +57,12 @@
 					</p>
 
 				</section>
-				<a href="#clasificacion" class="siguiente text-center" >Siguiente</a>
+
+				<div class="siguiente text-center">
+					<a href="#clasificacion" class="glyphicon glyphicon-chevron-down" ></a>
+				</div>	
+
+
 				<section class="separador"></section>
 
 				<section id="clasificacion" class="contenido">
@@ -97,7 +102,9 @@
 
 					
 				</section>
-				<a href="#estabilidad" class="siguiente text-center" >Siguiente</a>
+				<div class="siguiente text-center">
+					<a href="#estabilidad" class="glyphicon glyphicon-chevron-down" ></a>
+				</div>	
 
 				<section id="estabilidad" class="contenido">
 					
@@ -116,10 +123,15 @@
 
 						Sed vel enim iaculis, tristique diam at, rutrum nisi. In tincidunt sapien eu diam convallis, in vestibulum nulla porta. Aliquam finibus nulla ac mattis tristique. Ut porttitor posuere luctus. Integer nec dignissim quam. Nunc posuere tincidunt auctor. Fusce in commodo nibh. Sed vel metus lacus. Quisque gravida nisl eros, sed auctor orci tincidunt non. Etiam in cursus enim. Nullam tristique eros at ligula cursus fringilla. Cras ornare semper lacinia.</br></br>
 
-						Pellentesque quis malesuada dui. Fusce pellentesque suscipit felis, sed fermentum magna sagittis nec. Maecenas diam mi, accumsan vel ullamcorper non, blandit id turpis. Etiam malesuada eu sem vitae mattis. Curabitur condimentum mollis eros, nec lacinia sem placerat et. Quisque interdum turpis in felis accumsan, eu ultricies leo elementum. Vivamus non mi enim. Sed gravida fringilla justo.</br></br>
+						Pellentesque quis malesuada dui. Fusce pellentesque suscipit felis, sed fermentum magna sagittis nec. Maecenas diam mi, accumsan vel ullamcorper non, blandit id turpis. Etiam malesuada eu sem vitae mattis. Curabitur condimentum mollis eros, nec lacinia sem placerat et. Quisque interdum turpis in felis accumsan, eu ultricies leo elementum. Vivamus non mi enim. Sed gravida fringilla justo.</br>
 					</p>
 				</section>
-				<a href="#introduccion" class="siguiente text-center" >Arriba</a>
+
+				<span class="siguiente text-center">
+					<a href="#introduccion" class="glyphicon glyphicon-chevron-up"></a>
+				</span>
+
+				
 			</div>
 			<?php include_once('../footerTips.php'); ?>	
 		</div>
