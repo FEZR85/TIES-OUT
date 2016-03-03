@@ -13,45 +13,33 @@
 			<div class="content">
 				<div class="center-block">
 					<h3 class="encabezado">Registro</h3><br>
-					
-					<form class="form-horizontal" role="form">
-					
-						<div class="form-group">
-							<label for="nombre" class="col-xs-2 control-label">Nombre </label>
-							<div class="col-xs-4">
-								<input id="nombre" class="form-control" type="text"placeholder="Juan López Ortega"  />	
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="correo" class="col-xs-2 control-label">Correo </label>
-							<div class="col-xs-4">
-								<input id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />			
-							</div>	
-						</div>
-						<div class="form-group">							
-							<label for="password" class="col-xs-2 control-label">Contraseña </label>
-							<div class="col-xs-4">
-								<input class="form-control" type="password" placeholder="contraseña" />		
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="Rptpassword" class="col-xs-2 control-label">Repetir contraseña </label>
-							<div class="col-xs-4">						
-								<input class="form-control" type="Rptpassword" placeholder="contraseña" />
-							</div>
-						</div>
+					<div class="row">
+						<form class="form-horizontal col-xs-offset-3 col-xs-6" role="form">
 						
-						
-						<div class="form-group">
-							<div class="col-xs-offset-2 col-xs-4">
-								<button id="registro" class="btn btn-primary" type="submit">Registrarse</button>
-								<span> | ¿Ya estás registrado?</span>
-								<a class="btn btn-link" href="<?php echo ROOTPATH ?>/login/login.php">Inicia Sesión</a>
-								
+							<div class="form-group">
+								<label for="nombre" >Nombre </label>								
+									<input id="nombre" class="form-control" type="text"placeholder="Juan López Ortega"  />	
 							</div>
-						</div>
-						
-					</form>
+							<div class="form-group">
+								<label for="correo" >Correo </label>
+									<input id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />			
+							</div>
+							<div class="form-group">							
+								<label for="password" >Contraseña </label>
+									<input class="form-control" type="password" placeholder="contraseña" />		
+							</div>
+							<div class="form-group">
+								<label for="Rptpassword" >Repetir contraseña </label>
+									<input class="form-control" type="Rptpassword" placeholder="contraseña" />
+							</div>														
+							<div class="form-group text-center">
+									<button id="registro" class="btn btn-primary" type="submit">Registrarse</button>
+									<span> | ¿Ya estás registrado?</span>
+									<a class="btn btn-link" href="<?php echo ROOTPATH ?>/login/login.php">Inicia Sesión</a>
+							</div>
+							
+						</form>
+					</div>
 				</div>
 				
 			</div>

@@ -13,32 +13,30 @@
 		<div class="content">
 			<div class="center-block">
 				<h3 class="encabezado">Iniciar Sesión</h3><br>
-				<form class="form-horizontal" role="form">
-					<div class="form-group">
-						<label for="correo" class="col-xs-2 control-label">Correo </label>
-						<div class="col-xs-4">
-							<input id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />			
-						</div>	
-					</div>
-					<div class="form-group">							
-						<label for="password" class="col-xs-2 control-label">Contraseña </label>
-						<div class="col-xs-4">
-							<input class="form-control" type="password" placeholder="contraseña" />		
+				<div class="row">
+						<div class="col-xs-offset-3 col-xs-6">
+							<form class="form-horizontal col-xs-12" role="form">
+								<div class="form-group">
+									<label for="correo" >Correo </label>
+										<input id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />
+								</div>
+								<div class="form-group">							
+									<label for="password" >Contraseña </label>
+										<input class="form-control" type="password" placeholder="contraseña" />	
+								</div>
+								
+								<div class="form-group text-center">									
+										<button id="login" class="btn btn-primary" type="submit">Iniciar sesión</button>
+										<span> | ¿No estás registrado?</span>
+										<a class="btn btn-link" href="<?php echo ROOTPATH ?>/login/registro.php">Registrate</a>
+										<br><br>
+											<h4>¿Olvidaste tu contraseña?</h4>
+											<span><a class="btn-link" href="<?php echo ROOTPATH ?>/login/recuperar.php" >Haz clic aquí</a>
+											para cambiar tu contraseña</span>
+								</div>
+							</form>
 						</div>
 					</div>
-					
-					<div class="form-group">
-						<div class="col-xs-offset-2 col-xs-4">
-							<button id="login" class="btn btn-primary" type="submit">Iniciar sesión</button>
-							<span> | ¿No estás registrado?</span>
-							<a class="btn btn-link" href="<?php echo ROOTPATH ?>/login/registro.php">Registrate</a>
-							<br><br>
-								<h4>¿Olvidaste tu contraseña?</h4>
-								<span><a class="btn-link" href="<?php echo ROOTPATH ?>/login/recuperar.php" >Haz clic aquí</a>
-								para cambiar tu contraseña</span>
-						</div>
-					</div>
-				</form>
 			</div>
 			
 		</div>

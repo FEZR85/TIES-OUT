@@ -11,8 +11,7 @@
 			<?php include_once('../header.php'); ?>
 			<!--Contenido de la página registro-->
 			<div class="content">
-				<br><br>
-				<h3 class="col-xs-offset-2 encabezado">Lista de calificaciones</h3>
+				<h3 class="encabezado">Lista de calificaciones</h3>
 				<div class="table-responsive center block" >
 					<table summary="" class="table table-striped" >
 						<caption>Nombre del curso: Introducción a C++</caption>

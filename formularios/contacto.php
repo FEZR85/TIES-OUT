@@ -12,34 +12,30 @@
 				<div class="center-block">
 					<h3 class="encabezado">Contacto</h3>
 					<h4 class="text-muted subencabezado">Ponte en contacto con nosotros, resolveremos tus dudas, tomaremos en cuenta tus opiniones,y haremos una retrospectiva a tus comentarios para mejorar este sitio.</h4><br>
-					
-					<form class="form-horizontal" role="form">
-						
-						<div class="form-group">
-							<label for="nombre" class="col-xs-2 control-label">Nombre:</label>
-							<div class="col-xs-4">
-								<input type="text" class="form-control" name="nombre" id="nombre" />
-							</div>
+					<div class="row">
+						<div class="col-xs-offset-3 col-xs-6">
+							<form class="form-horizontal col-xs-12" role="form" >			
+								<div class="form-group">
+									<label for="nombre" >Nombre:</label>
+									<input type="text" class="form-control" name="nombre" id="nombre" />
+								</div>
+								<div class="form-group">
+									<label for="correo" class=" control-label">Correo:</label>		
+									<input type="text" class="form-control" name="correo" id="correo" />
+								</div>
+								<div class="form-group">
+									<label for="mensaje" class=" control-label">Mensaje:</label>
+									<textarea class="form-control" name="mensaje" id="mensaje"></textarea>
+								</div>
+								
+								<div class="form-group">
+									<div class="">
+										<button id="login" class="btn btn-primary" type="submit">Enviar</button>
+									</div>
+								</div>
+							</form>
 						</div>
-						<div class="form-group">
-							<label for="correo" class="col-xs-2 control-label">Correo:</label>
-							<div class="col-xs-4">
-								<input type="text" class="form-control" name="correo" id="correo" />
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="mensaje" class="col-xs-2 control-label">Mensaje:</label>
-							<div class="col-xs-4">
-								<textarea class="form-control" name="mensaje" id="mensaje"></textarea>
-							</div>
-						</div>
-						
-						<div class="form-group">
-							<div class="col-xs-offset-2 col-xs-4">
-								<button id="login" class="btn btn-primary" type="submit">Enviar</button>
-							</div>
-						</div>
-					</form>
+					</div>
 				</div>
 				
 			</div>

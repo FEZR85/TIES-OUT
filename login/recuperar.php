@@ -13,22 +13,18 @@
 		<div class="content">
 			<div class="center-block">
 				<h3 class="encabezado">Cambiar contraseña</h3><br>
-				
-				<form class="form-horizontal" role="form">
-					<div class="form-group">
-						<label for="correo" class="col-xs-2 control-label">Correo </label>
-						<div class="col-xs-4">
-							<input id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />			
-						</div>	
-					</div>
-					
-					<div class="form-group">
-						<div class="col-xs-offset-2 col-xs-4">
-							<a id="login" class="btn btn-default" href="<?php echo ROOTPATH ?>/login/login.php">Iniciar sesión</a>
-							<button id="recuperar" class="btn btn-primary" type="submit">Enviar</button>
+				<div class="row">
+					<form class="form-horizontal col-xs-offset-3 col-xs-6" role="form">
+						<div class="form-group">
+							<label for="correo" >Correo </label>
+								<input id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />			
+						</div>						
+						<div class="form-group text-center">
+								<a id="login" class="btn btn-default" href="<?php echo ROOTPATH ?>/login/login.php">Iniciar sesión</a>
+								<button id="recuperar" class="btn btn-primary" type="submit">Enviar</button>
 						</div>
-					</div>
-				</form>
+					</form>
+				</div>
 			</div>
 			
 		</div>

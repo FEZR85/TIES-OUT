@@ -12,7 +12,7 @@
 <body>
 	<?php  include_once("header.php"); ?>
 	<div class="content misCursos">
-		<h2 class="text-center encabezado" >Mis Cursos</h2>
+		<h2 class="encabezado" >Mis Cursos</h2>
 		<section class="cursos"style="padding:0em 3em 0em;">
 			<table class="table table-bordered">
 				<thead>
