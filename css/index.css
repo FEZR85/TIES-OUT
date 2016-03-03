@@ -181,11 +181,18 @@ div.marketing, div.container{
 /*footer*/
 
 #footertips {
-	height: 4em; 
+	height: auto; 
 	bottom: 0;
-	background-color: #f0f0f0;
+	background-color: #319972;
 	padding: .5em 0em .5em 0em;
 	text-align: center;
+	font-size: 1.4em;
+	color: white;
+}
+
+#footertips b{
+	color: #6B2100;
+	font-size: 1.5em; 
 }
 
 #footer{
