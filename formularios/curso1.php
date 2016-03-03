@@ -67,14 +67,12 @@
 							Altura: la altura de un árbol se define como el nivel del nodo de mayor nivel. Como cada nodo de un árbol puede considerarse a su vez como la raíz de un árbol, también podemos hablar de altura de ramas.
 						</li><br />
 					</div>
-
 				</section>
 
 				<footer id="fuente">
 					<p>
-						fuente: Abril de 2002, Salvador Pozo Coronado, salvador@conclase.net <a href="http://www.c.conclase.net/edd/?cap=006">c.conclase.net</a>
+						Fuente: Abril de 2002, Salvador Pozo Coronado, salvador@conclase.net <a href="http://www.c.conclase.net/edd/?cap=006">c.conclase.net</a>
 					</p>
-
 				</footer>
 				
 			</article>
