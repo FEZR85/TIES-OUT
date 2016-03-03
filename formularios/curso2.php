@@ -10,6 +10,33 @@
 	<body>
 		<?php include_once('../header.php'); ?>
 
+
+		<aside id="inscribete">
+			<div style="display: none;">
+				<span>¿No est&aacute;s registrado en &eacute;ste curso?</span><br />
+				<a class="btn btn-warning btn-lg" href="<?php echo ROOTPATH ?>/login/registro.php">Reg&iacute;strate</a><br />
+			</div>
+			
+			<ol id="temas">
+				<li>
+					<a href="#introduccion">
+						Introducción
+					</a>
+				</li>
+				<li>
+					<a href="#clasificacion">
+						Clasificación
+					</a>
+				</li>
+				<li>
+					<a href="#estabilidad">
+						Estabilidad
+					</a>
+				</li>
+
+			</ol>
+		</aside>
+
 		<div class="content">
 			<div>
 				<section class = "encabezado">
@@ -18,8 +45,8 @@
 			</div>
 
 			<div>
-				<section class="contenido">
-					<h3>Introducción</h3><br/>
+				<section class="contenido" id="introduccion">
+					<h3 >Introducción</h3><br/>
 					
 					<p align="justify">
 						En computación y matematicas un algoritmo de ordenamiento es un algoritmo que pone elementos de una lista o un vector en una secuencia dada por una relación de orden, es decir, el resultado de salida ha de ser una permutación de la entrada que satisfaga la relación de orden dada. Las relaciones de orden más usadas son el orden numérico y el orden lexicográfico. Ordenamientos eficientes son importantes para optimizar el uso de otros algoritmos (como los de búsqueda y fusión) que requieren listas ordenadas para una ejecución rápida. También es útil para poner datos en forma canónica y para generar resultados legibles por humanos.
@@ -29,12 +56,11 @@
 						Los algoritmos de ordenamiento son comunes en las clases introductorias a la computación, donde la abundancia de algoritmos para el problema proporciona una gentil introducción a la variedad de conceptos núcleo de los algoritmos, como notación de O mayúscula, algoritmos divide y vencerás, estructuras de datos, análisis de los casos peor, mejor, y promedio, y límites inferiores.
 					</p></br>
 
-					<a href="#clasificacion">SIGUIENTE</a>
 				</section>
 
 				<section class="separador"></section>
 
-				<section id = "clasificacion" class="contenido">
+				<section id="clasificacion" class="contenido">
 					
 					<h3>Clasificación</h3></br>
 
@@ -69,10 +95,10 @@
 
 					</div>
 
-					<a href="#estabilidad">SIGUIENTE</a>
+					
 				</section>
 
-				<section id = "estabilidad" class="contenido">
+				<section id="estabilidad" class="contenido">
 					
 					<h3>Estabilidad</h3></br>
 
@@ -91,8 +117,6 @@
 
 						Pellentesque quis malesuada dui. Fusce pellentesque suscipit felis, sed fermentum magna sagittis nec. Maecenas diam mi, accumsan vel ullamcorper non, blandit id turpis. Etiam malesuada eu sem vitae mattis. Curabitur condimentum mollis eros, nec lacinia sem placerat et. Quisque interdum turpis in felis accumsan, eu ultricies leo elementum. Vivamus non mi enim. Sed gravida fringilla justo.</br></br>
 					</p>
-
-					<a href="#">ARRIBA</a>
 				</section>
 
 			</div>
