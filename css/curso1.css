@@ -44,7 +44,7 @@ h1 {
  
 #inscribete {
    right: 2em; 
-   padding:2em;
+   padding:1em;
    top: 5em;
    position: fixed;
    opacity: 0.9;
@@ -54,6 +54,8 @@ h1 {
    text-align: center;
    font-size: 1.4em;
    font-weight: bold;
+
+   resize: none;
 }
  
  
@@ -70,3 +72,7 @@ h1 {
  #lista {
       text-align: left;
  }
+
+#temas{
+   text-align: left;
+}
