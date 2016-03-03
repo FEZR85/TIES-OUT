@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Usuarios</title>
+		<title>Cursos</title>
 		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link type="text/css" rel="stylesheet" href="../css/index.css">
@@ -11,10 +11,10 @@
 		<?php include_once("../header.php"); ?>
 		<div class="container">
 		<div class="content">
-			<h3 class="encabezado">Lista de alumnos</h3>
+			<h3 class="encabezado">Lista de cursos</h3>
 			<div class="table-responsive center block" >
 				<table summary="" class="table table-hover table-striped" >
-					<caption>Usuarios registrados</caption>
+					<caption>Cursos registrados</caption>
 					<thead>
 						<tr>
 							<th class="botones" colspan="4">
@@ -24,9 +24,9 @@
 					
 						</tr>
 						<tr>
-							<th># de usuario</th>
+							<th># de curso</th>
 							<th>Nombre</th>
-							<th>Correo electrónico</th>
+							<th>Descripción</th>
 							<th colspan="2">Acciones</th>
 						</tr>
 					</thead>
