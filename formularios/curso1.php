@@ -70,12 +70,12 @@
 
 				</section>
 
-				<section id="fuente">
+				<footer id="fuente">
 					<p>
 						fuente: Abril de 2002, Salvador Pozo Coronado, salvador@conclase.net <a href="http://www.c.conclase.net/edd/?cap=006">c.conclase.net</a>
 					</p>
 
-				</section>
+				</footer>
 				
 			</article>
 
