@@ -54,10 +54,10 @@
 					<p  align="justify">
 						Desde los comienzos de la computación, el problema del ordenamiento ha atraído gran cantidad de investigación, tal vez debido a la complejidad de resolverlo eficientemente a pesar de su planteamiento simple y familiar. Por ejemplo, BubbleSort fue analizado desde 1956. Aunque muchos puedan considerarlo un problema resuelto, nuevos y útiles algoritmos de ordenamiento se siguen inventado hasta el día de hoy (por ejemplo, el ordenamiento de biblioteca se publicó por primera vez en el 2004).</br>
 						Los algoritmos de ordenamiento son comunes en las clases introductorias a la computación, donde la abundancia de algoritmos para el problema proporciona una gentil introducción a la variedad de conceptos núcleo de los algoritmos, como notación de O mayúscula, algoritmos divide y vencerás, estructuras de datos, análisis de los casos peor, mejor, y promedio, y límites inferiores.
-					</p></br>
+					</p>
 
 				</section>
-
+				<a href="#clasificacion" class="siguiente text-center" >Siguiente</a>
 				<section class="separador"></section>
 
 				<section id="clasificacion" class="contenido">
@@ -91,12 +91,13 @@
 						<ul>
 							<li align="justify">Complejidad computacional (peor caso, caso promedio y mejor caso) en términos de n, el tamaño de la lista o arreglo. Para esto se usa el concepto de orden de una función y se usa la notación O(n). El mejor comportamiento para ordenar (si no se aprovecha la estructura de las claves) es O(n log n). Los algoritmos más simples son cuadráticos, es decir O(n²). Los algoritmos que aprovechan la estructura de las claves de ordenamiento (p. ej. bucket sort) pueden ordenar en O(kn) donde k es el tamaño del espacio de claves. Como dicho tamaño es conocido a priori, se puede decir que estos algoritmos tienen un desempeño lineal, es decir O(n).</li>
 							<li align="justify">Uso de memoria y otros recursos computacionales. También se usa la notación O(n).</li>
-						</ul></br>
+						</ul>
 
 					</div>
 
 					
 				</section>
+				<a href="#estabilidad" class="siguiente text-center" >Siguiente</a>
 
 				<section id="estabilidad" class="contenido">
 					
@@ -118,7 +119,7 @@
 						Pellentesque quis malesuada dui. Fusce pellentesque suscipit felis, sed fermentum magna sagittis nec. Maecenas diam mi, accumsan vel ullamcorper non, blandit id turpis. Etiam malesuada eu sem vitae mattis. Curabitur condimentum mollis eros, nec lacinia sem placerat et. Quisque interdum turpis in felis accumsan, eu ultricies leo elementum. Vivamus non mi enim. Sed gravida fringilla justo.</br></br>
 					</p>
 				</section>
-
+				<a href="#introduccion" class="siguiente text-center" >Arriba</a>
 			</div>
 			<?php include_once('../footerTips.php'); ?>	
 		</div>

@@ -76,3 +76,19 @@ h1 {
 #temas{
    text-align: left;
 }
+
+.siguiente{
+   display: none;
+   font-size: 1.3em;
+}
+
+@media screen and (max-width:768px){
+   #inscribete{
+      display: none;
+   }   
+
+   .siguiente{
+      display: block;
+   }
+}
+
