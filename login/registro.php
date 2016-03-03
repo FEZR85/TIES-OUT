@@ -53,7 +53,8 @@
 						
 					</form>
 				</div>
-				<?php include_once('../footer.php'); ?>
+				
 			</div>
+			<?php include_once('../footer.php'); ?>
 	</body>
 </html>

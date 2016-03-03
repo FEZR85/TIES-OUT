@@ -224,8 +224,8 @@
 							</tbody>
 						</table>
 					</div>
-				</div>
-				<?php include_once('../footer.php');  ?>
+				</div>				
 			</div>
+			<?php include_once('../footer.php');  ?>
 	</body>
 </html>
