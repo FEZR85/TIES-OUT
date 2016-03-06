@@ -13,8 +13,7 @@
 					<h3 class="encabezado">Contacto</h3>
 					<h4 class="text-muted subencabezado">Ponte en contacto con nosotros, resolveremos tus dudas, tomaremos en cuenta tus opiniones,y haremos una retrospectiva a tus comentarios para mejorar este sitio.</h4><br>
 					<div class="row">
-						<div class="col-xs-offset-3 col-xs-6">
-							<form class="form-horizontal col-xs-12" role="form" >			
+							<form class="form-horizontal col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6" role="form" >			
 								<div class="form-group">
 									<label for="nombre" >Nombre:</label>
 									<input type="text" class="form-control" name="nombre" id="nombre" />
@@ -34,7 +33,6 @@
 									</div>
 								</div>
 							</form>
-						</div>
 					</div>
 				</div>
 				
