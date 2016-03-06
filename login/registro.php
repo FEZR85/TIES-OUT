@@ -17,7 +17,7 @@
 				<div class="center-block">
 					<h3 class="encabezado">Registro</h3><br>
 					<div class="row">
-						<form class="form-horizontal col-xs-offset-3 col-xs-6" role="form">
+						<form class="form-horizontal col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6" role="form">
 						
 							<div class="form-group">
 								<label for="nombre" >Nombre </label>								
