@@ -10,7 +10,7 @@ Plataforma de entrevistas para el área de sistemas computacionales.
 * [Descripción](#descripción-de-la-plataforma)
 * [Partes del Sistema](#partes-del-sistema)
 * [Colaboradores](#colaboradores)
-* [¿Cómo acceder al panel administrativo?](#¿Cómo-acceder-al-panel-administrativo?)
+* [¿Cómo acceder al panel administrativo?](#¿Cómo-acceder-al-panel-administrativo?
 
 ##Objetivo
 
