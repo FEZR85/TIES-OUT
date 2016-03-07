@@ -10,7 +10,7 @@ Plataforma de entrevistas para el área de sistemas computacionales.
 * [Descripción](#descripción-de-la-plataforma)
 * [Partes del Sistema](#partes-del-sistema)
 * [Colaboradores](#colaboradores)
-* [¿Cómo acceder al panel administrativo?](#¿Cómo-acceder-al-panel-administrativo?
+* [¿Cómo acceder al panel administrativo?](#cómo-acceder-al-panel-administrativo)
 
 ##Objetivo
 
@@ -57,7 +57,7 @@ Las distintas secciones del sistema son:
 * Noel Vela Larios
 * Daniel Alfonso Caballero Cruz
 
-##¿Cómo acceder al panel administrativo?
+##Cómo acceder al panel administrativo
 IMPORTANTE: actualmente el inicio de sesión y recuperar contraseña están deshabilitados, para poder ingresar al panel ve a [inicio del panel](http://panel.ties-out.com/panel.php)
 
 * Para ser administrador y tener registrado el correo será necesario enviar un correo a soporte@ties-out.com donde se te enviará una clave única para poder ingresar.
