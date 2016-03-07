@@ -23,7 +23,8 @@
                     <a class="mostrar glyphicon glyphicon-user" title="Usuarios" href="<?php echo ROOTPATH ?>/listas/usuarios.php" ></a>
                 </li>
                 <li>
-                	<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                	<a href="#menu-toggle" class="esconder btn btn-default" id="menu-toggle">Menú</a>
+                	<a href="#menu-toggle" class="mostrar glyphicon glyphicon-expand" id="menu2-toggle"></a>
                 </li>
             </ul>
         </div>
@@ -33,6 +34,10 @@
 	<script src="<?php echo ROOTPATH ?>/js/jQuery/jquery.js"></script>
     <script>
     $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    $("#menu2-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });

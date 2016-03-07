@@ -1,6 +1,6 @@
 <html>
 	<head>
-			<title>TIES-OUT::Registrarse</title>
+			<title>Registrarse</title>
 			<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
 			<?php include_once("../imports.php"); ?>
 			<meta name="viewport" content="width=device-width, initial-scale=1">

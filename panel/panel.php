@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<?php include_once("header.php"); ?>
-    	<div id="piechart" style="width: 900px; height: 500px; margin-left: 20em;"></div> 
+    	<div id="piechart" style="width: 900px; height: 500px; margin-left: 20em;"></div> <!-- aqui se manda llamar la grafica-->
 	
 	
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -18,12 +18,12 @@
 	      function drawChart() {
 	
 	        var data = google.visualization.arrayToDataTable([
-	          ['Task', 'Hours per Day'],
-	          ['Work',     11],
-	          ['Eat',      2],
-	          ['Commute',  2],
-	          ['Watch TV', 2],
-	          ['Sleep',    7]
+	          ['Curso', 'Inscritos'],
+	          ['Árboles',     11],
+	          ['Métodos de ordenamiento',      2],
+	          ['Sintaxis básica de PHP',  2],
+	          ['Algoritmos de búqueda', 2],
+	          ['Sintaxis básica de Java',    7]
 	        ]);
 	
 	        var options = {

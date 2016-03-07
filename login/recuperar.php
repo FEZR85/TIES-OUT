@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>TIES-OUT::Cambiar contraseña</title>
+		<title>Cambiar contraseña</title>
 		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="../css/login.css">

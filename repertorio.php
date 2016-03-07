@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-			<title>TIES-OUT::Cursos Disponibles</title>
+			<title>Cursos Disponibles</title>
 			<link rel="shortcut icon" href="/img/logoTieOut.ico" type="image/x-icon" /> 
 			<link rel="stylesheet" type="text/css" href="css/encabezados.css">
 			<meta name="viewport" content="width=device-width, initial-scale=1">

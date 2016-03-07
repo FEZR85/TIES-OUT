@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>TIES-OUT::Mis Cursos</title>
+		<title>Mis Cursos</title>
 		<link rel="shortcut icon" href="/img/logoTieOut.ico" type="image/x-icon" /> 	
 		<link rel="stylesheet" type="text/css" href="css/repertorio.css">
 		<link rel="stylesheet" type="text/css" href="css/encabezados.css">

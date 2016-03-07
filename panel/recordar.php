@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Iniciar sesión</title>
+		<title>Recordar contraseña</title>
 		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link type="text/css" rel="stylesheet" href="css/index.css">
