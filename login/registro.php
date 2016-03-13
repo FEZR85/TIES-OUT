@@ -11,52 +11,51 @@
 
 	</head>
 	<body>
-			<?php include_once('../header.php'); ?>
-			<!--Contenido de la página registro-->
-			<div class="content">
-				<div class="center-block">
-					<h3 class="encabezado">Registro</h3><br>
-					<div class="row">
-						<form class="form-horizontal col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6" role="form">
+		<?php include_once('../header.php'); ?>
+		<!--Contenido de la página registro-->
+		<div class="content">
+			<div class="center-block">
+				<h3 class="encabezado">Registro</h3><br>
+				<div class="row">
+					<form class="form-horizontal col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4" role="form">
+					
+						<div class="form-group">
+							<label for="nombre" >Nombre </label>								
+								<input id="nombre" class="form-control" type="text"placeholder="Juan López Ortega"  />	
+						</div>
+						<div class="form-group">
+							<label for="correo" >Correo </label>
+								<input id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />			
+						</div>
+						<div class="form-group">							
+							<label for="password" >Contraseña </label>
+								<input class="form-control" type="password" placeholder="contraseña" />		
+						</div>
+						<div class="form-group">
+							<label for="Rptpassword" >Repetir contraseña </label>
+								<input class="form-control" type="password" placeholder="contraseña" />
+						</div>														
+						<div class="form-group text-center">
+							<button id="registro" class="btn btn-primary" type="submit">Registrarse</button>
+							<span> | ¿Ya estás registrado?</span>
+							<a class="btn btn-link" href="<?php echo ROOTPATH ?>/login/login.php">Inicia Sesión</a>
+						</div>
 						
-							<div class="form-group">
-								<label for="nombre" >Nombre </label>								
-									<input id="nombre" class="form-control" type="text"placeholder="Juan López Ortega"  />	
-							</div>
-							<div class="form-group">
-								<label for="correo" >Correo </label>
-									<input id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />			
-							</div>
-							<div class="form-group">							
-								<label for="password" >Contraseña </label>
-									<input class="form-control" type="password" placeholder="contraseña" />		
-							</div>
-							<div class="form-group">
-								<label for="Rptpassword" >Repetir contraseña </label>
-									<input class="form-control" type="Rptpassword" placeholder="contraseña" />
-							</div>														
-							<div class="form-group text-center">
-									<button id="registro" class="btn btn-primary" type="submit">Registrarse</button>
-									<span> | ¿Ya estás registrado?</span>
-									<a class="btn btn-link" href="<?php echo ROOTPATH ?>/login/login.php">Inicia Sesión</a>
-							</div>
-							
-							<div class="form-group text-center">
-								<a class="btn btn-block btn-social btn-twitter">
-	    							<span class="fa fa-twitter">    									
-	    							</span> Registrate con Twitter
-  								</a>
+						<div class="form-group text-center">
+							<a class="btn btn-block btn-social btn-twitter">
+    							<span class="fa fa-twitter">  									
+    							</span> Registrate con Twitter  
+  							</a>
 
-  								<a class="btn btn-block btn-social btn-facebook">
-	    							<span class="fa fa-facebook">    									
-	    							</span> Registrate con Facebook
-  								</a>
-							</div>
-						</form>
-					</div>
+  							<a class="btn btn-block btn-social btn-facebook">
+    							<span class="fa fa-facebook">    									
+    							</span> Registrate con Facebook
+  							</a>
+						</div>
+					</form>
 				</div>
-				
 			</div>
-			<?php include_once('../footer.php'); ?>
+		</div>
+		<?php include_once('../footer.php'); ?>
 	</body>
 </html>

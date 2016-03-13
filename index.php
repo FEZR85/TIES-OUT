@@ -53,7 +53,7 @@
 				<div class="row">
 					<div class="col-xs-12 text-center center-block">
 						<img class="img-circle" width="180" height="180" alt="Logo TIES-OUT" src="img/logoTieOut.png">
-						<h1><b>¡Ya estás dentro!</b></h1>
+						<h2><b>¡Ya estás dentro!</b></h2>
 						<p class="parrafo">
 							Te damos la bienvenida a la plataforma de auto-aprendizajes para entrevistas en el área
 							de informática y computación. Ofrecemos una gran variedad de cursos para que ¡postules por el mejor puesto! En Ties-out
@@ -70,7 +70,7 @@
 			<div class="repertorio">
 				<div class="row ">
 					<div class="col-md-12">
-						<h1 class="text-center"><span class="glyphicon glyphicon-book"></span>  Los cursos más vistos</h1>
+						<h2 class="text-center"><span class="glyphicon glyphicon-book"></span>  Los cursos más vistos</h2>
 					</div>
 				</div>
 				<div class="row cursos">

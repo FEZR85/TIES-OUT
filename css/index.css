@@ -166,7 +166,7 @@ html, body {
     height: 30px;
 }
 
-#infoUser, #confPerfil, #salirS, #miscursos{
+#infoUser, #confPerfil, #salirS, #miscursos, #tsesion{
 	display: none;
 }
 
