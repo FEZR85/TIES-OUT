@@ -26,6 +26,10 @@
                 	<a href="#menu-toggle" class="esconder btn btn-default" id="menu-toggle">Ocultar menú</a>
                 	<a href="#menu-toggle" class="mostrar glyphicon glyphicon-expand" id="menu2-toggle" title="Mostrar menú"></a>
                 </li>
+                <li>
+                	<a href="<?php echo ROOTPATH ?>/index.php" class="esconder" id="salir">Cerrar sesión</a>
+                	<a href="<?php echo ROOTPATH ?>/index.php" class="mostrar glyphicon glyphicon-log-out" id="salir2" title="Cerrar sesión"></a>
+                </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
