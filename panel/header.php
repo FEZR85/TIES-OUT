@@ -11,7 +11,7 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a class="esconder" title="Inicio" href="<?php echo ROOTPATH ?>/panel.php">TIES-OUT</a>
-                    <a class="mostrar" href="<?php echo ROOTPATH ?>/panel.php"><img src="<?php echo ROOTPATH ?>/img/logoTieOut.png" width="10%" alt="" ></a>
+                    <a class="mostrar" href="<?php echo ROOTPATH ?>/panel.php" title="Inicio"><img src="<?php echo ROOTPATH ?>/img/logoTieOut.png" width="10%" alt="" ></a>
                 </li>
                 <li class="divider"></li>
                 <li>
@@ -23,8 +23,8 @@
                     <a class="mostrar glyphicon glyphicon-user" title="Usuarios" href="<?php echo ROOTPATH ?>/listas/usuarios.php" ></a>
                 </li>
                 <li>
-                	<a href="#menu-toggle" class="esconder btn btn-default" id="menu-toggle">Menú</a>
-                	<a href="#menu-toggle" class="mostrar glyphicon glyphicon-expand" id="menu2-toggle"></a>
+                	<a href="#menu-toggle" class="esconder btn btn-default" id="menu-toggle">Ocultar menú</a>
+                	<a href="#menu-toggle" class="mostrar glyphicon glyphicon-expand" id="menu2-toggle" title="Mostrar menú"></a>
                 </li>
             </ul>
         </div>

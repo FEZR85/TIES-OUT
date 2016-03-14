@@ -10,7 +10,6 @@
 	<body>
 		<?php include_once("../header.php"); ?>
 		<div class="container">
-		<div class="content">
 			<h3 class="encabezado">Lista de alumnos</h3>
 			<div class="table-responsive center block" >
 				<table summary="" class="table table-hover table-striped" >
@@ -147,7 +146,6 @@
 				  </li>
 				</ul>
 			</div>
-		</div>
 		</div>
 	</body>
 </html>

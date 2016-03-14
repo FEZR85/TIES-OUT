@@ -14,7 +14,7 @@
 			<div class="center-block">
 				<h3 class="encabezado">Cambiar contraseña</h3><br>
 				<div class="row">
-					<form class="form-horizontal col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6" role="form">
+					<form class="form-horizontal col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4" role="form">
 						<div class="form-group">
 							<label for="correo" >Correo </label>
 								<input id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />			

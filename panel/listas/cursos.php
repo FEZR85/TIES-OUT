@@ -10,7 +10,6 @@
 	<body>
 		<?php include_once("../header.php"); ?>
 		<div class="container">
-		<div class="content">
 			<h3 class="encabezado">Lista de cursos</h3>
 			<div class="table-responsive center block" >
 				<table summary="" class="table table-hover table-striped" >
@@ -24,7 +23,6 @@
 					
 						</tr>
 						<tr>
-							<th># de curso</th>
 							<th>Nombre</th>
 							<th>Descripción</th>
 							<th colspan="2">Acciones</th>
@@ -32,105 +30,90 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td>1</td>
 							<td>Francisco Arevalo Nuñez</td>
 							<td>franarn@gmail.com</td>
 							<td align="center"><a href="#avances" title="Ver avances" class="glyphicon glyphicon-eye-open"></a></td>
 							<td align="center"><a href="#calificaciones" title="Ver calificaciones" class="glyphicon glyphicon-ok"></a></td>
 						</tr>
 						<tr>
-							<td>2</td>
 							<td>Francisco Arevalo Nuñez</td>
 							<td>franarn@gmail.com</td>
 							<td align="center"><a href="#avances" title="Ver avances" class="glyphicon glyphicon-eye-open"></a></td>
 							<td align="center"><a href="#calificaciones" title="Ver calificaciones" class="glyphicon glyphicon-ok"></a></td>
 						</tr>
 						<tr>
-							<td>3</td>
 							<td>Francisco Arevalo Nuñez</td>
 							<td>franarn@gmail.com</td>
 							<td align="center"><a href="#avances" title="Ver avances" class="glyphicon glyphicon-eye-open"></a></td>
 							<td align="center"><a href="#calificaciones" title="Ver calificaciones" class="glyphicon glyphicon-ok"></a></td>
 						</tr>
 						<tr>
-							<td>4</td>
 							<td>Francisco Arevalo Nuñez</td>
 							<td>franarn@gmail.com</td>
 							<td align="center"><a href="#avances" title="Ver avances" class="glyphicon glyphicon-eye-open"></a></td>
 							<td align="center"><a href="#calificaciones" title="Ver calificaciones" class="glyphicon glyphicon-ok"></a></td>
 						</tr>
 						<tr>
-							<td>5</td>
 							<td>Francisco Arevalo Nuñez</td>
 							<td>franarn@gmail.com</td>
 							<td align="center"><a href="#avances" title="Ver avances" class="glyphicon glyphicon-eye-open"></a></td>
 							<td align="center"><a href="#calificaciones" title="Ver calificaciones" class="glyphicon glyphicon-ok"></a></td>
 						</tr>
 						<tr>
-							<td>6</td>
 							<td>Francisco Arevalo Nuñez</td>
 							<td>franarn@gmail.com</td>
 							<td align="center"><a href="#avances" title="Ver avances" class="glyphicon glyphicon-eye-open"></a></td>
 							<td align="center"><a href="#calificaciones" title="Ver calificaciones" class="glyphicon glyphicon-ok"></a></td>
 						</tr>
 						<tr>
-							<td>4</td>
 							<td>Francisco Arevalo Nuñez</td>
 							<td>franarn@gmail.com</td>
 							<td align="center"><a href="#avances" title="Ver avances" class="glyphicon glyphicon-eye-open"></a></td>
 							<td align="center"><a href="#calificaciones" title="Ver calificaciones" class="glyphicon glyphicon-ok"></a></td>
 						</tr>
 						<tr>
-							<td>5</td>
 							<td>Francisco Arevalo Nuñez</td>
 							<td>franarn@gmail.com</td>
 							<td align="center"><a href="#avances" title="Ver avances" class="glyphicon glyphicon-eye-open"></a></td>
 							<td align="center"><a href="#calificaciones" title="Ver calificaciones" class="glyphicon glyphicon-ok"></a></td>
 						</tr>
 						<tr>
-							<td>6</td>
 							<td>Francisco Arevalo Nuñez</td>
 							<td>franarn@gmail.com</td>
 							<td align="center"><a href="#avances" title="Ver avances" class="glyphicon glyphicon-eye-open"></a></td>
 							<td align="center"><a href="#calificaciones" title="Ver calificaciones" class="glyphicon glyphicon-ok"></a></td>
 						</tr>
 						<tr>
-							<td>4</td>
 							<td>Francisco Arevalo Nuñez</td>
 							<td>franarn@gmail.com</td>
 							<td align="center"><a href="#avances" title="Ver avances" class="glyphicon glyphicon-eye-open"></a></td>
 							<td align="center"><a href="#calificaciones" title="Ver calificaciones" class="glyphicon glyphicon-ok"></a></td>
 						</tr>
 						<tr>
-							<td>5</td>
 							<td>Francisco Arevalo Nuñez</td>
 							<td>franarn@gmail.com</td>
 							<td align="center"><a href="#avances" title="Ver avances" class="glyphicon glyphicon-eye-open"></a></td>
 							<td align="center"><a href="#calificaciones" title="Ver calificaciones" class="glyphicon glyphicon-ok"></a></td>
 						</tr>
 						<tr>
-							<td>6</td>
 							<td>Francisco Arevalo Nuñez</td>
 							<td>franarn@gmail.com</td>
 							<td align="center"><a href="#avances" title="Ver avances" class="glyphicon glyphicon-eye-open"></a></td>
 							<td align="center"><a href="#calificaciones" title="Ver calificaciones" class="glyphicon glyphicon-ok"></a></td>
 						</tr>
 						<tr>
-							<td>4</td>
 							<td>Francisco Arevalo Nuñez</td>
 							<td>franarn@gmail.com</td>
 							<td align="center"><a href="#avances" title="Ver avances" class="glyphicon glyphicon-eye-open"></a></td>
 							<td align="center"><a href="#calificaciones" title="Ver calificaciones" class="glyphicon glyphicon-ok"></a></td>
 						</tr>
 						<tr>
-							<td>5</td>
 							<td>Francisco Arevalo Nuñez</td>
 							<td>franarn@gmail.com</td>
 							<td align="center"><a href="#avances" title="Ver avances" class="glyphicon glyphicon-eye-open"></a></td>
 							<td align="center"><a href="#calificaciones" title="Ver calificaciones" class="glyphicon glyphicon-ok"></a></td>
 						</tr>
 						<tr>
-							<td>6</td>
 							<td>Francisco Arevalo Nuñez</td>
 							<td>franarn@gmail.com</td>
 							<td align="center"><a href="#avances" title="Ver avances" class="glyphicon glyphicon-eye-open"></a></td>
@@ -147,7 +130,6 @@
 				  </li>
 				</ul>
 			</div>
-		</div>
 		</div>
 	</body>
 </html>

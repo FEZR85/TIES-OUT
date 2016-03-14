@@ -8,32 +8,12 @@
 	</head>
 	<body>
 		<?php include_once("header.php"); ?>
-    	<div id="piechart" style="width: 900px; height: 500px; margin-left: 20em;"></div> <!-- aqui se manda llamar la grafica-->
-	
-	
+		
+		 <!-- aqui se manda llamar la grafica-->
+    	<div id="piechart"></div>
+    	<div id="chart_div"></div>
+    	
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	    <script type="text/javascript">
-	      google.charts.load('current', {'packages':['corechart']});
-	      google.charts.setOnLoadCallback(drawChart);
-	      function drawChart() {
-	
-	        var data = google.visualization.arrayToDataTable([
-	          ['Curso', 'Inscritos'],
-	          ['Árboles',     11],
-	          ['Métodos de ordenamiento',      2],
-	          ['Sintaxis básica de PHP',  2],
-	          ['Algoritmos de búqueda', 2],
-	          ['Sintaxis básica de Java',    7]
-	        ]);
-	
-	        var options = {
-	          title: 'Los cursos más populares'
-	        };
-	
-	        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-	
-	        chart.draw(data, options);
-	      }
-	    </script>
+	    <script type="text/javascript" src="<?php echo ROOTPATH ?>/js/graficas.js"></script>	
 	</body>
 </html>

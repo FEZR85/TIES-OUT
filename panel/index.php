@@ -8,36 +8,30 @@
 	</head>
 	<body>
 		<!--Contenido de la página de Login-->
-		<div class="contentSesion text-center">
+		<div class="contentSesion">
 			<h2><img src="img/logoTieOut.png" alt="Logo" width="35em" >  TIES-OUT</h2>
-			<h3 class="encabezado">Iniciar Sesión</h3><br>
-			<form class="form-horizontal" role="form">
-				<div class="form-group">
-					<label for="correo" class="col-xs-4 control-label">Correo </label>
-					<div class="col-xs-5">
-						<input id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />			
-					</div>	
-				</div>
-				<div class="form-group">							
-					<label for="password" class="col-xs-4 control-label">Contraseña </label>
-					<div class="col-xs-5">
-						<input class="form-control" type="password" placeholder="contraseña" />		
+			<h3 class="encabezado text-center">Iniciar Sesión</h3><br>
+			<div class="row">
+				<form class="form-horizontal col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-9 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6" role="form">
+					<div class="form-group">
+						<label for="correo">Correo </label>
+							<input id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />	
 					</div>
-				</div>
-				
-				<div class="form-group">
-					<div class="col-xs-10">
-						<button id="login" class="btn btn-primary" type="submit">Iniciar sesión</button>
+					<div class="form-group">							
+						<label for="password">Contraseña </label>
+							<input id="password" class="form-control" type="password" placeholder="contraseña" />		
 					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-xs-offset-1 col-xs-10">
-						<b>¿Olvidaste tu contraseña?</b>
-						<span><a class="btn-link" href="<?php echo ROOTPATH ?>/recordar.php" >Haz clic aquí</a>
-						para cambiar tu contraseña</span>
+					
+					<div class="form-group text-center">
+							<button id="login" class="btn btn-primary" type="submit">Iniciar sesión</button>
 					</div>
-				</div>
-			</form>
+					<div class="form-group text-center">
+							<b>¿Olvidaste tu contraseña?</b>
+							<span><a class="btn-link" href="<?php echo ROOTPATH ?>/recordar.php" >Haz clic aquí</a>
+							para cambiar tu contraseña</span>
+					</div>
+				</form>
+			</div>
 		</div>
 		<footer id="footer">
 		  	<div class="container text-center">
