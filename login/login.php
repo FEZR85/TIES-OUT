@@ -15,19 +15,21 @@
 		<div class="content">
 			<div class="center-block">
 				<h3 class="encabezado">Iniciar Sesión</h3><br>
-				<div class="row">
-					<form class="form-horizontal col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4" role="form">
+				<div id="contacto" class="row">
+					<form method="post" id="formlogin" name="formlogin" class="form-horizontal col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4" role="form" novalidate>
 						<div class="form-group">
 							<label for="correo" >Correo </label>
-								<input id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />
+							<input id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />
+							<span id="error" class="error">Correo inválido</span>
 						</div>
 						<div class="form-group">							
 							<label for="password" >Contraseña </label>
 								<input class="form-control" type="password" placeholder="contraseña" />	
 						</div>
-								
+						
+						<!-- botones y enlaces -->
 						<div class="form-group text-center">									
-							<button id="login" class="btn btn-primary" type="submit">Iniciar sesión</button>
+							<button id="login" name="login" onclick="valida()" class="btn btn-primary" type="submit">Iniciar sesión</button>
 							<span> | ¿No estás registrado?</span>
 							<a class="btn btn-link" href="<?php echo ROOTPATH ?>/login/registro.php">Registrate</a>
 							<br><br>
@@ -38,15 +40,15 @@
 						</div>
 
 						<div class="form-group text-center">
-							<a class="btn btn-block btn-social btn-twitter">
+							<button id="twitter" type="button" class="btn btn-block btn-social btn-twitter">
 	    						<span class="fa fa-twitter">    									
 	    						</span> Inicia Sesión con Twitter
-  							</a>
+  							</button>
 
-  							<a class="btn btn-block btn-social btn-facebook">
+  							<button id="facebook" type="button" class="btn btn-block btn-social btn-facebook">
 	    						<span class="fa fa-facebook">    									
 	    						</span> Inicia Sesión con Facebook
-  								</a>
+  							</button>
 						</div>
 					</form>
 				</div>
@@ -54,5 +56,7 @@
 			
 		</div>
 		<?php include_once('../footer.php'); ?>
+		<script type="text/javascript" src="<?php echo ROOTPATH ?>/js/sesion.js" ></script>
+</script>
 	</body>
 </html>

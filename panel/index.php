@@ -12,7 +12,7 @@
 			<h2><img src="img/logoTieOut.png" alt="Logo" width="35em" >  TIES-OUT</h2>
 			<h3 class="encabezado text-center">Iniciar Sesión</h3><br>
 			<div class="row">
-				<form class="form-horizontal col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-9 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6" role="form">
+				<form method="post" id="loginPanel" name="loginPanel" class="form-horizontal col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-9 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6" role="form" novalidate >
 					<div class="form-group">
 						<label for="correo">Correo </label>
 							<input id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />	

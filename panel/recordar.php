@@ -11,7 +11,7 @@
 		<div class="contentSesion text-center">
 			<h2><img src="img/logoTieOut.png" alt="Logo" width="35em" >  TIES-OUT</h2>
 			<h3 class="encabezado">Iniciar Sesión</h3><br>
-			<form class="form-horizontal" role="form">
+			<form method="post" id="recuperaPsw" name="recuperaPsw" class="form-horizontal" role="form" novalidate >
 				<div class="form-group">
 					<label for="correo" class="col-xs-4 control-label">Correo </label>
 					<div class="col-xs-5">

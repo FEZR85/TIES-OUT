@@ -13,7 +13,7 @@
 		<div class="content">
 			<h3 class=" encabezado">Configurar perfil</h3>
 			<div class="row">
-			<form class="form-horizontal col-xs-offset-1 col-xs-11 col-sm-offset-1 col-sm-11 col-md-offset-1 col-md-11 col-lg-offset-1 col-lg-11" role="form">
+			<form method="post" id="perfil" name="perfil" class="form-horizontal col-xs-offset-1 col-xs-11 col-sm-offset-1 col-sm-11 col-md-offset-1 col-md-11 col-lg-offset-1 col-lg-11" role="form" novalidate >
 
 				<div id="img" class="page-wrap form-group col-xs-10 col-sm-10 col-md-6 col-lg-6">
 					<label for="foto">Foto de perfil</label><br>

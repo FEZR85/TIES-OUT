@@ -2,3 +2,8 @@
 	padding-left: 30%;
 	border:1px solid black;
 }
+
+.error{
+	display: none;
+	color: red;
+}

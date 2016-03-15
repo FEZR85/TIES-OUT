@@ -13,7 +13,7 @@
 					<h3 class="encabezado">Contacto</h3>
 					<h4 class="text-muted subencabezado">Ponte en contacto con nosotros, resolveremos tus dudas, tomaremos en cuenta tus opiniones,y haremos una retrospectiva a tus comentarios para mejorar este sitio.</h4><br>
 					<div class="row">
-							<form class="form-horizontal col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6" role="form" >			
+							<form method="post" id="contacto" name="contacto" class="form-horizontal col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6" role="form" novalidate >			
 								<div class="form-group">
 									<label for="nombre" >Nombre:</label>
 									<input type="text" class="form-control" name="nombre" id="nombre" />
@@ -29,7 +29,7 @@
 								
 								<div class="form-group">
 									<div class="">
-										<button id="login" class="btn btn-primary" type="submit">Enviar</button>
+										<button id="contactar" class="btn btn-primary" type="submit">Enviar</button>
 									</div>
 								</div>
 							</form>
