@@ -1,9 +1,8 @@
 <html>
 	<head>
 		<title>Métodos de Ordenamiento</title>
-		<link rel="stylesheet" type="" href="../css/curso1.css">
+		<link rel="stylesheet" type="" href="../css/cursos.css">
 		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
-		<link rel="stylesheet" type="text/css" href="../css/encabezados.css">
 		<?php include_once("../imports.php"); ?>
 	</head>
 
@@ -12,7 +11,7 @@
 		<aside id="tablaContenido">
 			<ol id="temas">
 				<li>
-					<a href="<?php echo ROOTPATH ?>/formularios/curso2.php" class="tema">
+					<a href="<?php echo ROOTPATH ?>/cursos/curso2.php" class="tema">
 						Introducción
 					</a>
 				</li>
@@ -32,7 +31,7 @@
 					</ol>
 				</li>
 				<li>
-					<a href="<?php echo ROOTPATH ?>/formularios/curso2estabilidad.php"class="tema">
+					<a href="<?php echo ROOTPATH ?>/cursos/curso2estabilidad.php"class="tema">
 						Estabilidad
 					</a>
 				</li>
@@ -40,13 +39,9 @@
 		</aside>
 
 		<div class="content2">
-			<div>
 				<section class = "encabezado">
 					<h2>METODOS DE ORDENAMIENTO</h2><br />				
 				</section>
-			</div>
-
-			<div>
 				<div class="siguiente text-center">
 					<a href="#clasificacion" class="glyphicon glyphicon-chevron-down" ></a>
 				</div>	
@@ -100,8 +95,9 @@
 						<li align="justify">Uso de memoria y otros recursos computacionales. También se usa la notación O(n).</li>
 					</ul>
 				</section>
-				<a class="btn btn-default" href="<?php echo ROOTPATH ?>/formularios/curso2.php" ><< Anterior</a>
-				<a class="btn btn-default" href="<?php echo ROOTPATH ?>/formularios/curso2estabilidad.php" >Siguiente >> </a>
+			<div class="btnNavegaCurso">
+				<a class="btn btn-primary" href="<?php echo ROOTPATH ?>/cursos/curso2.php" >Anterior</a>
+				<a class="btn btn-primary" href="<?php echo ROOTPATH ?>/cursos/curso2estabilidad.php" >Siguiente</a>
 			</div>
 			<?php include_once('../footerTips.php'); ?>	
 		</div>

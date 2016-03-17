@@ -1,9 +1,8 @@
 <html>
 <head>
 		<title>Árboles</title>
-		<link rel="stylesheet" type="" href="../css/curso1.css">
+		<link rel="stylesheet" type="" href="../css/cursos.css">
 		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
-		<link rel="stylesheet" type="text/css" href="../css/encabezados.css">
 		<?php include_once("../imports.php"); ?>
 </head>
 <body>
@@ -11,7 +10,7 @@
 				
 		<aside id="inscribete">
 			<span>¿No est&aacute;s registrado en &eacute;ste curso?</span><br />
-			<a class="btn btn-warning btn-lg" href="<?php echo ROOTPATH ?>/login/registro.php">Reg&iacute;strate</a><br />
+			<a class="btn btn-warning btn-lg" href="<?php echo ROOTPATH ?>/sesion/registro.php">Reg&iacute;strate</a><br />
 		</aside>
 
 		<div class="content">		

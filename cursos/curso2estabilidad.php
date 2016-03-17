@@ -1,9 +1,8 @@
 <html>
 	<head>
 		<title>Métodos de Ordenamiento</title>
-		<link rel="stylesheet" type="" href="../css/curso1.css">
+		<link rel="stylesheet" type="" href="../css/cursos.css">
 		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
-		<link rel="stylesheet" type="text/css" href="../css/encabezados.css">
 		<?php include_once("../imports.php"); ?>
 	</head>
 
@@ -12,12 +11,12 @@
 		<aside id="tablaContenido">
 			<ol id="temas">
 				<li>
-					<a href="<?php echo ROOTPATH ?>/formularios/curso2.php" class="tema">
+					<a href="<?php echo ROOTPATH ?>/cursos/curso2.php" class="tema">
 						Introducción
 					</a>
 				</li>
 				<li>
-					<a href="<?php echo ROOTPATH ?>/formularios/curso2clasificacion.php"class="tema">
+					<a href="<?php echo ROOTPATH ?>/cursos/curso2clasificacion.php"class="tema">
 						Clasificación
 					</a>
 					<ol>
@@ -40,13 +39,10 @@
 		</aside>
 
 		<div class="content2">
-			<div>
 				<section class = "encabezado">
 					<h2>METODOS DE ORDENAMIENTO</h2><br />				
 				</section>
-			</div>
 
-			<div>
 				<div class="siguiente text-center">
 					<a href="#estabilidad" class="glyphicon glyphicon-chevron-down" ></a>
 				</div>
@@ -95,7 +91,8 @@
 						justo.
 					</p>
 				</section>
-				<a class="btn btn-default" href="<?php echo ROOTPATH ?>/formularios/curso2clasificacion.php" ><< Anterior</a>
+			<div class="btnNavegaCurso">
+				<a class="btn btn-primary" href="<?php echo ROOTPATH ?>/cursos/curso2clasificacion.php" >Anterior</a>
 			</div>
 			<?php include_once('../footerTips.php'); ?>	
 		</div>
