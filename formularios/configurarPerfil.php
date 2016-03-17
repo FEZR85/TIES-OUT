@@ -2,7 +2,6 @@
 	<head>
 			<title>Configurar Perfil</title>
 			<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
-			<link rel="stylesheet" type="text/css" href="../css/encabezados.css">
 			<?php include_once("../imports.php"); ?>
 			<link type="text/css" rel="stylesheet" href="../css/confPerfil.css">
 			<meta name="viewport" content="width=device-width, initial-scale=1">

@@ -15,6 +15,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="<?php echo ROOTPATH ?>/js/bootstrap/css/bootstrap.min.css">
-	<script src="<?php echo ROOTPATH ?>/js/bootstrap/js/bootstrap.min.js"></script>
-	<script>$('.carousel').carousel({interval: 3000 }) </script>
+<link rel="stylesheet" type="text/css" href="<?php echo ROOTPATH ?>/js/bootstrap/css/bootstrap.min.css">
+<script src="<?php echo ROOTPATH ?>/js/bootstrap/js/bootstrap.min.js"></script>
+<script>$('.carousel').carousel({interval: 3000 }) </script>
+<link rel="stylesheet" type="text/css" href="<?php echo ROOTPATH ?>/css/encabezados.css">

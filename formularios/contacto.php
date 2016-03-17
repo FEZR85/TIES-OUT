@@ -2,8 +2,7 @@
 	<head>
 			<title>Contacto</title>
 			<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
-			<link rel="stylesheet" type="text/css" href="../css/login.css">
-			<link rel="stylesheet" type="text/css" href="../css/encabezados.css">
+			<link rel="stylesheet" type="text/css" href="../css/sesion.css">
 			<?php include_once("../imports.php"); ?>
 	</head>
 	<body>

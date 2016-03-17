@@ -3,7 +3,6 @@
 		<title>Quiénes somos</title>
 		<link rel="stylesheet" type="" href="css/curso1.css">
 		<link rel="shortcut icon" href="img/logoTieOut.ico" type="image/x-icon" /> 
-		<link rel="stylesheet" type="text/css" href="css/encabezados.css">
 		<?php include_once("imports.php"); ?>
 	</head>
 	<body>

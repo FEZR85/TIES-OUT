@@ -3,11 +3,10 @@
 <head>
 	<title>Búsqueda</title>
 	<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
-	<link rel="stylesheet" type="text/css" href="../css/encabezados.css">
 	<?php include_once("../imports.php"); ?> 
-	<?php include_once("../header.php"); ?>
 </head>
 	<body>
+		<?php include_once("../header.php"); ?>
 		<div class="content">
 			<h3 class="encabezado">Resultados de búsqueda</h3>
 			<!--sección de resultados-->

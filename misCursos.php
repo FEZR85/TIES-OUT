@@ -4,7 +4,6 @@
 		<title>Mis Cursos</title>
 		<link rel="shortcut icon" href="/img/logoTieOut.ico" type="image/x-icon" /> 	
 		<link rel="stylesheet" type="text/css" href="css/repertorio.css">
-		<link rel="stylesheet" type="text/css" href="css/encabezados.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<?php include_once("imports.php"); ?>
 	
@@ -34,7 +33,7 @@
 					</tr>
 					<tr>
 						<th>2</th>
-						<td><a href="<?php echo ROOTPATH ?>/formularios/curso2.php" style="color:#000">Metodos de ordenamiento</a></td>
+						<td><a href="<?php echo ROOTPATH ?>/formularios/curso2.php" style="color:#000">Métodos de ordenamiento</a></td>
 						<td>25%</td>
 						<td>
 							<a href="#">B</a>
