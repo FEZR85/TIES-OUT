@@ -3,7 +3,8 @@
 	border:1px solid black;
 }
 
-.error{
+.clsError{
 	display: none;
 	color: red;
+	font-size: 1.2em;
 }

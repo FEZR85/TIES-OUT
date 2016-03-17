@@ -8,7 +8,7 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="btn navbar-toggle collapsed" id="inicia" href="<?php echo ROOTPATH ?>/login/login.php" >
+			<a class="btn navbar-toggle collapsed" id="inicia" href="<?php echo ROOTPATH ?>/sesion/sesion.php" >
 		    	<span class="glyphicon glyphicon-log-in"></span>
 			</a>
 			<a class="btn navbar-toggle collapsed" id="salirS" href="<?php echo ROOTPATH ?>/index.php" >
@@ -37,8 +37,8 @@
 	          CURSOS <b class="caret"></b>
 	        </a>
 	        <ul class="dropdown-menu">
-	          <li><a href="<?php echo ROOTPATH ?>/formularios/curso1.php">Árboles</a></li>
-	          <li><a href="<?php echo ROOTPATH ?>/formularios/curso2.php">Métodos de ordenamiento</a></li>
+	          <li><a href="<?php echo ROOTPATH ?>/cursos/curso1.php">Árboles</a></li>
+	          <li><a href="<?php echo ROOTPATH ?>/cursos/curso2.php">Métodos de ordenamiento</a></li>
 	          <li><a href="#">Algoritmos de búsqueda</a></li>
 	          <li class="divider"></li>
 	          <li><a href="#"></a></li>
@@ -49,10 +49,10 @@
 	    </ul>
 	   
 	 	 <ul class="nav navbar-nav navbar-right login">
-	      	<li id="registro"><a href="<?php echo ROOTPATH ?>/login/registro.php">Registrate</a></li>
+	      	<li id="registro"><a href="<?php echo ROOTPATH ?>/sesion/registro.php">Registrate</a></li>
 	      	<li id="entrar">
-	      		<a class="btn" id="sesion" href="<?php echo ROOTPATH ?>/login/login.php" >Iniciar sesión</a>
-	      		<a class="btn" id="inicia" href="<?php echo ROOTPATH ?>/login/login.php" >
+	      		<a class="btn" id="sesion" href="<?php echo ROOTPATH ?>/sesion/sesion.php" >Iniciar sesión</a>
+	      		<a class="btn" id="inicia" href="<?php echo ROOTPATH ?>/sesion/sesion.php" >
 	      			<span class="glyphicon glyphicon-log-in"></span>
 	      		</a>
 	      	</li>
