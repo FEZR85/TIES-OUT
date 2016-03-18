@@ -52,6 +52,9 @@ html, body {
 		nav.navbar{
 			position:absolute;
 		}
+		#footertips {
+			font-size: .8em; 
+		}
 	}
 @media screen and (min-width:801px) and (max-width:1000px){
 		.slide,#tiesOut,#sesion, #tsesion{
@@ -89,6 +92,9 @@ html, body {
 			width: 100%;
 			left: auto;
 			text-align: right;;
+		}
+		#footertips {
+			font-size: 1em;
 		}
 	}
 @media screen and (min-width:1001px) and (max-width:1238px){

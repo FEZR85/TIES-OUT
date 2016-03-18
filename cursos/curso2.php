@@ -8,39 +8,11 @@
 
 	<body>
 		<?php include_once('../header.php'); ?>
-		<aside id="tablaContenido">
-			<ol id="temas">
-				<li>
-					<a href="#introduccion" class="tema">
-						Introducción
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo ROOTPATH ?>/cursos/curso2clasificacion.php"class="tema">
-						Clasificación
-					</a>
-					<ol>
-						<li> Método burbuja
-						</li>
-						<li> Método shell
-						</li>
-						<li> Método por inserción
-						</li>
-						<li> Método de selección
-						</li>
-					</ol>
-				</li>
-				<li>
-					<a href="<?php echo ROOTPATH ?>/cursos/curso2estabilidad.php"class="tema">
-						Estabilidad
-					</a>
-				</li>
-			</ol>
-		</aside>
+		<?php include_once('menuCurso2.php'); ?>
 
 		<div class="content2">
 			<section class = "encabezado">
-				<h2>METODOS DE ORDENAMIENTO</h2><br />				
+				<h2>MÉTODOS DE ORDENAMIENTO</h2><br />				
 			</section>
 			<section class="contenido" id="introduccion">
 				<h3 >Introducción</h3>
@@ -62,7 +34,7 @@
 					inventado hasta el día de hoy (por ejemplo, el ordenamiento de biblioteca se publicó por primera 
 					vez en el 2004).
 				</p>
-				<p>
+				<p  align="justify">
 					Los algoritmos de ordenamiento son comunes en las clases introductorias a la computación, donde 
 					la abundancia de algoritmos para el problema proporciona una gentil introducción a la variedad 
 					de conceptos núcleo de los algoritmos, como notación de O mayúscula, algoritmos divide y vencerás, 

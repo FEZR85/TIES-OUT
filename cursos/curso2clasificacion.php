@@ -8,44 +8,12 @@
 
 	<body>
 		<?php include_once('../header.php'); ?>
-		<aside id="tablaContenido">
-			<ol id="temas">
-				<li>
-					<a href="<?php echo ROOTPATH ?>/cursos/curso2.php" class="tema">
-						Introducción
-					</a>
-				</li>
-				<li>
-					<a href="#clasificacion"class="tema">
-						Clasificación
-					</a>
-					<ol>
-						<li> Método burbuja
-						</li>
-						<li> Método shell
-						</li>
-						<li> Método por inserción
-						</li>
-						<li> Método de selección
-						</li>
-					</ol>
-				</li>
-				<li>
-					<a href="<?php echo ROOTPATH ?>/cursos/curso2estabilidad.php"class="tema">
-						Estabilidad
-					</a>
-				</li>
-			</ol>
-		</aside>
+		<?php include_once('menuCurso2.php'); ?>
 
 		<div class="content2">
 				<section class = "encabezado">
-					<h2>METODOS DE ORDENAMIENTO</h2><br />				
+					<h2>MÉTODOS DE ORDENAMIENTO</h2><br />				
 				</section>
-				<div class="siguiente text-center">
-					<a href="#clasificacion" class="glyphicon glyphicon-chevron-down" ></a>
-				</div>	
-
 				<section id="clasificacion" class="contenido">
 					<h3>Clasificación</h3>
 					<p align="justify">
@@ -76,7 +44,7 @@
 						se quiere que si una clave aBC estaba antes que AbC, en el resultado ambas claves aparezcan juntas 
 						y en el orden original: aBC, AbC.
 					</p>
-					<p>
+					<p  align="justify">
 						Cuando los elementos son indistinguibles (porque cada elemento se ordena por la clave completa) 
 						la estabilidad no interesa. Los algoritmos de ordenamiento que no son estables se pueden implementar 
 						para que sí lo sean. Una manera de hacer esto es modificar artificialmente la clave de ordenamiento 

@@ -119,23 +119,30 @@ h1 {
     color: #3b3b3b;
 }
 @media screen and (min-width: 320px) and (max-width: 1000px){
-      #inscribete{
-         margin: 0;
-         padding: 0;
-         top: em;
-         position: static;
-         background-color: #FFF;
-         display: none;
-      }
-      #inscribete span{
-         display: none;
-      }
+	#inscribete{
+		margin: 0;
+		padding: 0;
+		top: em;
+		position: static;
+		background-color: #FFF;
+	}
+	#inscribete span,#tema,#inscribete,#tablaContenido{
+		display: none;
+	}
+	.siguiente{
+		display: block;
+	}
+	.contenido h3, .encabezado h2{
+		font-size: 1.3em;
+	}
+	 .contenido p, .contenido ul{
+	 	font-size: .9em;
+	 }
+	 .content2 {
+		margin-bottom: 1em;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-      #tema{
-         display: none;
-      }
-
-      .siguiente{
-         display: block;
-      }
 }
