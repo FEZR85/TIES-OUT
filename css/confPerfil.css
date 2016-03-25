@@ -55,3 +55,16 @@ body.droppable .profile-avatar-wrap {
   width: 100%;
   display: block;
 }
+
+/*estilos de la pagina de Nosotros*/
+.nombre{
+	padding-left: 2em;
+	font-size: 2em;
+	color: #702100;
+	font-weight: bold;
+}
+.encabezado2{
+	padding-left: 1em;
+	color: #607891;
+	font-weight: bold;
+}

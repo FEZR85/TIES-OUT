@@ -1,12 +1,12 @@
 <html>
 	<head>
-			<title>Registrarse</title>
-			<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
-			<?php include_once("../imports.php"); ?>
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<link rel="stylesheet" type="text/css" href="../css/sesion.css">
-			<link rel="stylesheet" type="text/css" href="<?php echo ROOTPATH ?>/js/social/bootstrap-social.css">
-			<link rel="stylesheet" href="<?php echo ROOTPATH ?>/js/social/assets/css/font-awesome.css">
+		<title>Registrarse</title>
+		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
+		<?php include_once("../imports.php"); ?>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/sesion.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo ROOTPATH ?>/js/social/bootstrap-social.css">
+		<link rel="stylesheet" href="<?php echo ROOTPATH ?>/js/social/assets/css/font-awesome.css">
 	</head>
 	<body>
 		<?php include_once('../header.php'); ?>
@@ -45,16 +45,14 @@
 						<a class="btn btn-link" href="<?php echo ROOTPATH ?>/sesion/sesion.php"><b>Inicia Sesión</b></a>
 					</div>
 					
-					<div class="form-group col-xs-offset-1 col-xs-10  col-sm-offset-2 col-sm-8 col-md-offset-3 col-md- col-lg-offset-4 col-lg-4">
-						<a class="btn btn-block btn-social btn-twitter">
-							<span class="fa fa-twitter">  									
-							</span> Registrate con Twitter  
-	  					</a>
+					<div class="form-group col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4">
+						<button id="twitter" type="button" class="btn btn-block btn-social btn-twitter">
+							<span class="fa fa-twitter"></span> Registrate con Twitter
+	  					</button>
 	
-	  					<a class="btn btn-block btn-social btn-facebook">
-							<span class="fa fa-facebook">    									
-							</span> Registrate con Facebook
-	  					</a>
+	  					<button id="facebook" type="button" class="btn btn-block btn-social btn-facebook">
+							<span class="fa fa-facebook"></span> Registrate con Facebook
+	  					</button>
 					</div>
 				</div>
 			</div>

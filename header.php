@@ -45,7 +45,8 @@
 	        </ul>
 	      </li>
 	      <li><a class="head" href="<?php echo ROOTPATH ?>/formularios/contacto.php">CONTACTO</a></li>
-	      <li id="miscursos"><a class="head" href="#">MIS CURSOS</a></li>
+	      <li><a class="head" href="<?php echo ROOTPATH ?>/informacion.php">NOSOTROS</a></li>
+	      <li id="miscursos"><a class="head" href="<?php echo ROOTPATH ?>/cursos/misCursos.php">MIS CURSOS</a></li>
 	    </ul>
 	   
 	 	 <ul class="nav navbar-nav navbar-right login">
@@ -79,12 +80,12 @@
 	    <form class="navbar-form navbar-right" role="search">
 	      	<div class="input-group">
 	        	<input type="text" class="form-control" placeholder="e.j. Árboles binarios">
-				<span class="glyphicon glyphicon-search input-group-addon"></span>
+				<span class="input-group-btn">
+					<button type="submit" class="btn btn-default glyphicon glyphicon-search">
+					</button>
+				</span>
 	      	</div>
-	      <!--button type="submit" class="btn btn-default glyphicon glyphicon-search input-group-addon"></button-->
 	    </form>
-	 
-	    
 	  </div>
 	  </div>
 	</nav>

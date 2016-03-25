@@ -105,14 +105,14 @@
     text-align: left;
 }
 
-.siguiente{
-    font-size: 3em;
-    display: none;
+.navegar{
+    font-size: 1.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 1.5em;
 }
 
-.btnNavegaCurso{
-	margin-bottom: 2em;
-}
+
 
 h1 {
 	width: 95%;

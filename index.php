@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 		<title>TIES-OUT</title>
@@ -78,56 +79,56 @@
 						<article>					
 							<h3>Árboles</h3>
 							<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
-							<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
+							<a class="btn btn-default" href="cursos/curso1.php" role="button">Ver más...</a>
 						</article>
 					</div>
 					<div class="col-md-4 cafe">
 						<article>					
 							<h3>Árboles</h3>
 							<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
-							<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
+							<a class="btn btn-default" href="cursos/curso1.php" role="button">Ver más...</a>
 						</article>
 					</div>
 					<div class="col-md-4 azul" >
 						<article>					
 							<h3>Árboles</h3>
 							<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
-							<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
+							<a class="btn btn-default" href="cursos/curso1.php" role="button">Ver más...</a>
 						</article>
 					</div>
 					<div class="col-md-4 naranja" >
 						<article>					
 							<h3>Árboles</h3>
 							<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
-							<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
+							<a class="btn btn-default" href="cursos/curso1.php" role="button">Ver más...</a>
 						</article>
 					</div>
 					<div class="col-md-4 verde" >
 						<article>					
 							<h3>Árboles</h3>
 							<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
-							<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
+							<a class="btn btn-default" href="cursos/curso1.php" role="button">Ver más...</a>
 						</article>
 					</div>
 					<div class="col-md-4 cafe" >
 						<article>					
 							<h3>Árboles</h3>
 							<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
-							<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
+							<a class="btn btn-default" href="cursos/curso1.php" role="button">Ver más...</a>
 						</article>
 					</div>
 					<div class="col-md-4 azul" >
 						<article>					
 							<h3>Árboles</h3>
 							<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
-							<a class="btn btn-default" href="formularios/curso1.php" role="button">Ver más...</a>
+							<a class="btn btn-default" href="cursos/curso1.php" role="button">Ver más...</a>
 						</article>
 					</div>
 					<div class="col-md-4 naranja" >
 						<article>					
 							<h3>Árboles</h3>
 							<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
-							<a class="btn btn-default" href="formularios/curso2.php" role="button">Ver más...</a>
+							<a class="btn btn-default" href="cursos/curso2.php" role="button">Ver más...</a>
 						</article>
 					</div>
 				</div>

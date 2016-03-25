@@ -59,8 +59,19 @@
 						justo.
 					</p>
 				</section>
-			<div class="btnNavegaCurso">
-				<a class="btn btn-primary" href="<?php echo ROOTPATH ?>/cursos/curso2clasificacion.php" >Anterior</a>
+			<div class="row navegar">
+				<div class="col-lg-12">
+					<ul class="pager">
+						<li class="previous">
+							<a href="<?php echo ROOTPATH ?>/cursos/curso2clasificacion.php">
+								<i class="glyphicon glyphicon-arrow-left"></i>
+								Anterior
+							</a>
+						</li>
+						<li class="next">
+						</li>
+					</ul>
+				</div>
 			</div>
 			<?php include_once('../footerTips.php'); ?>	
 		</div>

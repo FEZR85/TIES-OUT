@@ -41,8 +41,20 @@
 					estructuras de datos, análisis de los casos peor, mejor, y promedio, y límites inferiores.
 				</p>
 			</section>
-			<div class="btnNavegaCurso">				
-				<a class="btn btn-primary" href="<?php echo ROOTPATH ?>/cursos/curso2clasificacion.php" >Siguiente</a>
+			
+			<div class="row navegar">
+				<div class="col-lg-12">
+					<ul class="pager">
+						<li class="previous">
+						</li>
+						<li class="next">
+							<a href="<?php echo ROOTPATH ?>/cursos/curso2clasificacion.php">
+								Siguiente
+								<i class="glyphicon glyphicon-arrow-right"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<?php include_once('../footerTips.php'); ?>	
 		</div>

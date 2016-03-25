@@ -13,4 +13,10 @@
 
 .subencabezado p{
 	font-size: 1.4em;
+	line-height: 1.4em;
+	padding-bottom: 1.4em;
+}
+
+.subencabezado p::first-letter{
+	padding-left: 1em;
 }

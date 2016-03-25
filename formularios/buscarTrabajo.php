@@ -8,7 +8,7 @@
 	<body>
 			<?php include_once('../header.php'); ?>
 			<div class="content">
-				<div><h1 class="encabezado">Buscar empleo</h1></div>
+				<div><h2 class="encabezado">Buscar empleo</h2></div>
 				<div id="works" class="clearfix grid">
 					<figure class="effect fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
 						<img alt="OCC Mundial" src="<?php echo ROOTPATH ?>/img/occ.png">
