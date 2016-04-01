@@ -8,13 +8,7 @@
        	patronAlfabetico = /^([a-zA-Z]+[\s]*)+$/, //Campos: Nombre, Ocupación
        	patronContrasena = /^([a-zA-Z0-9]{6,20})$/;//Campo: Contraseña
        	
-    
-    for (var i = 0; i < formIniciaSesion.length ; i++) {
-    	if(formIniciaSesion[i].tagName == "INPUT"){
-    		console.log(formIniciaSesion[i].id);
-    	}
-    	
-    }
+
 
     formIniciaSesion.addEventListener("submit", function(event){ //Cuando se intente enviar los datos
         event.preventDefault(); //Cancelo el envío
