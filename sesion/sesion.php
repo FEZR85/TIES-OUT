@@ -14,7 +14,7 @@
 		<div class="content">
 			<h3 class="encabezado">Iniciar Sesión</h3><br>
 			<div id="contacto" class="row">
-				<form id="iniciaSesion" name="iniciaSesion" 
+				<form id="formulario" name="iniciaSesion" 
 						class="form-horizontal col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4" 
 						role="form" novalidate>
 					<div class="form-group">

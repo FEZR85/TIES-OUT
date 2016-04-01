@@ -15,7 +15,7 @@
 			<div class="center-block">
 				<h3 class="encabezado">Registro</h3><br>
 				<div class="row">
-					<form id="registrar" name="registrar" class="form-horizontal col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4" role="form" novalidate>
+					<form id="formulario" name="registrar" class="form-horizontal col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4" role="form" novalidate>
 						<div class="form-group">
 							<label for="nombre" >Nombre </label>								
 							<input id="nombre" class="form-control" type="text" placeholder="Juan López Ortega"  />	
@@ -58,5 +58,6 @@
 			</div>
 		</div>
 		<?php include_once('../footer.php'); ?>
+		<script type="text/javascript" src="<?php echo ROOTPATH ?>/js/valida.js" ></script>
 	</body>
 </html>
