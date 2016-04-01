@@ -56,6 +56,5 @@
 		</div>
 		<?php include_once('../footer.php'); ?>
 		<script type="text/javascript" src="<?php echo ROOTPATH ?>/js/valida.js" ></script>
-</script>
 	</body>
 </html>

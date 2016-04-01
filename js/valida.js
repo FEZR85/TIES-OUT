@@ -1,7 +1,3 @@
-
-	var errorCorreo = $("#errorCorreo");
-	var errorContrasena = $("#errorContrasena");
-	
 /**************************************Inicio de sesion*****************************************/
     var formulario = document.querySelector("#formulario"), //Tomo al formulario
     	mensajesError = jQuery(".clsError");
