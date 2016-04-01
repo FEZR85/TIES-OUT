@@ -8,3 +8,7 @@
 	color: red;
 	font-size: 1.2em;
 }
+
+.campoError{
+	border-color: red;
+}
