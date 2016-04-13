@@ -1,7 +1,7 @@
 /**************************************Inicio de sesion*****************************************/
     var formulario = document.querySelector("#formulario"), //Tomo al formulario
     	mensajesError = jQuery(".clsError");
-   		patronCorreo = /^([a-z0-9A-Z]+[\.-]?)+@(([a-z0-9A-Z]+[-]?[a-z0-9A-Z]+)+[\.]?){1,4}(\.[a-zA-Z]{1,5})$/, //Expresión regular de validación del campo Correo
+   		patronCorreo = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i, //Expresión regular de validación del campo Correo
        	patronAlfabetico = /^([a-zA-Z]+[\s]*)+$/, //Campos: Nombre, Ocupación
        	patronContrasena = /^([a-zA-Z0-9]{6,20})$/;//Campo: Contraseña
 
