@@ -93,7 +93,6 @@
 	    width: 5em;
 	    height: 100%;
 	    margin-left: -5em;
-	    overflow-y: auto;
 	    background: #00482D;
 	}
 	#menu-toggle, #menu2-toggle{
@@ -140,12 +139,11 @@
 	    width: 13em;
 	    height: 100%;
 	    margin-left: -13em;
-	    overflow-y: auto;
 	    background: #00482D;
-	    -webkit-transition: all 0.5s ease;
-	    -moz-transition: all 0.5s ease;
-	    -o-transition: all 0.5s ease;
-	    transition: all 0.5s ease;
+	    -webkit-transition: all 0.1s ease;
+	    -moz-transition: all 0.1s ease;
+	    -o-transition: all 0.1s ease;
+	    transition: all 0.1s ease;
 	}
 
     #wrapper.toggled #sidebar-wrapper {

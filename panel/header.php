@@ -7,7 +7,7 @@
 	<div id="wrapper">
 
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
+        <aside id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a class="esconder" title="Inicio" href="<?php echo ROOTPATH ?>/panel.php">TIES-OUT</a>
@@ -31,7 +31,7 @@
                 	<a href="<?php echo ROOTPATH ?>/index.php" class="mostrar glyphicon glyphicon-log-out" id="salir2" title="Cerrar sesión"></a>
                 </li>
             </ul>
-        </div>
+        </aside>
         <!-- /#sidebar-wrapper -->
 
     </div>
