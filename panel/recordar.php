@@ -3,7 +3,8 @@
 		<title>Recordar contraseña</title>
 		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link type="text/css" rel="stylesheet" href="css/index.css">
+		<link type="text/css" rel="stylesheet" href="css/index.css">		
+		<link rel="stylesheet" type="text/css" href="css/sesion.css">
 		<?php include_once("imports.php"); ?>
 	</head>
 	<body>
@@ -11,11 +12,12 @@
 		<div class="contentSesion text-center">
 			<h2><img src="img/logoTieOut.png" alt="Logo" width="35em" >  TIES-OUT</h2>
 			<h3 class="encabezado">Iniciar Sesión</h3><br>
-			<form method="post" id="recuperaPsw" name="recuperaPsw" class="form-horizontal" role="form" novalidate >
+			<form method="post" id="formulario" name="recuperaPsw" class="form-horizontal" role="form" novalidate >
 				<div class="form-group">
 					<label for="correo" class="col-xs-4 control-label">Correo </label>
 					<div class="col-xs-5">
 						<input id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />			
+						<span id="errorCorreo" class="clsError"></span>
 					</div>	
 				</div>
 				
@@ -31,5 +33,6 @@
 		    	<p class="text-muted credit">TIES-OUT © 2016 | Contacto: contacto@ties-out.com</p>
 		  	</div>
 		</footer>
+		<script type="text/javascript" src="<?php echo ROOTPATH ?>/js/valida.js" ></script>
 	</body>
 </html>
