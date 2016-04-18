@@ -19,33 +19,33 @@
 						<div class="col-md-12 ">
 							<h4>¿Qué es un árbol de búsqueda?</h4>
 								
-							<input type="radio" name="respuesta1" id="Opcion1"></input>
-								<label for="Opcion1">Opción 1 </label><br>								
-							<input type="radio" name="respuesta1" id="Opcion2"></input>
-								<label for="Opcion2">Opción 2 </label><br>								
-							<input type="radio" name="respuesta1" id="Opcion3"></input>
-								<label for="Opcion3">Opción 3 </label><br>
+							<input type="radio" name="respuesta1" id="Opcion1a"></input>
+								<label for="Opcion1a">Opción 1 </label><br>								
+							<input type="radio" name="respuesta1" id="Opcion2a"></input>
+								<label for="Opcion2a">Opción 2 </label><br>								
+							<input type="radio" name="respuesta1" id="Opcion3a"></input>
+								<label for="Opcion3a">Opción 3 </label><br>
 						</div>
 					</article>
 					<article class="pregunta">
 						<div class="col-md-12 ">
 							<h4>¿Qué es un árbol de búsqueda?</h4>								
-							<input type="radio" name="respuesta2" id="Opcion1"></input>
-								<label for="Opcion1">Opción 1 </label><br>								
-							<input type="radio" name="respuesta2" id="Opcion2"></input>
-								<label for="Opcion2">Opción 2 </label><br>								
-							<input type="radio" name="respuesta2" id="Opcion3"></input>
-								<label for="Opcion3">Opción 3 </label><br>
+							<input type="radio" name="respuesta2" id="Opcion1b"></input>
+								<label for="Opcion1b">Opción 1 </label><br>								
+							<input type="radio" name="respuesta2" id="Opcion2b"></input>
+								<label for="Opcion2b">Opción 2 </label><br>								
+							<input type="radio" name="respuesta2" id="Opcion3b"></input>
+								<label for="Opcion3b">Opción 3 </label><br>
 						</div>
 					</article>
 					<article class="pregunta">
 						<div class="col-md-12 ">
 							<h4>¿Qué es un árbol de búsqueda?</h4>								
-							<input type="radio" name="respuesta3" id="Opcion1"></input>
+							<input type="radio" name="respuesta3c" id="Opcion1c"></input>
 								<label for="Opcion1">Opción 1 </label><br>								
-							<input type="radio" name="respuesta3" id="Opcion2"></input>
+							<input type="radio" name="respuesta3c" id="Opcion2c"></input>
 								<label for="Opcion2">Opción 2 </label><br>								
-							<input type="radio" name="respuesta3" id="Opcion3"></input>
+							<input type="radio" name="respuesta3c" id="Opcion3c"></input>
 								<label for="Opcion3">Opción 3 </label><br>
 						</div>
 					</article>
@@ -53,12 +53,12 @@
 						<div class="col-md-12 ">
 							<h4>¿Qué es un árbol de búsqueda?</h4>
 								
-							<input type="radio" name="respuesta4" id="Opcion1"></input>
-								<label for="Opcion1">Opción 1 </label><br>								
-							<input type="radio" name="respuesta4" id="Opcion2"></input>
-								<label for="Opcion2">Opción 2 </label><br>								
-							<input type="radio" name="respuesta4" id="Opcion3"></input>
-								<label for="Opcion3">Opción 3 </label><br>
+							<input type="radio" name="respuesta4" id="Opcion1d"></input>
+								<label for="Opcion1d">Opción 1 </label><br>								
+							<input type="radio" name="respuesta4" id="Opcion2d"></input>
+								<label for="Opcion2d">Opción 2 </label><br>								
+							<input type="radio" name="respuesta4" id="Opcion3d"></input>
+								<label for="Opcion3d">Opción 3 </label><br>
 						</div>
 					</article>
 				</div>				
