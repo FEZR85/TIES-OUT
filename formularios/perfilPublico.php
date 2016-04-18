@@ -33,22 +33,22 @@
 				<section class="cursosCompletados col-md-8">
 					<h2>Cursos terminados</h2>
 					<div class="row">
-						<a href="curso1.php">
+						<a href="../cursos/curso1.php">
 							<article class="col-md-12 naranja">
 								<h3>Árboles</h3>							
 							</article>
 						</a>
-						<a href="curso1.php">
+						<a href="../cursos/curso2.php">
 							<article class="col-md-12 verde">
 								<h3>Métodos de Ordenamiento</h3>							
 							</article>
 						</a>
-						<a href="curso1.php">
+						<a href="../cursos/curso1.php">
 							<article class="col-md-12 azul">
 								<h3>Árboles</h3>							
 							</article>
 						</a>
-						<a href="curso1.php">
+						<a href="../cursos/curso2.php">
 							<article class="col-md-12 naranja">
 								<h3>Métodos de Ordenamiento</h3>							
 							</article>
