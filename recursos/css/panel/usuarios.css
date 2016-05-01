@@ -1,0 +1,47 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	
+}
+
+div.container{
+	margin-left: 15em;
+	
+	}
+	
+.encabezado{
+	background-color: #FCFCFC;
+	color: gray;
+	font-size: 2em;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	padding-left: 2em;
+}
+
+caption{
+	font-size: 1.3em;	
+	
+	}
+
+.botones{
+	text-align: right;
+}
+
+@media screen and (max-width: 700px){
+	div.container{
+		margin-left: 5em;
+	}
+	.encabezado{
+		font-size: 1.5em;
+	}
+	
+	caption{
+		font-size: 1em;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	
+	div.table-responsive{
+		overflow-y: auto;
+	}
+}
