@@ -112,7 +112,7 @@
 				break;
 			default:
 				# code...
-				require('app/View/home.php');
+				require('app/Vistas/home.php');
 				break;
 		}
 
@@ -120,7 +120,7 @@
 			$controlador->muestra();
 		}
 	}else{
-		require('app/View/home.php');
+		require('app/Vistas/home.php');
 	}
 ?>
 

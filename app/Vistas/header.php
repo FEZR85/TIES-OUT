@@ -1,17 +1,11 @@
-<?php 
-    $base_dir  = __DIR__; // Absolute path to your installation, ex: /var/www/mywebsite
-    $doc_root  = preg_replace("!${_SERVER['SCRIPT_NAME']}$!", '', $_SERVER['SCRIPT_FILENAME']);
-    $base_url  = preg_replace("!^${doc_root}!", '', $base_dir); # ex: '' or '/mywebsite'
-    define('ROOTPATH', $base_url); 
-?>
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="btn navbar-toggle collapsed" id="inicia" href="<?php echo ROOTPATH ?>/sesion/sesion.php" >
+			<a class="btn navbar-toggle collapsed" id="inicia" href="<?php echo ROOTPATH ?>/sesion.php" >
 		    	<span class="glyphicon glyphicon-log-in"></span>
 			</a>
-			<a class="btn navbar-toggle collapsed" id="salirS" href="<?php echo ROOTPATH ?>/index.php" >
+			<a class="btn navbar-toggle collapsed" id="salirS" href="<?php echo ROOTPATH ?>/home.php" >
 	      		<span class="glyphicon glyphicon-log-out"></span>
 	      	</a>
 		    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -21,10 +15,10 @@
 		      <span class="icon-bar"></span>
 		      <span class="icon-bar"></span>
 		    </button>
-		    <a class="navbar-brand" href="<?php echo ROOTPATH ?>/index.php">
-		    	<img alt="Brand" src="<?php echo ROOTPATH ?>/img/logoTieOut.png">
+		    <a class="navbar-brand" href="<?php echo ROOTPATH ?>/home.php">
+		    	<img alt="Brand" src="<?php echo ROOTPATH ?>/../../recursos/img/logoTieOut.png">
 		    </a>
-		    <a id="tiesOut" class="navbar-brand" href="<?php echo ROOTPATH ?>/index.php">TIES-OUT</a>
+		    <a id="tiesOut" class="navbar-brand" href="<?php echo ROOTPATH ?>/home.php">TIES-OUT</a>
 	  	</div>
 	 
 	  <!-- Agrupar los enlaces de navegación, los formularios y cualquier
@@ -52,8 +46,8 @@
 	 	 <ul class="nav navbar-nav navbar-right login">
 	      	<li id="registro"><a href="<?php echo ROOTPATH ?>/sesion/registro.php">Registrate</a></li>
 	      	<li id="entrar">
-	      		<a class="btn" id="sesion" href="<?php echo ROOTPATH ?>/sesion/sesion.php" >Iniciar sesión</a>
-	      		<a class="btn" id="inicia" href="<?php echo ROOTPATH ?>/sesion/sesion.php" >
+	      		<a class="btn" id="sesion" href="<?php echo ROOTPATH ?>/sesion.php" >Iniciar sesión</a>
+	      		<a class="btn" id="inicia" href="<?php echo ROOTPATH ?>/sesion.php" >
 	      			<span class="glyphicon glyphicon-log-in"></span>
 	      		</a>
 	      	</li>
@@ -70,8 +64,8 @@
 	      		</a>
 	      	</li>
 	      	<li id="salir">
-	      		<a id="tsesion" href="<?php echo ROOTPATH ?>/index.php" >Salir</a>
-	      		<a id="salirS" href="<?php echo ROOTPATH ?>/index.php" >
+	      		<a id="tsesion" href="<?php echo ROOTPATH ?>/home.php" >Salir</a>
+	      		<a id="salirS" href="<?php echo ROOTPATH ?>/home.php" >
 	      			<span class="glyphicon glyphicon-log-out"></span>
 	      		</a>
 	      	</li>

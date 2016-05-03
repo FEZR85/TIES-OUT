@@ -1,10 +1,17 @@
+<?php 
+    $base_dir  = __DIR__; // Absolute path to your installation, ex: /var/www/mywebsite
+    $doc_root  = preg_replace("!${_SERVER['SCRIPT_NAME']}$!", '', $_SERVER['SCRIPT_FILENAME']);
+    $base_url  = preg_replace("!^${doc_root}!", '', $base_dir); # ex: '' or '/mywebsite'
+    define('ROOTPATH', $base_url); 
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 		<title>TIES-OUT</title>
 		<?php include_once("imports.php")?>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="css/repertorio.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo ROOTPATH?>/../../recursos/css/repertorio.css">
 </head>
 <body>
 		<?php  include_once("header.php"); ?>
