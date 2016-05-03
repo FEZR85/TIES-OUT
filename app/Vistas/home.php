@@ -60,7 +60,7 @@
 			<div class="container marketing">
 				<div class="row">
 					<div class="col-xs-12 text-center center-block">
-						<img id="logo" class="img-circle" width="180" height="180" alt="Logo TIES-OUT" src="img/logoTieOut.png">
+						<img id="logo" class="img-circle" width="180" height="180" alt="Logo TIES-OUT" src="<?php echo ROOTPATH ?>/../../recursos/img/logoTieOut.png">
 						<h2><b>¡Ya estás dentro!</b></h2>
 						<p class="parrafo">
 							Te damos la bienvenida a la plataforma de auto-aprendizajes para entrevistas en el área
