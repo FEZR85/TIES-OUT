@@ -1,15 +1,15 @@
 <html>
 	<head>
 		<title>Registrarse</title>
-		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
-		<?php include_once("../imports.php"); ?>
+		<link rel="shortcut icon" href="/../../recursos/img/logoTieOut.ico" type="image/x-icon" /> 
+		<?php include_once("imports.php"); ?>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="../css/sesion.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo ROOTPATH ?>/js/social/bootstrap-social.css">
-		<link rel="stylesheet" href="<?php echo ROOTPATH ?>/js/social/assets/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="/TIES-OUT/recursos/css/sesion.css">
+		<link rel="stylesheet" type="text/css" href="/TIES-OUT/recursos/js/social/bootstrap-social.css">
+		<link rel="stylesheet" href="/TIES-OUT/recursos/js/social/assets/css/font-awesome.css">
 	</head>
 	<body>
-		<?php include_once('../header.php'); ?>
+		<?php include_once('header.php'); ?>
 		<!--Contenido de la página registro-->
 		<div class="content">
 			<div class="center-block">
@@ -42,7 +42,7 @@
 					</form>
 					<div class="form-group col-xs-offset-1 col-xs-10  col-sm-offset-2 col-sm-8 col-md-offset-3 col-md- col-lg-offset-4 col-lg-4">
 						<span>¿Ya estás registrado?</span>
-						<a class="btn btn-link" href="<?php echo ROOTPATH ?>/sesion/sesion.php"><b>Inicia Sesión</b></a>
+						<a class="btn btn-link" href="sesion.php"><b>Inicia Sesión</b></a>
 					</div>
 					
 					<div class="form-group col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4">
@@ -57,7 +57,7 @@
 				</div>
 			</div>
 		</div>
-		<?php include_once('../footer.php'); ?>
-		<script type="text/javascript" src="<?php echo ROOTPATH ?>/js/valida.js" ></script>
+		<?php include_once('footer.php'); ?>
+		<script type="text/javascript" src="/TIES-OUT/recursos/js/valida.js" ></script>
 	</body>
 </html>

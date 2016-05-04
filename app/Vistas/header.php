@@ -44,7 +44,7 @@
 	    </ul>
 	   
 	 	 <ul class="nav navbar-nav navbar-right login">
-	      	<li id="registro"><a href="<?php echo ROOTPATH ?>/sesion/registro.php">Registrate</a></li>
+	      	<li id="registro"><a href="<?php echo ROOTPATH ?>/registro.php">Registrate</a></li>
 	      	<li id="entrar">
 	      		<a class="btn" id="sesion" href="<?php echo ROOTPATH ?>/sesion.php" >Iniciar sesión</a>
 	      		<a class="btn" id="inicia" href="<?php echo ROOTPATH ?>/sesion.php" >
