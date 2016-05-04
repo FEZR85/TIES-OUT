@@ -8,7 +8,7 @@
 		private $modelo;
 
 		function muestra(){
-			echo "Administrador.php";
+			//echo "Administrador.php";
 		}
 
 		public function ejecutar(){
