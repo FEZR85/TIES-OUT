@@ -34,7 +34,7 @@
 		}
 
 		if($bandera){
-			$controlador->muestra();
+			$controlador->ejecutar();
 		}
 	}else{
 		require('app/Vistas/home.php');
