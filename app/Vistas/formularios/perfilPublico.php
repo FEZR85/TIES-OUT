@@ -1,14 +1,14 @@
 <html>
 	<head>
-			<title>Perfil de Fulanito</title>
-			<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
+			<title>Perfil de Fulanito</title>			
+			<?php include_once("app/Vistas/imports.php"); ?>
+			<link rel="shortcut icon" href="<?php echo ROOTPATH ?>/img/logoTieOut.ico" type="image/x-icon" /> 
 			<link rel="stylesheet" type="text/css" href="../css/repertorio.css">
-			<?php include_once("../imports.php"); ?>
 			<link rel="stylesheet" type="text/css" href="../css/perfil.css">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
-			<?php include_once('../header.php'); ?>
+			<?php include_once('app/Vistas/header.php'); ?>
 			<!--Contenido de la página-->
 			<div class="content">
 				<h3 class=" encabezado">Perfil de Fulanito</h3>
