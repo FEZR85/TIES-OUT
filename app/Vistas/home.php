@@ -1,9 +1,3 @@
-<?php 
-    $base_dir  = __DIR__; // Absolute path to your installation, ex: /var/www/mywebsite
-    $doc_root  = preg_replace("!${_SERVER['SCRIPT_NAME']}$!", '', $_SERVER['SCRIPT_FILENAME']);
-    $base_url  = preg_replace("!^${doc_root}!", '', $base_dir); # ex: '' or '/mywebsite'
-    define('ROOTPATH', $base_url); 
-?>
 
 <!DOCTYPE html>
 <html>
