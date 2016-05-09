@@ -18,6 +18,9 @@
 				case 'mostrar':
 						$this->mostrarPerfil(1);					
 					break;				
+				case 'configura':
+						$this->configuraPerfil(1);
+					break;
 				default:
 					# code...
 					break;
@@ -31,6 +34,10 @@
 		public function mostrarPerfil($id){
 			/*Conecta al modelo correspondiente para consultar con el ID al usuario*/
 			require('app/Vistas/formularios/perfilPublico.php');
+		}
+
+		public function configuraPerfil($id){
+			require('app/Vistas/formularios/configurarPerfil.php');
 		}
 	}
 ?>
