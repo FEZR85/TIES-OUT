@@ -16,22 +16,8 @@
 			//$this->modelo = new UsuarioMdl();
 			switch ($_GET['act']) {
 				case 'mostrar':
-						$this->mostrarPerfil(1);
-					
-					break;
-				case 'ver':
-						echo "perfilPublico.php";
-					break;
-				case 'configurar':
-						echo "configurarPerfil.php";
-					break;
-				case 'recordar':
-						echo "recordar.php";
-					break;
-				case 'misCursos':
-						echo "misCursos.php";
-					break;
-				break;
+						$this->mostrarPerfil(1);					
+					break;				
 				default:
 					# code...
 					break;

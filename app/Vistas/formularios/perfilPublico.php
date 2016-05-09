@@ -3,8 +3,8 @@
 			<title>Perfil de Fulanito</title>			
 			<?php include_once("app/Vistas/imports.php"); ?>
 			<link rel="shortcut icon" href="<?php echo ROOTPATH ?>/img/logoTieOut.ico" type="image/x-icon" /> 
-			<link rel="stylesheet" type="text/css" href="../css/repertorio.css">
-			<link rel="stylesheet" type="text/css" href="../css/perfil.css">
+			<link rel="stylesheet" type="text/css" href="recursos/css/repertorio.css">
+			<link rel="stylesheet" type="text/css" href="recursos/css/perfil.css">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
@@ -15,7 +15,7 @@
 				<div class="row">
 				<section class="infoPersonal col-md-4" >
 						<figure class="foto">
-							<img id="fotoperfil" alt="Sin Foto" src="<?php echo ROOTPATH ?>/img/noimg.png">	
+							<img id="fotoperfil" alt="Sin Foto" src="recursos/img/noimg.png">	
 						</figure>
 						<br>
 						<ul class="listaInfo">
@@ -57,6 +57,6 @@
 				</section>
 				</div>						
 			</div>
-			<?php include_once('../footer.php'); ?>
+			<?php include_once('app/Vistas/footer.php'); ?>
 	</body>
 </html>
