@@ -8,7 +8,7 @@
 
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-<link rel="shortcut icon" href="/../../recursos/img/logoTieOut.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo ROOTPATH ?>/../../recursos/img/logoTieOut.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="<?php echo ROOTPATH ?>/../../recursos/css/index.css">
 <script type="text/javascript" src="<?php echo ROOTPATH ?>/../../recursos/js/jQuery/jquery-1.5.2.min.js"></script>
 <script>var $j = jQuery.noConflict(true);</script>

@@ -16,9 +16,9 @@
 		      <span class="icon-bar"></span>
 		    </button>
 		    <a class="navbar-brand" href="home.php">
-		    	<img alt="Brand" src="../../recursos/img/logoTieOut.png">
+		    	<img alt="Brand" src="<?php echo ROOTPATH ?>/../../recursos/img/logoTieOut.png">
 		    </a>
-		    <a id="tiesOut" class="navbar-brand" href="home.php">TIES-OUT</a>
+		    <a id="tiesOut" class="navbar-brand" href="<?php echo ROOTPATH ?>/home.php">TIES-OUT</a>
 	  	</div>
 	 
 	  <!-- Agrupar los enlaces de navegación, los formularios y cualquier
