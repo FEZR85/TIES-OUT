@@ -1,12 +1,12 @@
 <html>
 	<head>
 		<title>Registrarse</title>
-		<link rel="shortcut icon" href="/../../recursos/img/logoTieOut.ico" type="image/x-icon" /> 
+		<link rel="shortcut icon" href="../../recursos/img/logoTieOut.ico" type="image/x-icon" /> 
 		<?php include_once("imports.php"); ?>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="/TIES-OUT/recursos/css/sesion.css">
-		<link rel="stylesheet" type="text/css" href="/TIES-OUT/recursos/js/social/bootstrap-social.css">
-		<link rel="stylesheet" href="/TIES-OUT/recursos/js/social/assets/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="../../recursos/css/sesion.css">
+		<link rel="stylesheet" type="text/css" href="../../recursos/js/social/bootstrap-social.css">
+		<link rel="stylesheet" href="../../recursos/js/social/assets/css/font-awesome.css">
 	</head>
 	<body>
 		<?php include_once('header.php'); ?>
@@ -58,6 +58,6 @@
 			</div>
 		</div>
 		<?php include_once('footer.php'); ?>
-		<script type="text/javascript" src="/TIES-OUT/recursos/js/valida.js" ></script>
+		<script type="text/javascript" src="../../recursos/js/valida.js" ></script>
 	</body>
 </html>
