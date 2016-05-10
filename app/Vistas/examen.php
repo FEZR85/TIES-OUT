@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<title>Examen</title>
-		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 	
-		<link rel="stylesheet" type="text/css" href="../css/repertorio.css">
+		<link rel="shortcut icon" href="../../recursos/img/logoTieOut.ico" type="image/x-icon" /> 	
+		<link rel="stylesheet" type="text/css" href="../../recursos/css/repertorio.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<?php include_once("../imports.php"); ?>
+		<?php include_once("imports.php"); ?>
 	</head>
 	<body>
-		<?php  include_once("../header.php"); ?>
+		<?php  include_once("header.php"); ?>
 		<div class="content">
 			<section class="titulo">
 				<h2 class="text-center encabezado">Examen del curso "Árboles"</h2>
@@ -68,6 +68,6 @@
 			</section>			
 			<br>
 		</div>
-		<?php include_once('../footer.php'); ?>
+		<?php include_once('footer.php'); ?>
 	</body>
 </html>
