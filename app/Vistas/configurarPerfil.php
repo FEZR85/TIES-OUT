@@ -1,13 +1,13 @@
 <html>
 	<head>
 			<title>Configurar Perfil</title>
-			<?php include_once("app/Vistas/imports.php"); ?>
+			<?php include_once('imports.php'); ?>
 			<link rel="shortcut icon" href="recursos/img/logoTieOut.ico" type="image/x-icon" /> 			
 			<link type="text/css" rel="stylesheet" href="recursos/css/confPerfil.css">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
-		<?php include_once('app/Vistas/header.php'); ?>
+		<?php include_once('header.php'); ?>
 		<!--Contenido de la página registro-->
 		<div class="content">
 			<h3 class=" encabezado">Configurar perfil</h3>
@@ -72,7 +72,7 @@
 			</form>		
 			</div>
 		</div>
-		<?php include_once('app/Vistas/footer.php'); ?>
+		<?php include_once('footer.php'); ?>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="recursos/js/resample.js"></script>
 		<script src="recursos/js/avatar.js"></script>

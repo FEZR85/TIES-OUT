@@ -33,11 +33,11 @@
 		*/
 		public function mostrarPerfil($id){
 			/*Conecta al modelo correspondiente para consultar con el ID al usuario*/
-			require('app/Vistas/formularios/perfilPublico.php');
+			require('app/Vistas/perfilPublico.php');
 		}
 
 		public function configuraPerfil($id){
-			require('app/Vistas/formularios/configurarPerfil.php');
+			require('app/Vistas/configurarPerfil.php');
 		}
 	}
 ?>
