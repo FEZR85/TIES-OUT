@@ -40,14 +40,14 @@
 	      </li>
 	      <li><a class="head" href="contacto.php">CONTACTO</a></li>
 	      <li><a class="head" href="informacion.php">NOSOTROS</a></li>
-	      <li id="miscursos"><a class="head" href="misCursos.php">MIS CURSOS</a></li>
+	      <li id="miscursos"><a class="head" href="<?php echo ROOTPATH ?>/misCursos.php">MIS CURSOS</a></li>
 	    </ul>
 	   
 	 	 <ul class="nav navbar-nav navbar-right login">
-	      	<li id="registro"><a href="registro.php">Registrate</a></li>
+	      	<li id="registro"><a href="<?php echo ROOTPATH ?>/registro.php">Registrate</a></li>
 	      	<li id="entrar">
-	      		<a class="btn" id="sesion" href="sesion.php" >Iniciar sesión</a>
-	      		<a class="btn" id="inicia" href="sesion.php" >
+	      		<a class="btn" id="sesion" href="<?php echo ROOTPATH ?>/sesion.php" >Iniciar sesión</a>
+	      		<a class="btn" id="inicia" href="<?php echo ROOTPATH ?>/sesion.php" >
 	      			<span class="glyphicon glyphicon-log-in"></span>
 	      		</a>
 	      	</li>
