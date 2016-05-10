@@ -3,9 +3,10 @@
 <html>
 <head>
 		<title>TIES-OUT</title>
-		<?php include_once("imports.php")?>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="<?php echo ROOTPATH?>/../../recursos/css/repertorio.css">
+		<?php include_once("imports.php") ?>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="shortcut icon" href="../../recursos/img/logoTieOut.ico" type="image/x-icon" /> 
+		<link rel="stylesheet" type="text/css" href="../../recursos/css/repertorio.css"/>
 </head>
 <body>
 		<?php  include_once("header.php"); ?>
@@ -54,7 +55,7 @@
 			<div class="container marketing">
 				<div class="row">
 					<div class="col-xs-12 text-center center-block">
-						<img id="logo" class="img-circle" width="180" height="180" alt="Logo TIES-OUT" src="<?php echo ROOTPATH ?>/../../recursos/img/logoTieOut.png">
+						<img id="logo" class="img-circle" width="180" height="180" alt="Logo TIES-OUT" src="../../recursos/img/logoTieOut.png">
 						<h2><b>¡Ya estás dentro!</b></h2>
 						<p class="parrafo">
 							Te damos la bienvenida a la plataforma de auto-aprendizajes para entrevistas en el área

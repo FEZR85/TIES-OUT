@@ -1,13 +1,13 @@
 <html>
 	<head>
 		<title>Métodos de Ordenamiento</title>
-		<link rel="stylesheet" type="" href="../css/cursos.css">
-		<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
-		<?php include_once("../imports.php"); ?>
+		<link rel="stylesheet" type="" href="../../recursos/css/cursos.css">
+		<link rel="shortcut icon" href="../../recursos/img/logoTieOut.ico" type="image/x-icon" /> 
+		<?php include_once("imports.php"); ?>
 	</head>
 
 	<body>
-		<?php include_once('../header.php'); ?>
+		<?php include_once('header.php'); ?>
 		<?php include_once('menuCurso2.php'); ?>
 
 		<div class="content2">
@@ -63,7 +63,7 @@
 				<div class="col-lg-12">
 					<ul class="pager">
 						<li class="previous">
-							<a href="<?php echo ROOTPATH ?>/cursos/curso2clasificacion.php">
+							<a href="curso2clasificacion.php">
 								<i class="glyphicon glyphicon-arrow-left"></i>
 								Anterior
 							</a>
@@ -73,8 +73,8 @@
 					</ul>
 				</div>
 			</div>
-			<?php include_once('../footerTips.php'); ?>	
+			<?php include_once('footerTips.php'); ?>	
 		</div>
-		<?php include_once('../footer.php'); ?>
+		<?php include_once('footer.php'); ?>
 	</body>
 </html>
