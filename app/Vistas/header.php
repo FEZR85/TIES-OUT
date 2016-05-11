@@ -5,7 +5,7 @@
 			<a class="btn navbar-toggle collapsed" id="inicia" href="sesion.php" >
 		    	<span class="glyphicon glyphicon-log-in"></span>
 			</a>
-			<a class="btn navbar-toggle collapsed" id="salirS" href="home.php" >
+			<a class="btn navbar-toggle collapsed" id="salirS" href="<?php echo ROOTPATH ?>/index.php" >
 	      		<span class="glyphicon glyphicon-log-out"></span>
 	      	</a>
 		    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -15,17 +15,17 @@
 		      <span class="icon-bar"></span>
 		      <span class="icon-bar"></span>
 		    </button>
-		    <a class="navbar-brand" href="home.php">
-		    	<img alt="Brand" src="<?php echo ROOTPATH ?>/../../recursos/img/logoTieOut.png">
+		    <a class="navbar-brand" href="<?php echo ROOTPATH ?>/index.php">
+		    	<img alt="Brand" src="<?php echo ROOTPATH ?>/recursos/img/logoTieOut.png">
 		    </a>
-		    <a id="tiesOut" class="navbar-brand" href="<?php echo ROOTPATH ?>/home.php">TIES-OUT</a>
+		    <a id="tiesOut" class="navbar-brand" href="<?php echo ROOTPATH ?>/index.php">TIES-OUT</a>
 	  	</div>
 	 
 	  <!-- Agrupar los enlaces de navegación, los formularios y cualquier
 	       otro elemento que se pueda ocultar al minimizar la barra -->
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
 	    <ul class="nav navbar-nav">
-	      <li><a class="head" href="buscarTrabajo.php">BUSCAR EMPLEO</a></li>
+	      <li><a class="head" href="<?php echo ROOTPATH ?>/index.php?controlador=general&act=btrabajo">BUSCAR EMPLEO</a></li>
 	      <li class="dropdown">
 	        <a class="head" href="#" class="dropdown-toggle" data-toggle="dropdown">
 	          CURSOS <b class="caret"></b>
