@@ -1,17 +1,18 @@
 <html>
 	<head>
 			<title>Buscar empleo</title>
-			<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 
-			<link rel="stylesheet" type="text/css" href="../css/buscaTrabajo.css">
-			<?php include_once("../imports.php"); ?>
+			<?php include_once("imports.php"); ?>
+			<link rel="shortcut icon" href="<?php echo ROOTPATH ?>/recursos/img/logoTieOut.ico" type="image/x-icon" /> 
+			<link rel="stylesheet" type="text/css" href="<?php echo ROOTPATH ?>/recursos/css/buscaTrabajo.css">
+			
 	</head>
 	<body>
-			<?php include_once('../header.php'); ?>
+			<?php include_once('header.php'); ?>
 			<div class="content">
 				<div><h2 class="encabezado">Buscar empleo</h2></div>
 				<div id="works" class="clearfix grid">
 					<figure class="effect fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-						<img alt="OCC Mundial" src="<?php echo ROOTPATH ?>/img/occ.png">
+						<img alt="OCC Mundial" src="<?php echo ROOTPATH ?>/recursos/img/occ.png">
 						<figcaption>
 							<h2>OCC Mundial</h2>
 							<p>
@@ -23,7 +24,7 @@
 					</figure>
 					
 					<figure class="effect fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-						<img alt="CompuTrabajo" src="<?php echo ROOTPATH ?>/img/computrabajo.png">
+						<img alt="CompuTrabajo" src="<?php echo ROOTPATH ?>/recursos/img/computrabajo.png">
 						<figcaption>
 							<h2>CompuTrabajo</h2>
 							<p>
@@ -35,7 +36,7 @@
 					</figure>
 					
 					<figure class="effect fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-						<img alt="Bumeran" src="<?php echo ROOTPATH ?>/img/bumeran.png">
+						<img alt="Bumeran" src="<?php echo ROOTPATH ?>/recursos/img/bumeran.png">
 						<figcaption>
 							<h2>Bumeran</h2>
 							<p>
@@ -47,7 +48,7 @@
 					</figure>
 					
 					<figure class="effect fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-						<img alt="ZonaJobs" src="<?php echo ROOTPATH ?>/img/zonjobs.png">
+						<img alt="ZonaJobs" src="<?php echo ROOTPATH ?>/recursos/img/zonjobs.png">
 						<figcaption>
 							<h2>ZonaJobs</h2>
 							<p>
@@ -59,7 +60,7 @@
 					</figure>
 					
 					<figure class="effect fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-						<img alt="Indeed" src="<?php echo ROOTPATH ?>/img/indeed.jpeg">
+						<img alt="Indeed" src="<?php echo ROOTPATH ?>/recursos/img/indeed.jpeg">
 						<figcaption>
 							<h2>Indeed</h2>
 							<p>
@@ -71,7 +72,7 @@
 					</figure>
 				</div>				
 			</div>
-			<?php include_once('../footer.php'); ?>
+			<?php include_once('footer.php'); ?>
 		</body>
 
 	</html>
