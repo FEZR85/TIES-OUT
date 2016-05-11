@@ -11,24 +11,35 @@
 			echo "usuario.php";
 		}
 
+		/**
+		* Método que realiza una acción según el valor enviado en GET con la llave act
+		*
+		*/
 		public function ejecutar(){
-			//require_once("modelo/usuario.php");
-			//$this->modelo = new UsuarioMdl();
-			switch ($_GET['act']) {
-				case 'mostrar':
-						$this->mostrarPerfil(1);					
-					break;				
-				case 'configura':
-						$this->configuraPerfil(1);
-					break;
-				default:
-					# code...
-					break;
+
+			if(isset($_GET['act']) && isset($_GET['iduser'])){
+
+				$idUsuario = $_GET['iduser'];
+
+				switch ($_GET['act']) {
+					case 'mostrar':
+							$this->mostrarPerfil($idUsuario);					
+						break;				
+					case 'configura':
+							$this->configuraPerfil($idUsuario);
+						break;
+					default:
+							require('app/Vistas/404.php');
+						break;
+				}
+			}else{
+				require('app/Vistas/404.php');
 			}
 		}
 
 		/**
-		* mostrarPerfil
+		* Método que muestra el perfil público del usuario indicado.
+		* @param int $id ID correspondiente al usuario consultado
 		* 
 		*/
 		public function mostrarPerfil($id){
