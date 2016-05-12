@@ -39,7 +39,7 @@
 	        </ul>
 	      </li>
 	      <li><a class="head" href="<?php echo ROOTPATH ?>/index.php?controlador=general&act=contacto">CONTACTO</a></li>
-	      <li><a class="head" href="<?php echo ROOTPATH ?>/informacion.php">NOSOTROS</a></li>
+	      <li><a class="head" href="<?php echo ROOTPATH ?>/index.php?controlador=general&act=nosotros">NOSOTROS</a></li>
 	      <li id="miscursos"><a class="head" href="<?php echo ROOTPATH ?>/misCursos.php">MIS CURSOS</a></li>
 	    </ul>
 	   

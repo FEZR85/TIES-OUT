@@ -22,6 +22,9 @@
 					case 'contacto':
 							require('app/Vistas/contacto.php');
 						break;
+					case 'nosotros':
+							require('app/Vistas/informacion.php');
+						break;
 					default:
 						# code...
 						break;
