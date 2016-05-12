@@ -1,12 +1,12 @@
 		<aside id="tablaContenido">
 			<ol id="temas">
 				<li>
-					<a href="curso2.php" class="tema">
+					<a href="<?php echo ROOTPATH?>/app/Vistas/curso2.php" class="tema">
 						Introducción
 					</a>
 				</li>
 				<li>
-					<a href="curso2clasificacion.php"class="tema">
+					<a href="<?php echo ROOTPATH?>/app/Vistas/curso2clasificacion.php"class="tema">
 						Clasificación
 					</a>
 					<ol>
@@ -21,7 +21,7 @@
 					</ol>
 				</li>
 				<li>
-					<a href="curso2estabilidad.php"class="tema">
+					<a href="<?php echo ROOTPATH?>/app/Vistas/curso2estabilidad.php"class="tema">
 						Estabilidad
 					</a>
 				</li>

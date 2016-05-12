@@ -1,9 +1,9 @@
 <html>
 	<head>
 		<title>Métodos de Ordenamiento</title>
-		<link rel="stylesheet" type="" href="../../recursos/css/cursos.css">
-		<link rel="shortcut icon" href="../../recursos/img/logoTieOut.ico" type="image/x-icon" /> 
 		<?php include_once("imports.php"); ?>
+		<link rel="stylesheet" type="" href="<?php echo ROOTPATH ?>/recursos/css/cursos.css">
+		<link rel="shortcut icon" href="<?php echo ROOTPATH ?>/recursos/img/logoTieOut.ico" type="image/x-icon" /> 		
 	</head>
 
 	<body>

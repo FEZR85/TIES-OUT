@@ -31,8 +31,8 @@
 	          CURSOS <b class="caret"></b>
 	        </a>
 	        <ul class="dropdown-menu">
-	          <li><a href="curso1.php">Árboles</a></li>
-	          <li><a href="curso2.php">Métodos de ordenamiento</a></li>
+	          <li><a href="<?php echo ROOTPATH ?>/index.php?controlador=cursos&act=muestra&idcurso=1">Árboles</a></li>
+	          <li><a href="<?php echo ROOTPATH ?>/index.php?controlador=cursos&act=muestra&idcurso=2">Métodos de ordenamiento</a></li>
 	          <li><a href="#">Algoritmos de búsqueda</a></li>
 	          <li class="divider"></li>
 	          <li><a href="#"></a></li>
