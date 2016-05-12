@@ -1,12 +1,12 @@
 <html>
 	<head>
 			<title>Contacto</title>
-			<link rel="shortcut icon" href="../img/logoTieOut.ico" type="image/x-icon" /> 			
-			<?php include_once("../imports.php"); ?>
-			<link rel="stylesheet" type="text/css" href="../css/sesion.css">
+			<?php include_once("imports.php"); ?>
+			<link rel="shortcut icon" href="<?php echo ROOTPATH ?>/recursos/img/logoTieOut.ico" type="image/x-icon" /> 			
+			<link rel="stylesheet" type="text/css" href="<?php echo ROOTPATH ?>/recursos/css/sesion.css">
 	</head>
 	<body>
-		<?php include_once('../header.php'); ?>
+		<?php include_once('header.php'); ?>
 		<div class="content">
 			<h2 class="encabezado">Contacto</h2>
 			<h4 class="text-muted subencabezado">
@@ -40,7 +40,7 @@
 				</form>
 			</div>
 		</div>
-		<?php include_once('../footer.php'); ?>
-		<script type="text/javascript" src="<?php echo ROOTPATH ?>/js/valida.js" ></script>
+		<?php include_once('footer.php'); ?>
+		<script type="text/javascript" src="<?php echo ROOTPATH ?>/recursos/js/valida.js" ></script>
 	</body>
 </html>
