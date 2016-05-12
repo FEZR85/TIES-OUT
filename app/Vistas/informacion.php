@@ -1,8 +1,9 @@
 <html>
 	<head>
 		<title>Quiénes somos</title>
-		<link rel="stylesheet" type="text/css" href="css/confPerfil.css">
 		<?php include_once("imports.php"); ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo ROOTPATH ?>/recursos/css/confPerfil.css">
+		
 	</head>
 	<body>
 		<?php include_once('header.php'); ?>
@@ -35,7 +36,7 @@
 				<section id="img" class="page-wrap form-group col-xs-10 col-sm-10 col-md-offset-2 col-md-10 col-lg-offset-2 col-lg-10">
 					<figure class="profile">
 						<div class="profile-avatar-wrap col-xs-8 col-sm-8 col-md-2 col-lg-2">
-							<img class="img img-responsive img-circle" id="avatar" alt="noel" src="<?php echo ROOTPATH ?>/img/noel-min.jpeg">
+							<img class="img img-responsive img-circle" id="avatar" alt="noel" src="<?php echo ROOTPATH ?>/recursos/img/noel-min.jpeg">
 						</div>
 						<figcaption class="subencabezado col-xs-12 col-sm-12 col-md-9 col-lg-9">
 							<h4 class="nombre">Noel Vela</h4><hr>
@@ -48,7 +49,7 @@
 				<section id="img" class="page-wrap form-group col-xs-10 col-sm-10 col-md-offset-2 col-md-10 col-lg-offset-2 col-lg-10">
 					<figure class="profile">
 						<div class="profile-avatar-wrap col-xs-8 col-sm-8 col-md-2 col-lg-2">
-							<img class="img img-responsive img-circle" id="avatar" alt="alfonso" src="<?php echo ROOTPATH ?>/img/alfonso-min.jpeg">
+							<img class="img img-responsive img-circle" id="avatar" alt="alfonso" src="<?php echo ROOTPATH ?>/recursos/img/alfonso-min.jpeg">
 						</div>
 						<figcaption class="subencabezado col-xs-12 col-sm-12 col-md-9 col-lg-9">
 							<h4 class="nombre">Alfonso Caballero</h4><hr>
@@ -63,7 +64,7 @@
 				<section id="img" class="page-wrap form-group col-xs-10 col-sm-10 col-md-offset-2 col-md-10 col-lg-offset-2 col-lg-10">
 					<figure class="profile">
 						<div class="profile-avatar-wrap col-xs-8 col-sm-8 col-md-2 col-lg-2">
-							<img class="img img-responsive img-circle" id="avatar" alt="flor" src="<?php echo ROOTPATH ?>/img/flor-min_opt.jpg">
+							<img class="img img-responsive img-circle" id="avatar" alt="flor" src="<?php echo ROOTPATH ?>/recursos/img/flor-min_opt.jpg">
 						</div>
 						<figcaption class="subencabezado col-xs-12 col-sm-12 col-md-9 col-lg-9">
 							<h4 class="nombre">Flor Zárate</h4><hr>
