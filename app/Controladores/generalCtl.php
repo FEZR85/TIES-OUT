@@ -18,7 +18,10 @@
 				switch ($_GET['act']) {
 					case 'btrabajo':
 							require('app/Vistas/buscarTrabajo.php');						
-						break;					
+						break;	
+					case 'contacto':
+							require('app/Vistas/contacto.php');
+						break;
 					default:
 						# code...
 						break;
