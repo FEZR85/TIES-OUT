@@ -1,6 +1,6 @@
-<?php  
+<?php
 	$bandera = false;
-	if(isset($_GET['controlador'])){	
+	if(isset($_GET['controlador'])){
 		switch ($_GET['controlador']) {
 			case 'administrador':
 					require('app/Controladores/administradorCtl.php');
@@ -29,7 +29,9 @@
 				break;
 			default:
 				# code...
-				require('app/Vistas/home.php');
+					require_once('app/Vistas/header.html');
+					require_once('app/Vistas/home.html');
+					require_once('app/Vistas/footer.html');
 				break;
 		}
 
@@ -37,7 +39,8 @@
 			$controlador->ejecutar();
 		}
 	}else{
-		require('app/Vistas/home.php');
+		require_once('app/Vistas/header.html');
+		require_once('app/Vistas/home.html');
+		require_once('app/Vistas/footer.html');
 	}
 ?>
-
