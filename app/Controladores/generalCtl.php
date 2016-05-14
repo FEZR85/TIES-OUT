@@ -25,6 +25,9 @@
 					case 'nosotros':
 							$this->nosotros();
 						break;
+					case 'busqueda':
+							$this->busqueda();
+						break;
 					default:
 						# code...
 						break;
@@ -67,5 +70,15 @@
 			echo $vista;
 		}
 
+		function busqueda(){
+			$vista = file_get_contents("app/Vistas/busqueda.html");
+			$header = file_get_contents("app/Vistas/header.html");
+			$footer = file_get_contents("app/Vistas/footer.html");
+			$diccionario = array(
+				'{title}' => "Busqueda");
+			$vista = strtr($vista,$diccionario);
+			$vista = $header . $vista . $footer;
+			echo $vista;
+		}
 	}
 ?>
