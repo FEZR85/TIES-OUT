@@ -20,10 +20,10 @@
 							$this->btrabajo();
 						break;
 					case 'contacto':
-							require('app/Vistas/contacto.php');
+							$this->contacto();
 						break;
 					case 'nosotros':
-							require('app/Vistas/informacion.php');
+							$this->nosotros();
 						break;
 					default:
 						# code...
@@ -40,6 +40,28 @@
 			$footer = file_get_contents("app/Vistas/footer.html");
 			$diccionario = array(
 				'{title}' => "Buscar trabajo");
+			$vista = strtr($vista,$diccionario);
+			$vista = $header . $vista . $footer;
+			echo $vista;
+		}
+
+		function contacto(){
+			$vista = file_get_contents("app/Vistas/contacto.html");
+			$header = file_get_contents("app/Vistas/header.html");
+			$footer = file_get_contents("app/Vistas/footer.html");
+			$diccionario = array(
+				'{title}' => "Contacto");
+			$vista = strtr($vista,$diccionario);
+			$vista = $header . $vista . $footer;
+			echo $vista;
+		}
+
+		function nosotros(){
+			$vista = file_get_contents("app/Vistas/informacion.html");
+			$header = file_get_contents("app/Vistas/header.html");
+			$footer = file_get_contents("app/Vistas/footer.html");
+			$diccionario = array(
+				'{title}' => "Quiénes somos");
 			$vista = strtr($vista,$diccionario);
 			$vista = $header . $vista . $footer;
 			echo $vista;
