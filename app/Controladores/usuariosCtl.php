@@ -115,8 +115,10 @@
 		}
 
 		private function configuraPerfil($id){
+			$vista = file_get_contents('app/Vistas/configurarPerfil.html');
+
 			if($id >= 0){
-				require('app/Vistas/configurarPerfil.php');
+				echo $this->header . $vista . $this->footer;
 			}else{
 				require('404.html');
 			}
