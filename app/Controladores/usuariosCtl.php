@@ -81,25 +81,30 @@
 					'otro');
 
 				$listaUrl = array(
-					'app/Vistas/curso1.php');
+					'app/Vistas/curso1.php',
+					'app/Vistas/curso2.php');
 
-				$inicioFila = strrpos($vista,'<!--{inicioCurso}-->');
+				$inicioFila = strrpos($vista,'<!--{iniciaCurso}-->');
 				$finalFila = strrpos($vista,'<!--{terminaCurso}-->')+21;
 
 				$fila = substr($vista,$inicioFila,$finalFila-$inicioFila);
 				$filas = "";
 
+				$i = 0;
+
 				foreach ($listaTitulos as $row) {
 					$newFila = $fila;
 
 					$diccionarioFila = array(
-						'{urlCurso}'=>$listaUrl[0],
+						'{urlCurso}'=>$listaUrl[$i],
 						'{colorRandom}'=>'naranja',
-						'{Titulo}'=>$row[0]);
+						'{Titulo}'=>$row);
 
 					$newFila = strtr($newFila, $diccionarioFila);
 					$filas .= $newFila;
+					$i++;
 				}
+
 				$vista = str_replace($fila,$filas, $vista);
 				$vista = $this->header . $vista . $this->footer;
 
