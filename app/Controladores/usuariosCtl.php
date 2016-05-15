@@ -62,10 +62,10 @@
 		*/
 		private function mostrarPerfil($id){
 			/*Conecta al modelo correspondiente para consultar con el ID al usuario*/
-			//require('app/Vistas/perfilPublico.php');
+			//require('app/Vistas/perfilPublico.html');
 
 			if($id >= 0){
-				$vista = file_get_contents("app/Vistas/perfilPublico.php");
+				$vista = file_get_contents("app/Vistas/perfilPublico.html");
 				//$footer
 
 				$diccionarioUsuario = array(
