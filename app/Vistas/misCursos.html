@@ -2,13 +2,10 @@
 <html>
 	<head>
 		<title>Mis Cursos</title> 	
-		<link rel="stylesheet" type="text/css" href="../../recursos/css/repertorio.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<?php include_once("imports.php"); ?>
-	
+		<link rel="stylesheet" type="text/css" href="recursos/css/index.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">	
 	</head>
 <body>
-	<?php  include_once("header.php"); ?>
 	<div class="content misCursos">
 		<h2 class="encabezado" >Mis Cursos</h2>
 		<section class="cursos"style="padding:0em 3em 0em;">
@@ -22,7 +19,7 @@
 				<tbody>
 					<tr>
 						<th>1</th>
-						<td><a href="curso1.php" style="color:#000">Árboles</a></td>
+						<td><a href="index.php?controlador=cursos&act=mostrar&idcurso=1" style="color:#000">Árboles</a></td>
 						<td>65%</td>
 						<td>
 							<a href="#">A</a>
@@ -32,7 +29,7 @@
 					</tr>
 					<tr>
 						<th>2</th>
-						<td><a href="curso2.php" style="color:#000">Métodos de ordenamiento</a></td>
+						<td><a href="index.php?controlador=cursos&act=mostrar&idcurso=2" style="color:#000">Métodos de ordenamiento</a></td>
 						<td>25%</td>
 						<td>
 							<a href="#">B</a>
@@ -50,27 +47,25 @@
 					<article>					
 						<h3>Árboles</h3>
 						<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
-						<a class="btn btn-default" href="curso1.php" role="button">Ver más...</a>
+						<a class="btn btn-default" href="index.php?controlador=cursos&act=mostrar&idcurso=1" role="button">Ver más...</a>
 					</article>
 				</div>
 				<div class="col-md-4 cafe" style=" height: 15em; padding-left: 2em;" >
 					<article>					
 						<h3>Árboles</h3>
 						<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
-						<a class="btn btn-default" href="curso1.php" role="button">Ver más...</a>
+						<a class="btn btn-default" href="index.php?controlador=cursos&act=mostrar&idcurso=1" role="button">Ver más...</a>
 					</article>
 				</div>
 				<div class="col-md-4 naranja" style="height: 15em; padding-left: 2em;" >
 					<article>					
 						<h3>Árboles</h3>
 						<p>Un árbol es una estructura no lineal en la que cada nodo puede apuntar a uno o varios nodos. También se suele dar una definición...</p>
-						<a class="btn btn-default" href="curso1.php" role="button">Ver más...</a>
+						<a class="btn btn-default" href="index.php?controlador=cursos&act=mostrar&idcurso=1" role="button">Ver más...</a>
 					</article>
 				</div>
 			</div>
-		</section>
-		
+		</section>		
 	</div>
-	<?php include_once('footer.php'); ?>
 </body>
 </html>
