@@ -1,16 +1,13 @@
 <html>
 <head>
 		<title>Árboles</title>
-		<?php include_once("imports.php"); ?>
-		<link rel="stylesheet" type="" href="<?php echo ROOTPATH ?>/recursos/css/cursos.css">
-		<link rel="shortcut icon" href="<?php echo ROOTPATH ?>/recursos/img/logoTieOut.ico" type="image/x-icon" /> 
+		<link rel="stylesheet" type="" href="recursos/css/index.css">
+		<link rel="shortcut icon" href="recursos/img/logoTieOut.ico" type="image/x-icon" /> 
 </head>
-<body>
-		<?php include_once('header.php'); ?>
-				
+<body>				
 		<aside id="inscribete">
-			<span>¿No est&aacute;s registrado en &eacute;ste curso?</span><br />
-			<a class="btn btn-warning btn-lg" href="registro.php">Reg&iacute;strate</a><br />
+			<span>¿No estás registrado en éste curso?</span><br />
+			<a class="btn btn-warning btn-lg" href="index.php?controlador=usuarios&act=registro">Registrate</a><br />
 		</aside>
 
 		<div class="content">		
@@ -75,9 +72,7 @@
 				</footer>
 				
 			</article>
-
-			<?php include_once('footerTips.php'); ?>	
+			<!--{footerTip}-->			
 		</div>
-		<?php include_once('footer.php'); ?>
 	</body>
 </html>

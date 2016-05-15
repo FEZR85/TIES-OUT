@@ -40,19 +40,24 @@
 		}
 
 		private function muestraCurso($idcurso){
+			
 			if($idcurso>=0){
 				switch ($idcurso) {
 					case 1:
-						require('app/Vistas/curso1.php');
+						$vista = file_get_contents('app/Vistas/curso1.html');
 						break;
 					case 2:
-						require('app/Vistas/curso2.php');
+						$vista = file_get_contents('app/Vistas/curso2.html');
 						break;
 					default:
 						# code...
 						break;
 				}
-			}			
+			}else{
+
+			}
+
+			echo $this->header . $vista . $this->footer;
 		}
 
 		private function misCursos(){
