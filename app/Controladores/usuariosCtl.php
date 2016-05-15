@@ -131,15 +131,17 @@
 		private function muestraFormulario($tipo){
 			switch ($tipo) {
 				case 1:
-					require('app/Vistas/sesion.html');
+					$vista = file_get_contents('app/Vistas/sesion.html');					
 					break;
 				case 2:
-					require('app/Vistas/registro.html');
+					$vista = file_get_contents('app/Vistas/registro.html');
 					break;
 				default:
 					# code...
 					break;
 			}
+
+			echo $this->header . $vista . $this->footer;
 		}
 
 	}
