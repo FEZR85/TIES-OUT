@@ -6,6 +6,13 @@
 	{
 
 		private $modelo;
+		private $header;
+		private $footer;
+
+		function __construct(){
+			$this->header = file_get_contents("app/Vistas/header.html");
+			$this->footer = file_get_contents("app/Vistas/footer.html");			
+		}
 
 		function muestra(){
 			echo "usuario.php";
@@ -16,6 +23,7 @@
 		*
 		*/
 		public function ejecutar(){
+
 
 			if(isset($_GET['act'])){
 				if(isset($_GET['iduser'])){
@@ -58,7 +66,6 @@
 
 			if($id >= 0){
 				$vista = file_get_contents("app/Vistas/perfilPublico.php");
-				$header = file_get_contents("app/Vistas/header.php");
 				//$footer
 
 				$diccionarioUsuario = array(
@@ -94,7 +101,7 @@
 					$filas .= $newFila;
 				}
 				$vista = str_replace($fila,$filas, $vista);
-				$vista = $header . $vista;
+				$vista = $this->header . $vista . $this->footer;
 
 				echo $vista;
 			}else{
