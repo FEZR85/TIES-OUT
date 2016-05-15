@@ -46,6 +46,9 @@
 					case 'registro':
 							$this->muestraFormulario(2);
 						break;
+					case 'recuperar':
+							$this->muestraFormulario(3);
+						break;
 					default:
 							require('app/Vistas/404.php');
 						break;
@@ -126,7 +129,7 @@
 
 		/**
 		* Muestra un formulario indicado por el parámetro tipo
-		* @param $tipo El valor 1 abre el formulario de sesion, el valor 2 el formulario de registro
+		* @param $tipo El valor 1 abre el formulario de sesion, el valor 2 el formulario de registro, 3 recuperar contraseña
 		*/
 		private function muestraFormulario($tipo){
 			switch ($tipo) {
@@ -135,6 +138,9 @@
 					break;
 				case 2:
 					$vista = file_get_contents('app/Vistas/registro.html');
+					break;
+				case 3:
+					$vista = file_get_contents('app/Vistas/recuperar.html');
 					break;
 				default:
 					# code...
