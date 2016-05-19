@@ -49,12 +49,15 @@
 					case 'recuperar':
 							$this->muestraFormulario(3);
 						break;
+					case 'registrar':
+							//Aqui llegar para conectarse a la base de datos por medio del modelo
+						break;
 					default:
-							require('app/Vistas/404.php');
+							require('404.php');
 						break;
 				}
 			}else{
-				require('app/Vistas/404.php');
+				require('404.html');
 			}
 		}
 
