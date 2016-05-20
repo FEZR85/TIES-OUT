@@ -51,6 +51,7 @@
 						break;
 					case 'registrar':
 							//Aqui llegar para conectarse a la base de datos por medio del modelo
+							$this->altaUsuario();
 						break;
 					default:
 							require('404.php');
@@ -153,5 +154,17 @@
 			echo $this->header . $vista . $this->footer;
 		}
 
+		private function altaUsuario(){
+			require('app/Modelo/usuarioMdl.php');
+			$this->modelo = new UsuarioMdl();
+
+			if(empty($_POST)){
+				//No hay datos para guardar en la BD
+			}else{
+				//validaciones de que los campos contengan lo que deben contener
+				//validacion de segundo campo de contraseña
+				$resultadoalta = $this->modelo->alta($nombre,$correo,$contrasena);
+			}
+		}
 	}
 ?>

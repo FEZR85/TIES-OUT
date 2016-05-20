@@ -1,5 +1,5 @@
 <?php
-class AlumnoCtl{
+class UsuarioMdl{
 	private $modelo;
 	public function ejecutar(){
 		require_once("Modelo/AlumnoMdl.php");
@@ -64,5 +64,9 @@ class AlumnoCtl{
 			default:
 				require_once("Vista/404.html");
 		}
+	}
+
+	public function alta(){
+
 	}
 }
