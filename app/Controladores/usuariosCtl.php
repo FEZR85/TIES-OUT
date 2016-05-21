@@ -4,16 +4,22 @@
 	*/
 	class Usuario
 	{
-		include_once('app/Modelo/singleton.php');
+		
 
 		private $modelo;
 		private $header;
 		private $footer;
-		private $instancia = $Conexion::getInstance();
-		$instancia->__construct();
-		private $mysql = $instancia->getConnection();
+		private $instancia;
+		private $mysql;
 
 		function __construct(){
+			require('app/Modelo/singleton.php');
+			
+			$this->instancia = Conexion::getInstance();
+			$this->instancia->__construct();
+
+			$this->mysql = $this->instancia->getConnection();
+
 			$this->header = file_get_contents("app/Vistas/header.html");
 			$this->footer = file_get_contents("app/Vistas/footer.html");
 		}
