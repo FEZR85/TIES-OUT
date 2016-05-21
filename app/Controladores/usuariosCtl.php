@@ -166,7 +166,7 @@
 
 		private function altaUsuario(){
 			require('app/Modelo/usuarioMdl.php');
-			$this->modelo = new UsuarioMdl($mysql);//se le manda la variable con la conexion establecida
+			$this->modelo = new UsuarioMdl($this->mysql);//se le manda la variable con la conexion establecida
 
 			if(empty($_POST)){
 				//No hay datos para guardar en la BD
@@ -187,10 +187,14 @@
 					$header = file_get_contents("app/Vistas/header.html");
 					$footer = file_get_contents("app/Vistas/footer.html");
 
+					echo $header . $vista . $footer;
+
 					//mostrar el menu con la informacion del usuario: nombre, opcion de mis cursos, modificar perfil, cerrar sesion.
 				}
-				else
-					require_once("app/Vistas/Error.html");
+				else{
+					//require_once("app/Vistas/Error.html");
+					echo "No se pudo registrar";
+				}
 			}
 		}
 	}
