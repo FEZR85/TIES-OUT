@@ -1,6 +1,6 @@
-<?php  
+<?php
 	/**
-	* 
+	*
 	*/
 	class Administrador
 	{
@@ -17,7 +17,7 @@
 			if(isset($_GET['act'])){
 				switch ($_GET['act']) {
 					case 'alta':
-							echo "altaAlumnos.php";						
+							echo "altaAlumnos.php";
 						break;
 					case 'ver':
 							echo "perfilPublico.php";

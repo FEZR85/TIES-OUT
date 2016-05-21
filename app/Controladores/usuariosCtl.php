@@ -1,17 +1,21 @@
-<?php  
+<?php
 	/**
-	* 
+	*
 	*/
 	class Usuario
 	{
+		include_once('app/Modelo/singleton.php');
 
 		private $modelo;
 		private $header;
 		private $footer;
+		private $instancia = $Conexion::getInstance();
+		$instancia->__construct();
+		private $mysql = $instancia->getConnection();
 
 		function __construct(){
 			$this->header = file_get_contents("app/Vistas/header.html");
-			$this->footer = file_get_contents("app/Vistas/footer.html");			
+			$this->footer = file_get_contents("app/Vistas/footer.html");
 		}
 
 		function muestra(){
@@ -31,18 +35,18 @@
 				}else{
 					$idUsuario = -1;
 				}
-				
+
 
 				switch ($_GET['act']) {
 					case 'mostrar':
-							$this->mostrarPerfil($idUsuario);					
-						break;				
+							$this->mostrarPerfil($idUsuario);
+						break;
 					case 'configurar':
 							$this->configuraPerfil($idUsuario);
 						break;
-					case 'sesion':							
+					case 'sesion':
 							$this->muestraFormulario(1);
-						break;							
+						break;
 					case 'registro':
 							$this->muestraFormulario(2);
 						break;
@@ -65,7 +69,7 @@
 		/**
 		* Método que muestra el perfil público del usuario indicado.
 		* @param int $id ID correspondiente al usuario consultado
-		* 
+		*
 		*/
 		private function mostrarPerfil($id){
 			/*Conecta al modelo correspondiente para consultar con el ID al usuario*/
@@ -138,7 +142,7 @@
 		private function muestraFormulario($tipo){
 			switch ($tipo) {
 				case 1:
-					$vista = file_get_contents('app/Vistas/sesion.html');					
+					$vista = file_get_contents('app/Vistas/sesion.html');
 					break;
 				case 2:
 					$vista = file_get_contents('app/Vistas/registro.html');
@@ -156,14 +160,31 @@
 
 		private function altaUsuario(){
 			require('app/Modelo/usuarioMdl.php');
-			$this->modelo = new UsuarioMdl();
+			$this->modelo = new UsuarioMdl($mysql);//se le manda la variable con la conexion establecida
 
 			if(empty($_POST)){
 				//No hay datos para guardar en la BD
+					//validaciones de que los campos contengan lo que deben contener
+					//validacion de segundo campo de contraseña
 			}else{
-				//validaciones de que los campos contengan lo que deben contener
-				//validacion de segundo campo de contraseña
-				$resultadoalta = $this->modelo->alta($nombre,$correo,$contrasena);
+				$nombre 	= $_POST["nombre"];
+				$correo	= $_POST["correo"];
+				$contrasena 	= $_POST["contrasena"];
+					//validaciones de que los campos contengan lo que deben contener
+					//validacion de segundo campo de contraseña
+				$resultado = $this -> modelo -> alta($nombre, $correo, $contrasena);
+				//echo "<br>debug: Va a cargar la vista en base a lo devuelto por el modelo";
+				if($resultado!==FALSE){
+					//Procesar la vista
+					//Obtener la vista
+					$vista = file_get_contents("app/Vistas/home.html");
+					$header = file_get_contents("app/Vistas/header.html");
+					$footer = file_get_contents("app/Vistas/footer.html");
+
+					//mostrar el menu con la informacion del usuario: nombre, opcion de mis cursos, modificar perfil, cerrar sesion.
+				}
+				else
+					require_once("app/Vistas/Error.html");
 			}
 		}
 	}

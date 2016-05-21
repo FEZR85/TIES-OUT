@@ -1,17 +1,17 @@
 <?php
 	class AdministradorMdl{
-	
+
 	private $driver;
 
 	function __construct(){
-		$this -> driver = new mysqli('localhost','root','1234','proy');
+		$this -> driver = new mysqli($server,$user,$pass,$namedb);
 		if($this -> driver->connect_errno)
 			die("<br>Error en la conexión");
 	}
 
 	function alta($nombre, $codigo, $carrera, $correo){
-		
-		$query = 
+
+		$query =
 				"INSERT INTO administrador
 				(nombre, correo)
 				VALUES (
@@ -29,7 +29,7 @@
 	}
 
 	function lista(){
-		
+
 		$query = 'SELECT * FROM administrador';
 		$r = $this -> driver -> query($query);
 		while($row = $r -> fetch_assoc())
