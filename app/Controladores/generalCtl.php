@@ -7,13 +7,11 @@
 
 		private $modelo;
 
-		function muestra(){
-			echo "General.php";
+		function __construct(){
+			session_start();
 		}
 
 		public function ejecutar(){
-			//require_once("modelo/usuario.php");
-			//$this->modelo = new UsuarioMdl();
 			if(isset($_GET['act'])){
 				switch ($_GET['act']) {
 					case 'btrabajo':
@@ -35,7 +33,7 @@
 			}else{
 				require('app/Vistas/404.php');
 			}
-		}//fin funcion ejecutar
+		}
 
 		function btrabajo(){
 			$vista = file_get_contents("app/Vistas/buscarTrabajo.html");

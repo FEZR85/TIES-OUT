@@ -20,4 +20,10 @@ class UsuarioMdl{
 		elseif($result === FALSE)
 			return FALSE;
 	}
+
+	function consultaUsuario($correo, $contrasena){
+		$query = $this "SELECT vchnombre FROM usuario WHERE vchcorreo=$correo AND vchpassword=$contrasena";
+
+		//$result = $this->mysql-
+	}
 }

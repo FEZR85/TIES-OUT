@@ -10,6 +10,7 @@
 		private $footer;
 
 		function __construct(){
+			session_start();
 			$this->header = file_get_contents("app/Vistas/header.html");
 			$this->footer = file_get_contents("app/Vistas/footer.html");			
 		}

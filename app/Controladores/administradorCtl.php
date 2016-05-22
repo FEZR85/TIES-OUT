@@ -7,8 +7,8 @@
 
 		private $modelo;
 
-		function muestra(){
-			//echo "Administrador.php";
+		function __construct(){
+			session_start();
 		}
 
 		public function ejecutar(){
