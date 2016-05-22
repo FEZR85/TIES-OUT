@@ -13,6 +13,7 @@
 		private $mysql;
 
 		function __construct(){
+			session_start();
 			require('app/Modelo/singleton.php');
 			
 			$this->instancia = Conexion::getInstance();
@@ -22,10 +23,6 @@
 
 			$this->header = file_get_contents("app/Vistas/header.html");
 			$this->footer = file_get_contents("app/Vistas/footer.html");
-		}
-
-		function muestra(){
-			echo "usuario.php";
 		}
 
 		/**
@@ -62,6 +59,9 @@
 					case 'registrar':
 							//Aqui llegar para conectarse a la base de datos por medio del modelo
 							$this->altaUsuario();
+						break;
+					case 'inicioSesion':
+							$this->iniciaSesionUsuario();
 						break;
 					default:
 							require('404.php');
@@ -194,6 +194,33 @@
 				else{
 					//require_once("app/Vistas/Error.html");
 					echo "No se pudo registrar";
+				}
+			}
+		}
+
+		private function iniciaSesionUsuario(){
+			require('app/Modelo/usuarioMdl.php');
+			$this->modelo = new UsuarioMdl($this->msql);
+
+			if(empty($_POST)){
+
+			}else{
+				$correo = $_POST['correo'];
+				$contrasena = $_POST['contasena'];
+
+				//Validar correo y contraseña
+
+				//Revisa si el usuario existe en la base de datos
+				$resultado = $this->modelo->consultaUsuario($correo, $contrasena);
+
+				if($resultado!==FALSE){
+					$vista = file_get_contents("app/Vistas/home.html");
+					$header = file_get_contents("app/Vistas/header.html");
+					$footer = file_get_contents("app/Vistas/footer.html");
+
+					echo $header . $vista . $footer;
+				}else{
+					echo "Error al iniciar sesión";
 				}
 			}
 		}
