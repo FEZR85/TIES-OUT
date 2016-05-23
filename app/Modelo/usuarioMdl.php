@@ -21,8 +21,14 @@ class UsuarioMdl{
 			return FALSE;
 	}
 
-	function consultaUsuario($correo, $contrasena){
-		$query = $this "SELECT vchnombre FROM usuario WHERE vchcorreo=$correo AND vchpassword=$contrasena";
+	function consultaUsuario($correo, $contrasena){		
+		$query = $this->mysql->prepare('SELECT vchnombre FROM usuario WHERE vchcorreo=$correo AND vchpassword=$contrasena');
+
+			$query->execute();
+			$query->store_result();
+			$query->fetch();
+
+			echo $query;
 
 		//$result = $this->mysql-
 	}

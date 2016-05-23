@@ -200,13 +200,13 @@
 
 		private function iniciaSesionUsuario(){
 			require('app/Modelo/usuarioMdl.php');
-			$this->modelo = new UsuarioMdl($this->msql);
+			$this->modelo = new UsuarioMdl($this->mysql);
 
 			if(empty($_POST)){
 
 			}else{
 				$correo = $_POST['correo'];
-				$contrasena = $_POST['contasena'];
+				$contrasena = $_POST['contrasena'];
 
 				//Validar correo y contraseña
 
