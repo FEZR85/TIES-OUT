@@ -4,7 +4,7 @@
 	*/
 	class Usuario
 	{
-		
+
 
 		private $modelo;
 		private $header;
@@ -15,7 +15,7 @@
 		function __construct(){
 			session_start();
 			require('app/Modelo/singleton.php');
-			
+
 			$this->instancia = Conexion::getInstance();
 			$this->instancia->__construct();
 
@@ -176,16 +176,17 @@
 				$nombre 	= $_POST["nombre"];
 				$correo	= $_POST["correo"];
 				$contrasena 	= $_POST["contrasena"];
+
+				$header = file_get_contents("app/Vistas/header.html");
+				$footer = file_get_contents("app/Vistas/footer.html");
 					//validaciones de que los campos contengan lo que deben contener
 					//validacion de segundo campo de contraseña
-				$resultado = $this -> modelo -> alta($nombre, $correo, $contrasena);
+				$resultado = $this -> modelo -> alta($correo, $contrasena);
 				//echo "<br>debug: Va a cargar la vista en base a lo devuelto por el modelo";
 				if($resultado!==FALSE){
 					//Procesar la vista
 					//Obtener la vista
 					$vista = file_get_contents("app/Vistas/home.html");
-					$header = file_get_contents("app/Vistas/header.html");
-					$footer = file_get_contents("app/Vistas/footer.html");
 
 					echo $header . $vista . $footer;
 
@@ -193,7 +194,12 @@
 				}
 				else{
 					//require_once("app/Vistas/Error.html");
-					echo "No se pudo registrar";
+					$vista = file_get_contents('app/Vistas/registro.html');
+					$diccionario = array(
+						'<!-- Problema -->' => "No se pudo registrar"
+					);
+					$vista = strtr($vista,$diccionario);
+					echo $header . $vista . $footer;
 				}
 			}
 		}
