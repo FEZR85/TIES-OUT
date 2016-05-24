@@ -181,7 +181,7 @@
 				$footer = file_get_contents("app/Vistas/footer.html");
 					//validaciones de que los campos contengan lo que deben contener
 					//validacion de segundo campo de contraseña
-				$resultado = $this -> modelo -> alta($correo, $contrasena);
+				$resultado = $this -> modelo -> alta($nombre, $correo, $contrasena);
 				//echo "<br>debug: Va a cargar la vista en base a lo devuelto por el modelo";
 				if($resultado!==FALSE){
 					//Procesar la vista
