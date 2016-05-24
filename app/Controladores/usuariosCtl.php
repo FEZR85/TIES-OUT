@@ -140,7 +140,13 @@
 			$vista = file_get_contents('app/Vistas/configurarPerfil.html');
 
 			if($id >= 0){
-				echo $this->header . $vista . $this->footer;
+				$diccionario = array(
+					'{tituloPagina}'=>"Configurar Perfil");
+				
+				$this->head = strtr($this->head,$diccionario);
+				$vista = $this->head . $this->header . $vista . $this->footer;
+
+				echo $vista;
 			}else{
 				require('404.html');
 			}
