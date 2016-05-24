@@ -7,6 +7,7 @@
 
 
 		private $modelo;
+		private $head;
 		private $header;
 		private $footer;
 		private $instancia;
@@ -23,6 +24,7 @@
 
 			$this->header = file_get_contents("app/Vistas/header.html");
 			$this->footer = file_get_contents("app/Vistas/footer.html");
+			$this->head = file_get_contents("app/Vistas/head.html");
 		}
 
 		/**
@@ -99,6 +101,7 @@
 
 				$listaUrl = array(
 					'app/Vistas/curso1.php',
+					'app/Vistas/curso2.php',
 					'app/Vistas/curso2.php');
 
 				$inicioFila = strrpos($vista,'<!--{iniciaCurso}-->');
@@ -112,18 +115,20 @@
 				foreach ($listaTitulos as $row) {
 					$newFila = $fila;
 
-					$diccionarioFila = array(
+					$diccionario = array(
 						'{urlCurso}'=>$listaUrl[$i],
 						'{colorRandom}'=>'naranja',
-						'{Titulo}'=>$row);
+						'{Titulo}'=>$row,
+						'{tituloPagina}'=>"Perfil");
 
-					$newFila = strtr($newFila, $diccionarioFila);
+					$newFila = strtr($newFila, $diccionario);
 					$filas .= $newFila;
 					$i++;
 				}
 
 				$vista = str_replace($fila,$filas, $vista);
-				$vista = $this->header . $vista . $this->footer;
+				$this->head = strtr($this->head,$diccionario);
+				$vista = $this->head . $this->header . $vista . $this->footer;
 
 				echo $vista;
 			}else{
