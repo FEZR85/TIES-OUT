@@ -7,10 +7,17 @@
 
 		private $modelo;
 		private $head;
+		private $header;
+		private $footer;
+
+		private $vista;
 
 		function __construct(){
 			session_start();
 			$this->head = file_get_contents('app/Vistas/head.html');
+			$this->header = file_get_contents('app/Vistas/header.html');
+			$this->footer = file_get_contents('app/Vistas/footer.html');
+
 		}
 
 		public function ejecutar(){
@@ -31,59 +38,60 @@
 					default:
 						# code...
 						break;
-				}
+				}		
+				
 			}else{
 				require('app/Vistas/404.php');
 			}
 		}
 
 		function btrabajo(){
-			//<link rel="stylesheet" type="text/css" href="recursos/css/buscaTrabajo.css">
-			//Agregar css especifico para esta vista
-			
+			$this->vista = file_get_contents("app/Vistas/buscarTrabajo.html");
 
-			$vista = file_get_contents("app/Vistas/buscarTrabajo.html");
-			$header = file_get_contents("app/Vistas/header.html");
-			$footer = file_get_contents("app/Vistas/footer.html");
 			$diccionario = array(
 				'{tituloPagina}' => "Buscar empleo",
 				'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/css/buscaTrabajo.css">');
+
 			$this->head = strtr($this->head,$diccionario);
-			$vista = $this->head . $header . $vista . $footer;
-			echo $vista;
+			$this->vista = $this->head . $this->header . $this->vista . $this->footer;
+
+			echo $this->vista;			
 		}
 
 		function contacto(){
-			$vista = file_get_contents("app/Vistas/contacto.html");
-			$header = file_get_contents("app/Vistas/header.html");
-			$footer = file_get_contents("app/Vistas/footer.html");
+			$this->vista = file_get_contents("app/Vistas/contacto.html");
+
 			$diccionario = array(
-				'{title}' => "Contacto");
-			$vista = strtr($vista,$diccionario);
-			$vista = $header . $vista . $footer;
-			echo $vista;
+				'{tituloPagina}' => "Contacto");
+
+			$this->head = strtr($this->head,$diccionario);
+			$this->vista = $this->head . $this->header . $this->vista . $this->footer;
+						
+			echo $this->vista;
 		}
 
 		function nosotros(){
-			$vista = file_get_contents("app/Vistas/informacion.html");
-			$header = file_get_contents("app/Vistas/header.html");
-			$footer = file_get_contents("app/Vistas/footer.html");
+			$this->vista = file_get_contents("app/Vistas/informacion.html");
+
 			$diccionario = array(
-				'{title}' => "Quiénes somos");
-			$vista = strtr($vista,$diccionario);
-			$vista = $header . $vista . $footer;
-			echo $vista;
+				'{tituloPagina}' => "Quiénes somos");
+
+			$this->head = strtr($this->head,$diccionario);
+			$this->vista = $this->head . $this->header . $this->vista . $this->footer;
+						
+			echo $this->vista;
 		}
 
 		function busqueda(){
-			$vista = file_get_contents("app/Vistas/busqueda.html");
-			$header = file_get_contents("app/Vistas/header.html");
-			$footer = file_get_contents("app/Vistas/footer.html");
+			$this->vista = file_get_contents("app/Vistas/busqueda.html");
+			
 			$diccionario = array(
-				'{title}' => "Busqueda");
-			$vista = strtr($vista,$diccionario);
-			$vista = $header . $vista . $footer;
-			echo $vista;
+				'{tituloPagina}' => "Busqueda");
+			
+			$this->head = strtr($this->head,$diccionario);
+			$this->vista = $this->head . $this->header . $this->vista . $this->footer;
+						
+			echo $this->vista;
 		}
 	}
 ?>
