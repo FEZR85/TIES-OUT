@@ -6,9 +6,11 @@
 	{
 
 		private $modelo;
+		private $head;
 
 		function __construct(){
 			session_start();
+			$this->head = file_get_contents('app/Vistas/head.html');
 		}
 
 		public function ejecutar(){
@@ -36,13 +38,18 @@
 		}
 
 		function btrabajo(){
+			//<link rel="stylesheet" type="text/css" href="recursos/css/buscaTrabajo.css">
+			//Agregar css especifico para esta vista
+			
+
 			$vista = file_get_contents("app/Vistas/buscarTrabajo.html");
 			$header = file_get_contents("app/Vistas/header.html");
 			$footer = file_get_contents("app/Vistas/footer.html");
 			$diccionario = array(
-				'{title}' => "Buscar trabajo");
-			$vista = strtr($vista,$diccionario);
-			$vista = $header . $vista . $footer;
+				'{tituloPagina}' => "Buscar empleo",
+				'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/css/buscaTrabajo.css">');
+			$this->head = strtr($this->head,$diccionario);
+			$vista = $this->head . $header . $vista . $footer;
 			echo $vista;
 		}
 
