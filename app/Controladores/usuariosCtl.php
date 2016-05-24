@@ -157,22 +157,33 @@
 		* @param $tipo El valor 1 abre el formulario de sesion, el valor 2 el formulario de registro, 3 recuperar contraseña
 		*/
 		private function muestraFormulario($tipo){
+			$diccionario = "";
 			switch ($tipo) {
 				case 1:
 					$vista = file_get_contents('app/Vistas/sesion.html');
+					$diccionario = array(
+						'{tituloPagina}'=> "Iniciar Sesión",
+						'<!--{masLinks}-->'=> '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css"/>');
 					break;
 				case 2:
 					$vista = file_get_contents('app/Vistas/registro.html');
+					$diccionario = array(
+					'{tituloPagina}'=>"Registrarse");
 					break;
 				case 3:
 					$vista = file_get_contents('app/Vistas/recuperar.html');
+					$diccionario = array(
+					'{tituloPagina}'=>"Recuperar contraseña");
 					break;
 				default:
 					# code...
 					break;
-			}
+			}	
+			
+			$this->head = strtr($this->head,$diccionario);
+			$vista = $this->head . $this->header . $vista . $this->footer;
 
-			echo $this->header . $vista . $this->footer;
+			echo $vista;
 		}
 
 		private function altaUsuario(){
