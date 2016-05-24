@@ -168,7 +168,8 @@
 				case 2:
 					$vista = file_get_contents('app/Vistas/registro.html');
 					$diccionario = array(
-					'{tituloPagina}'=>"Registrarse");
+					'{tituloPagina}'=>"Registrarse",
+					'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
 					break;
 				case 3:
 					$vista = file_get_contents('app/Vistas/recuperar.html');
@@ -220,8 +221,11 @@
 					$diccionario = array(
 						'<!-- Problema -->' => "No se pudo registrar"
 					);
-					$vista = strtr($vista,$diccionario);
-					echo $header . $vista . $footer;
+
+					$this->head = strtr($this->head, $diccionario);
+					
+					$vista = $this->head . $this->header . $vista . $footer;
+					echo $vista;
 				}
 			}
 		}
