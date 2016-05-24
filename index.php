@@ -29,18 +29,20 @@
 				break;
 			default:
 				# code...
-					require_once('app/Vistas/header.html');
-					require_once('app/Vistas/home.html');
-					require_once('app/Vistas/footer.html');
+					require('app/Vistas/head.html');
+					require('app/Vistas/header.html');
+					require('app/Vistas/home.html');
+					require('app/Vistas/footer.html');
 				break;
 		}
 
 		if($bandera){
 			$controlador->ejecutar();
 		}
-	}else{
-		require_once('app/Vistas/header.html');
-		require_once('app/Vistas/home.html');
-		require_once('app/Vistas/footer.html');
+	}else{		
+		require('app/Vistas/head.html');
+		require('app/Vistas/header.html');
+		require('app/Vistas/home.html');
+		require('app/Vistas/footer.html');
 	}
 ?>
