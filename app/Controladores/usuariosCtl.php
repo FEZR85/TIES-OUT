@@ -199,9 +199,6 @@
 				$nombre 	= $_POST["nombre"];
 				$correo	= $_POST["correo"];
 				$contrasena 	= $_POST["contrasena"];
-
-				$header = file_get_contents("app/Vistas/header.html");
-				$footer = file_get_contents("app/Vistas/footer.html");
 					//validaciones de que los campos contengan lo que deben contener
 					//validacion de segundo campo de contraseña
 				$resultado = $this -> modelo -> alta($nombre, $correo, $contrasena);
@@ -209,24 +206,22 @@
 				if($resultado!==FALSE){
 					//Procesar la vista
 					//Obtener la vista
-					$vista = file_get_contents("app/Vistas/home.html");
-
-					echo $header . $vista . $footer;
+					$vista = file_get_contents("app/Vistas/home.html");					
 
 					//mostrar el menu con la informacion del usuario: nombre, opcion de mis cursos, modificar perfil, cerrar sesion.
 				}
 				else{
 					//require_once("app/Vistas/Error.html");
 					$vista = file_get_contents('app/Vistas/registro.html');
-					$diccionario = array(
-						'<!-- Problema -->' => "No se pudo registrar"
-					);
 
-					$this->head = strtr($this->head, $diccionario);
-					
-					$vista = $this->head . $this->header . $vista . $footer;
-					echo $vista;
+					$diccionario = array(
+					'{tituloPagina}'=>"Registrarse",
+					'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
+
+					$this->head = strtr($this->head, $diccionario);					
 				}
+				$vista = $this->head . $this->header . $vista . $this->footer;
+					echo $vista;
 			}
 		}
 
