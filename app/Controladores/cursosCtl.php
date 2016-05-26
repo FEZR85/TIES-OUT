@@ -8,11 +8,13 @@
 		private $modelo;
 		private $header;
 		private $footer;
+		private $head;
 
 		function __construct(){
 			session_start();
 			$this->header = file_get_contents("app/Vistas/header.html");
-			$this->footer = file_get_contents("app/Vistas/footer.html");			
+			$this->footer = file_get_contents("app/Vistas/footer.html");	
+			$this->head = file_get_contents("app/Vistas/head.html");		
 		}
 
 		public function ejecutar(){
@@ -58,13 +60,13 @@
 
 			}
 
-			echo $this->header . $vista . $this->footer;
+			echo $this->head . $this->header . $vista . $this->footer;
 		}
 
 		private function misCursos(){
 			$vista = file_get_contents('app/Vistas/misCursos.html');
 
-			echo $this->header . $vista . $this->footer;
+			echo $this->head . $this->header . $vista . $this->footer;
 		}
 	}
-?>
+?> 
