@@ -21,6 +21,7 @@ class UsuarioMdl{
 	}
 
 	function consultaUsuario($correo, $contrasena){
+		$info = "";
 		$query = "SELECT vchnombre FROM usuario WHERE vchcorreo='$correo' AND vchcontrasena='$contrasena' AND tiActivo = 1";
 		$resultado = $this->mysql->query($query);
 		while($fila = $resultado->fetch_assoc()){
