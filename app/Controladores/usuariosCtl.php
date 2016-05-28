@@ -142,7 +142,7 @@
 			if($id >= 0){
 				$diccionario = array(
 					'{tituloPagina}'=>"Configurar Perfil");
-				
+
 				$this->head = strtr($this->head,$diccionario);
 				$vista = $this->head . $this->header . $vista . $this->footer;
 
@@ -179,8 +179,8 @@
 				default:
 					# code...
 					break;
-			}	
-			
+			}
+
 			$this->head = strtr($this->head,$diccionario);
 			$vista = $this->head . $this->header . $vista . $this->footer;
 
@@ -190,38 +190,51 @@
 		private function altaUsuario(){
 			require('app/Modelo/usuarioMdl.php');
 			$this->modelo = new UsuarioMdl($this->mysql);//se le manda la variable con la conexion establecida
-
 			if(empty($_POST)){
-				//No hay datos para guardar en la BD
-					//validaciones de que los campos contengan lo que deben contener
-					//validacion de segundo campo de contraseña
+				$this->mostrarProblemaRegistro("Favor de llenar los campos requeridos");
 			}else{
-				$nombre 	= $_POST["nombre"];
+				$nombre = $_POST["nombre"];
 				$correo	= $_POST["correo"];
-				$contrasena 	= $_POST["contrasena"];
-					//validaciones de que los campos contengan lo que deben contener
-					//validacion de segundo campo de contraseña
-				$resultado = $this -> modelo -> alta($nombre, $correo, $contrasena);
-				//echo "<br>debug: Va a cargar la vista en base a lo devuelto por el modelo";
-				if($resultado!==FALSE){
-					//Procesar la vista
-					//Obtener la vista
-					$vista = file_get_contents("app/Vistas/home.html");					
+				$contrasena = $_POST["contrasena"];
 
-					//mostrar el menu con la informacion del usuario: nombre, opcion de mis cursos, modificar perfil, cerrar sesion.
+				//Valida si lo que se recibio es un correo
+				if(!preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/',$correo)){
+					$this->mostrarProblemaRegistro("Ingrese un correo válido");
+					exit();
 				}
-				else{
-					//require_once("app/Vistas/Error.html");
-					$vista = file_get_contents('app/Vistas/registro.html');
 
-					$diccionario = array(
-					'{tituloPagina}'=>"Registrarse",
-					'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
-
-					$this->head = strtr($this->head, $diccionario);					
+				//Valida si lo que se recibio es un nombre
+				if(!preg_match('/^([a-zA-Z]+[\s]*)+$/',$nombre)){
+					$this->mostrarProblemaRegistro("Ingrese un nombre válido");
+					exit();
 				}
-				$vista = $this->head . $this->header . $vista . $this->footer;
-					echo $vista;
+
+				//Valida si lo que se recibio es una contraseña
+				if(!preg_match('/^([a-zA-Z0-9]{6,20})$/',$contrasena)){
+					$this->mostrarProblemaRegistro("La contraseña debe contener minimo 6 caracteres alfanuméricos");
+					exit();
+				}
+
+				//Revisa en la BD si el correo ya existe
+				if(!$this->modelo->existecorreo($correo)){
+					$contrasena = md5($contrasena); //se encripta la contraseña
+					$resultado = $this->modelo->alta($nombre, $correo, $contrasena);//damos de alta en la BD
+					if($resultado!==FALSE){//Si se pudo insertar muestra la vista
+						$vista = file_get_contents("app/Vistas/home.html");
+						$diccionario = array(
+						'{tituloPagina}'=>"Inicio",
+						'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
+						$this->head = strtr($this->head,$diccionario);
+						$vista = $this->head . $this->header . $vista . $this->footer;
+						echo $vista;
+					}
+					else{
+						$this->mostrarProblemaRegistro("No se pudo completar el registro, intente más tarde.");
+					}
+				}
+				else {
+					$this->mostrarProblemaRegistro("El correo ya existe, intente con otro");
+				}
 			}
 		}
 
@@ -230,26 +243,66 @@
 			$this->modelo = new UsuarioMdl($this->mysql);
 
 			if(empty($_POST)){
-
+				$this->mostrarProblemaIniciosesion("Ingrese un correo y contraseña para poder iniciar sesión.");
 			}else{
 				$correo = $_POST['correo'];
 				$contrasena = $_POST['contrasena'];
 
-				//Validar correo y contraseña
+				//Valida si lo que se recibio es un correo
+				if(!preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/',$correo)){
+					$this->mostrarProblemaIniciosesion("Ingrese un correo válido");
+					exit();
+				}
 
+				//Valida si lo que se recibio es una contraseña
+				if(!preg_match('/^([a-zA-Z0-9]{6,20})$/',$contrasena)){
+					$this->mostrarProblemaIniciosesion("La contraseña debe contener minimo 6 caracteres alfanuméricos");
+					exit();
+				}
+
+				$contrasena = md5($contrasena); //encriptamos primero para poder comparar con la contraseña de la BD
 				//Revisa si el usuario existe en la base de datos
 				$resultado = $this->modelo->consultaUsuario($correo, $contrasena);
-
-				if($resultado!==FALSE){
+				if(!empty($resultado)){
 					$vista = file_get_contents("app/Vistas/home.html");
-					$header = file_get_contents("app/Vistas/header.html");
-					$footer = file_get_contents("app/Vistas/footer.html");
-
-					echo $header . $vista . $footer;
+					$diccionario = array(
+					'{tituloPagina}'=>"Inicio",
+					'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
+					$this->head = strtr($this->head,$diccionario);
+					$vista = $this->head . $this->header . $vista . $this->footer;
+					echo $vista;
 				}else{
-					echo "Error al iniciar sesión";
+					$this->mostrarProblemaIniciosesion("El usuario y/o contraseña es incorrecto. Intente de nuevo.");
 				}
 			}
+		}
+
+		/* Método para mostrar errores o problemas con la información recibida
+		 * @param $string, cadena con el texto a mostrar en la vista. */
+		private function mostrarProblemaRegistro($string){
+			$vista = file_get_contents('app/Vistas/registro.html');
+			$diccionario = array(
+			'{tituloPagina}'=>"Registrarse",
+			'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
+			$diccionarioProblema = array('<!-- Problema -->'=>'<span class="text-danger">'.$string.'</span>');
+			$vista = strtr($vista,$diccionarioProblema);
+			$this->head = strtr($this->head, $diccionario);
+			$vista = $this->head . $this->header . $vista . $this->footer;
+			echo $vista;
+		}
+
+		/* Método para mostrar errores o problemas con la información recibida
+		 * @param $string, cadena con el texto a mostrar en la vista. */
+		private function mostrarProblemaIniciosesion($string){
+			$vista = file_get_contents('app/Vistas/sesion.html');
+			$diccionario = array(
+			'{tituloPagina}'=>"Iniciar sesión",
+			'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
+			$diccionarioProblema = array('<!-- Problema -->'=>'<span class="text-danger">'.$string.'</span>');
+			$vista = strtr($vista,$diccionarioProblema);
+			$this->head = strtr($this->head, $diccionario);
+			$vista = $this->head . $this->header . $vista . $this->footer;
+			echo $vista;
 		}
 	}
 ?>
