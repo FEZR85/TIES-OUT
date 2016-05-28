@@ -38,8 +38,8 @@
 					default:
 						# code...
 						break;
-				}		
-				
+				}
+
 			}else{
 				require('app/Vistas/404.php');
 			}
@@ -55,7 +55,7 @@
 			$this->head = strtr($this->head,$diccionario);
 			$this->vista = $this->head . $this->header . $this->vista . $this->footer;
 
-			echo $this->vista;			
+			echo $this->vista;
 		}
 
 		function contacto(){
@@ -66,7 +66,7 @@
 
 			$this->head = strtr($this->head,$diccionario);
 			$this->vista = $this->head . $this->header . $this->vista . $this->footer;
-						
+
 			echo $this->vista;
 		}
 
@@ -78,19 +78,19 @@
 
 			$this->head = strtr($this->head,$diccionario);
 			$this->vista = $this->head . $this->header . $this->vista . $this->footer;
-						
+
 			echo $this->vista;
 		}
 
 		function busqueda(){
 			$this->vista = file_get_contents("app/Vistas/busqueda.html");
-			
+
 			$diccionario = array(
-				'{tituloPagina}' => "Busqueda");
-			
+				'{tituloPagina}' => "Búsqueda");
+
 			$this->head = strtr($this->head,$diccionario);
 			$this->vista = $this->head . $this->header . $this->vista . $this->footer;
-						
+
 			echo $this->vista;
 		}
 	}
