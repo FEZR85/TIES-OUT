@@ -3,22 +3,22 @@
 		<div class="content">
 			<h3 class="encabezado">Iniciar Sesión</h3><br>
 			<div id="contacto" class="row">
-				<form action="index.php?controlador=usuarios&act=inicioSesion" method="post" id="formulario" name="iniciaSesion" 
-						class="form-horizontal col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4" 
+				<form action="index.php?controlador=usuarios&act=inicioSesion" method="post" id="formulario" name="iniciaSesion"
+						class="form-horizontal col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4"
 						role="form" novalidate>
 					<div class="form-group">
 						<label for="correo" >Correo </label>
 						<input name="correo" id="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />
 						<span id="errorCorreo" class="clsError"></span>
 					</div>
-					<div class="form-group">							
+					<div class="form-group">
 						<label for="contrasena" >Contraseña </label>
-						<input name="contrasena" id="contrasena" class="form-control" type="password" placeholder="contraseña" />	
+						<input name="contrasena" id="contrasena" class="form-control" type="password" placeholder="contraseña" />
 						<span id="errorContrasena" class="clsError"></span>
 					</div>
-					
+					<!-- Problema -->
 					<!-- botones y enlaces -->
-					<div class="form-group text-center">									
+					<div class="form-group text-center">
 						<button id="iniciar" name="iniciar" class="btn btn-primary" type="submit">Iniciar sesión</button>
 					</div>
 				</form>
