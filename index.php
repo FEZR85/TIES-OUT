@@ -2,11 +2,6 @@
 	$bandera = false;
 	if(isset($_GET['controlador'])){
 		switch ($_GET['controlador']) {
-			case 'administrador':
-					require('app/Controladores/administradorCtl.php');
-					$controlador = new Administrador();
-					$bandera = true;
-				break;
 			case 'busqueda':
 					require('app/Controladores/busquedaCtl.php');
 					$controlador = new Busqueda();
@@ -28,21 +23,28 @@
 					$bandera = true;
 				break;
 			default:
-				# code...
-					require('app/Vistas/head.html');
-					require('app/Vistas/header.html');
-					require('app/Vistas/home.html');
-					require('app/Vistas/footer.html');
+					$head = file_get_contents('app/Vistas/head.html');
+					$header = file_get_contents('app/Vistas/header.html');
+					$vista = file_get_contents('app/Vistas/home.html');
+					$footer = file_get_contents('app/Vistas/footer.html');
+					$diccionario = array('{tituloPagina}'=>"Inicio");
+					$head = strtr($head, $diccionario);
+					$vista = $head . $header . $vista . $footer;
+					echo $vista;
 				break;
 		}
 
 		if($bandera){
 			$controlador->ejecutar();
 		}
-	}else{		
-		require('app/Vistas/head.html');
-		require('app/Vistas/header.html');
-		require('app/Vistas/home.html');
-		require('app/Vistas/footer.html');
+	}else{
+		$head = file_get_contents('app/Vistas/head.html');
+		$header = file_get_contents('app/Vistas/header.html');
+		$vista = file_get_contents('app/Vistas/home.html');
+		$footer = file_get_contents('app/Vistas/footer.html');
+		$diccionario = array('{tituloPagina}'=>"Inicio");
+		$head = strtr($head, $diccionario);
+		$vista = $head . $header . $vista . $footer;
+		echo $vista;
 	}
 ?>
