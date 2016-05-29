@@ -11,7 +11,7 @@ class UsuarioMdl{
 		/*$query = "INSERT INTO usuario(vchNombre, vchPaterno, vchMaterno, vchCorreo, vchContraseña,tiEliminado, tiActivo, iidTipo)
 				VALUES('$nombre','uno','dos','$correo','$contrasena',0,1,1)";*/
 		//La siguiente query es segun la otra base de datos
-		$query = "INSERT INTO usuario (vchNombre,vchCorreo, vchContrasena) VALUES ('$nombre','$contrasena')";
+		$query = "INSERT INTO usuario (vchNombre,vchCorreo, vchContrasena) VALUES ('$nombre','$correo','$contrasena')";
 		$result = $this->mysql->query($query);
 		if($this -> mysql-> insert_id){
 			return $this -> mysql -> insert_id;
@@ -21,7 +21,8 @@ class UsuarioMdl{
 	}
 
 	function consultaUsuario($correo, $contrasena){
-		$query = "SELECT vchnombre FROM usuario WHERE vchcorreo='$correo' AND vchcontrasena='$contrasena' AND tiActivo = 1";
+		$info = "";
+		$query = "SELECT iidUsuario, vchnombre FROM usuario WHERE vchcorreo='$correo' AND vchcontrasena='$contrasena' AND tiActivo = 1";
 		$resultado = $this->mysql->query($query);
 		while($fila = $resultado->fetch_assoc()){
 			$info[] = $fila;
@@ -37,5 +38,15 @@ class UsuarioMdl{
 				return true;
 		}
 		return false;
+	}
+
+	function traerUsuario($iidUsuario){
+		$info = "";
+		$query = "SELECT * FROM usuario WHERE iidUsuario=$iidUsuario AND tiActivo = 1";
+		$resultado = $this->mysql->query($query);
+		while($fila = $resultado->fetch_assoc()){
+			$info[] = $fila;
+		}
+		return $info;
 	}
 }
