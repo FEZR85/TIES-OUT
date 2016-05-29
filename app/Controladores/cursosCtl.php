@@ -11,13 +11,15 @@
 		private $head;
 
 		function __construct(){
-			session_start();
-			if($_SESSION["iidUsuario"] == "" || isset($_SESSION["iidUsuario"]))
-				$this->header = file_get_contents("app/Vistas/header.html");
-			else
-				$this->header = file_get_contents("app/Vistas/header2.html");
-			$this->footer = file_get_contents("app/Vistas/footer.html");
-			$this->head = file_get_contents("app/Vistas/head.html");
+			require('app/Controladores/generalCtl.php');
+
+ 			session_start();
+			$this->header = file_get_contents("app/Vistas/header.html");
++			$this->footer = file_get_contents("app/Vistas/footer.html");
++			$this->head = file_get_contents("app/Vistas/head.html");
++
++			$this->generalctl = new General();
++			$this->header = $this->generalctl->headerSesion($this->header);
 		}
 
 		public function ejecutar(){
@@ -46,7 +48,6 @@
 		}
 
 		private function muestraCurso($idcurso){
-
 			if($idcurso>=0){
 				switch ($idcurso) {
 					case 1:

@@ -22,12 +22,10 @@ class UsuarioMdl{
 
 	function consultaUsuario($correo, $contrasena){
 		$info = "";
-		$query = "SELECT iidUsuario, vchnombre FROM usuario WHERE vchcorreo='$correo' AND vchcontrasena='$contrasena' AND tiActivo = 1";
+		$query = "SELECT vchnombre FROM usuario WHERE vchcorreo='$correo' AND vchcontrasena='$contrasena' AND tiActivo = 1";
 		$resultado = $this->mysql->query($query);
-		while($fila = $resultado->fetch_assoc()){
-			$info[] = $fila;
-		}
-		return $info;
+		$fila = $resultado->fetch_assoc();
+		return $fila;
 	}
 
 	function existecorreo($correo){
@@ -40,13 +38,4 @@ class UsuarioMdl{
 		return false;
 	}
 
-	function traerUsuario($iidUsuario){
-		$info = "";
-		$query = "SELECT * FROM usuario WHERE iidUsuario=$iidUsuario AND tiActivo = 1";
-		$resultado = $this->mysql->query($query);
-		while($fila = $resultado->fetch_assoc()){
-			$info[] = $fila;
-		}
-		return $info;
-	}
 }

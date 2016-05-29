@@ -10,16 +10,16 @@
 		private $header;
 		private $footer;
 
+		private $generalctl;
 		private $vista;
 
 		function __construct(){
 			session_start();
-			if($_SESSION["iidUsuario"]=="" || isset($_SESSION["iidUsuario"]))
-				$this->header = file_get_contents('app/Vistas/header.html');
-			else
-				$this->header = file_get_contents('app/Vistas/header2.html');
 			$this->head = file_get_contents('app/Vistas/head.html');
-			$this->footer = file_get_contents('app/Vistas/footer.html');
++			$this->header = file_get_contents('app/Vistas/header.html');
+ 			$this->footer = file_get_contents('app/Vistas/footer.html');
+
++			$this->header = $this->headerSesion($this->header);
 
 		}
 
@@ -95,6 +95,30 @@
 			$this->vista = $this->head . $this->header . $this->vista . $this->footer;
 
 			echo $this->vista;
+		}
+
+		public static function headerSesion($header){
+
+
+			if(isset($_SESSION) && !empty($_SESSION)){
+				var_dump($_SESSION);
+				$inicioDesconectado = strrpos($header, '<!--{iniciodesconectado}-->');
+				$finDesconectado = strrpos($header, '<!--{findesconectado}-->') + 24;
+
+				$desconectado = substr($header, $inicioDesconectado,$finDesconectado - $inicioDesconectado);
+				$header = str_replace($desconectado, '<!--{Desconectado}-->', $header);
+
+				$header = str_replace('<!--{nombreUsuario}-->', $_SESSION['nombre'], $header);
+
+			}else{
+				$inicioConectado = strrpos($header, '<!--{inicioconectado}-->');
+				$finConectado = strrpos($header, '<!--{finconectado}-->') + 21;
+
+				$conectado = substr($header, $inicioConectado, $finConectado - $inicioConectado);
+				$header = str_replace($conectado,'<!--{Conectado}-->', $header);
+			}
+
+			return $header;
 		}
 	}
 ?>

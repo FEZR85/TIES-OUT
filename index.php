@@ -23,27 +23,22 @@
 					$bandera = true;
 				break;
 			default:
-				session_start();
-				if($_SESSION["iidUsuario"] == "" || isset($_SESSION["iidUsuario"])){
+			require('app/Controladores/generalCtl.php');
+					$generalctl = new General();
+
 					$head = file_get_contents('app/Vistas/head.html');
 					$header = file_get_contents('app/Vistas/header.html');
+					$header = $generalctl->headerSesion($header);
+
 					$vista = file_get_contents('app/Vistas/home.html');
 					$footer = file_get_contents('app/Vistas/footer.html');
+
 					$diccionario = array('{tituloPagina}'=>"Inicio");
+
 					$head = strtr($head, $diccionario);
+
 					$vista = $head . $header . $vista . $footer;
 					echo $vista;
-				}
-				else{
-					$head = file_get_contents('app/Vistas/head.html');
-					$header = file_get_contents('app/Vistas/header2.html');
-					$vista = file_get_contents('app/Vistas/home.html');
-					$footer = file_get_contents('app/Vistas/footer.html');
-					$diccionario = array('{tituloPagina}'=>"Inicio");
-					$head = strtr($head, $diccionario);
-					$vista = $head . $header . $vista . $footer;
-					echo $vista;
-				}
 				break;
 		}
 
@@ -51,26 +46,21 @@
 			$controlador->ejecutar();
 		}
 	}else{
-		session_start();
-		if($_SESSION["iidUsuario"] == "" || isset($_SESSION["iidUsuario"])){
-			$head = file_get_contents('app/Vistas/head.html');
-			$header = file_get_contents('app/Vistas/header.html');
-			$vista = file_get_contents('app/Vistas/home.html');
-			$footer = file_get_contents('app/Vistas/footer.html');
-			$diccionario = array('{tituloPagina}'=>"Inicio");
-			$head = strtr($head, $diccionario);
-			$vista = $head . $header . $vista . $footer;
-			echo $vista;
-		}
-		else{
-			$head = file_get_contents('app/Vistas/head.html');
-			$header = file_get_contents('app/Vistas/header2.html');
-			$vista = file_get_contents('app/Vistas/home.html');
-			$footer = file_get_contents('app/Vistas/footer.html');
-			$diccionario = array('{tituloPagina}'=>"Inicio");
-			$head = strtr($head, $diccionario);
-			$vista = $head . $header . $vista . $footer;
-			echo $vista;
-		}
+		require('app/Controladores/generalCtl.php');
+		$generalctl = new General();
+
+		$head = file_get_contents('app/Vistas/head.html');
+		$header = file_get_contents('app/Vistas/header.html');
+		$header = $generalctl->headerSesion($header);
+
+		$vista = file_get_contents('app/Vistas/home.html');
+		$footer = file_get_contents('app/Vistas/footer.html');
+
+		$diccionario = array('{tituloPagina}'=>"Inicio");
+
+		$head = strtr($head, $diccionario);
+
+		$vista = $head . $header . $vista . $footer;
+		echo $vista;
 	}
 ?>

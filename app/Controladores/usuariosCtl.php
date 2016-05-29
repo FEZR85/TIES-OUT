@@ -12,20 +12,22 @@
 		private $footer;
 		private $instancia;
 		private $mysql;
+		private $generalctl;
 
 		function __construct(){
 			session_start();
 			require('app/Modelo/singleton.php');
+			require('app/Controladores/generalCtl.php');
 
 			$this->instancia = Conexion::getInstance();
 			$this->instancia->__construct();
 
 			$this->mysql = $this->instancia->getConnection();
 
-			if($_SESSION["iidUsuario"] == "" || isset($_SESSION["iidUsuario"]))
-				$this->header = file_get_contents("app/Vistas/header.html");
-			else
-				$this->header = file_get_contents('app/Vistas/header2.html');
+			$this->generalctl = new General();
++
++			$this->header = file_get_contents("app/Vistas/header.html");
++			$this->header = $this->generalctl->headerSesion($this->header);
 			$this->footer = file_get_contents("app/Vistas/footer.html");
 			$this->head = file_get_contents("app/Vistas/head.html");
 		}
@@ -223,19 +225,13 @@
 					$contrasena = md5($contrasena); //se encripta la contraseña
 					$resultado = $this->modelo->alta($nombre, $correo, $contrasena);//damos de alta en la BD
 					if($resultado!==FALSE){//Si se pudo insertar muestra la vista
-						session_start();
-						$datos = $this->modelo->traerUsuario($resultado);
-						if(isset($datos))
-							foreach($datos as $fila)
-								$_SESSION["iidUsuario"] = $fila["iidUsuario"];
 
 						$vista = file_get_contents("app/Vistas/home.html");
 						$diccionario = array(
 						'{tituloPagina}'=>"Inicio",
 						'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
 						$this->head = strtr($this->head,$diccionario);
-						$header2 = file_get_contents("app/Vistas/header2.html");
-						$vista = $this->head . $header2 . $vista . $this->footer;
+						$vista = $this->head . $this->header . $vista . $this->footer;
 						echo $vista;
 					}
 					else{
@@ -274,16 +270,17 @@
 				//Revisa si el usuario existe en la base de datos
 				$resultado = $this->modelo->consultaUsuario($correo, $contrasena);
 				if(!empty($resultado)){
-					session_start();
-					foreach($resultado as $fila)
-						$_SESSION["iidUsuario"] = $fila["iidUsuario"];
+					$_SESSION['correo'] = $correo;
++					$_SESSION['contrasena'] = $contrasena;
++					$_SESSION['nombre'] = $resultado['vchnombre'];
++
++					$this->header = $this->generalctl->headerSesion($this->header);
 					$vista = file_get_contents("app/Vistas/home.html");
 					$diccionario = array(
 					'{tituloPagina}'=>"Inicio",
 					'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
 					$this->head = strtr($this->head,$diccionario);
-					$header2 = file_get_contents("app/Vistas/header2.html");
-					$vista = $this->head . $header2 . $vista . $this->footer;
+					$vista = $this->head . $this->header . $vista . $this->footer;
 					echo $vista;
 				}else{
 					$this->mostrarProblemaIniciosesion("El usuario y/o contraseña es incorrecto. Intente de nuevo.");
