@@ -14,8 +14,11 @@
 
 		function __construct(){
 			session_start();
+			if($_SESSION["iidUsuario"]=="" || isset($_SESSION["iidUsuario"]))
+				$this->header = file_get_contents('app/Vistas/header.html');
+			else
+				$this->header = file_get_contents('app/Vistas/header2.html');
 			$this->head = file_get_contents('app/Vistas/head.html');
-			$this->header = file_get_contents('app/Vistas/header.html');
 			$this->footer = file_get_contents('app/Vistas/footer.html');
 
 		}
