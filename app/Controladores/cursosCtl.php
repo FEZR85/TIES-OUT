@@ -1,6 +1,6 @@
-<?php  
+<?php
 	/**
-	* 
+	*
 	*/
 	class Curso
 	{
@@ -12,9 +12,12 @@
 
 		function __construct(){
 			session_start();
-			$this->header = file_get_contents("app/Vistas/header.html");
-			$this->footer = file_get_contents("app/Vistas/footer.html");	
-			$this->head = file_get_contents("app/Vistas/head.html");		
+			if($_SESSION["iidUsuario"] == "" || isset($_SESSION["iidUsuario"]))
+				$this->header = file_get_contents("app/Vistas/header.html");
+			else
+				$this->header = file_get_contents("app/Vistas/header2.html");
+			$this->footer = file_get_contents("app/Vistas/footer.html");
+			$this->head = file_get_contents("app/Vistas/head.html");
 		}
 
 		public function ejecutar(){
@@ -27,7 +30,7 @@
 						$idcurso = -1;
 					}
 
-					
+
 					switch ($_GET['act']) {
 						case 'mostrar':
 								$this->muestraCurso($idcurso);
@@ -43,7 +46,7 @@
 		}
 
 		private function muestraCurso($idcurso){
-			
+
 			if($idcurso>=0){
 				switch ($idcurso) {
 					case 1:
@@ -69,4 +72,4 @@
 			echo $this->head . $this->header . $vista . $this->footer;
 		}
 	}
-?> 
+?>
