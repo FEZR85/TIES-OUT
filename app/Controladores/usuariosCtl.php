@@ -225,14 +225,18 @@
 					$contrasena = md5($contrasena); //se encripta la contraseña
 					$resultado = $this->modelo->alta($nombre, $correo, $contrasena);//damos de alta en la BD
 					if($resultado!==FALSE){//Si se pudo insertar muestra la vista
-
-						$vista = file_get_contents("app/Vistas/home.html");
-						$diccionario = array(
-						'{tituloPagina}'=>"Inicio",
-						'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
-						$this->head = strtr($this->head,$diccionario);
-						$vista = $this->head . $this->header . $vista . $this->footer;
-						echo $vista;
+						require('correos/confirmarRegistro.php');
+						if($exito == false){
+							$this->mostrarProblemaRegistro("No se pudo enviar el correo");
+						}else{
+							$vista = file_get_contents("app/Vistas/home.html");
+							$diccionario = array(
+							'{tituloPagina}'=>"Inicio",
+							'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
+							$this->head = strtr($this->head,$diccionario);
+							$vista = $this->head . $this->header . $vista . $this->footer;
+							echo $vista;
+						}
 					}
 					else{
 						$this->mostrarProblemaRegistro("No se pudo completar el registro, intente más tarde.");

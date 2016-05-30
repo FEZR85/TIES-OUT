@@ -1,6 +1,7 @@
 <?php
 
-    require('phpmailer/class.phpmailer.php');
+    //require('phpmailer/class.phpmailer.php');
+    require 'phpmailer/PHPMailerAutoload.php';
     $mailer = new PHPMailer();
     $mailer->IsSMTP();
     $mailer->SMTPAuth = true;
@@ -51,11 +52,11 @@
     if($correo != ""){
         $mailer->AddAddress($correo);
     }
-
+    $exito = false;
     if(!$mailer->Send()) {
-      echo "Hubo un error: " . $mailer->ErrorInfo;
+      $exito = false;
     } else {
-      echo "Mensaje enviado con exito.";
+      $exito = true;
     }
 
 ?>
