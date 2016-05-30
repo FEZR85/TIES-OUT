@@ -163,8 +163,9 @@
     	width: 30px;
     	height: 30px;
 	}
-	#infoUser, #confPerfil, #salirS, #miscursos, #tsesion{
-			display: inline;
+	/*#infoUser, #confPerfil, #tsesion*/
+	#salirS, #miscursos{
+			display: none;
 		}
 /*--------------------------------------------------------------------------
 ----                             CONTENIDO                              ----
