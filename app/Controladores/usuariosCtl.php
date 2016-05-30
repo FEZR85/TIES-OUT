@@ -161,7 +161,7 @@
 						'{nombreUsuario}'=>$_SESSION['nombre'],
 						'{correo}'=>$_SESSION['correo'],
 						'{ocupacion}' => $_SESSION['ocupacion'],
-						'{descripcion}' => $_SESSION['descripcion']);
+						'<!--{descripcion}-->' => $_SESSION['descripcion']);
 
 					$this->head = strtr($this->head,$diccionario);
 					$vista = strtr($vista,$diccionario);
