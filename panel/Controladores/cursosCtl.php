@@ -11,34 +11,24 @@
 		private $head;
 
 		function __construct(){
-			require('app/Controladores/generalCtl.php');
+			require('Controladores/generalCtl.php');
 
- 			session_start();
-			$this->header = file_get_contents("app/Vistas/header.html");
-+			$this->footer = file_get_contents("app/Vistas/footer.html");
-+			$this->head = file_get_contents("app/Vistas/head.html");
-+
-+			$this->generalctl = new General();
-+			$this->header = $this->generalctl->headerSesion($this->header);
+// 			session_start();
+			$this->header = file_get_contents("Vistas/header.html");
+			$this->footer = file_get_contents("Vistas/footer.html");
+			$this->head = file_get_contents("Vistas/head.html");
+
+			$this->generalctl = new General();
+			$this->header = $this->generalctl->headerSesion($this->header);
 		}
 
 		public function ejecutar(){
 				//require_once("modelo/usuario.php");
 				//$this->modelo = new UsuarioMdl();
 				if(isset($_GET['act'])){
-					if(isset($_GET['idcurso'])){
-						$idcurso = $_GET['idcurso'];
-					}else{
-						$idcurso = -1;
-					}
-
-
 					switch ($_GET['act']) {
 						case 'mostrar':
-								$this->muestraCurso($idcurso);
-							break;
-						case 'miscursos':
-								$this->misCursos();
+								$this->muestraCursos();
 							break;
 						default:
 							# code...
@@ -47,29 +37,13 @@
 				}
 		}
 
-		private function muestraCurso($idcurso){
-			if($idcurso>=0){
-				switch ($idcurso) {
-					case 1:
-						$vista = file_get_contents('app/Vistas/curso1.html');
-						break;
-					case 2:
-						$vista = file_get_contents('app/Vistas/curso2.html');
-						break;
-					default:
-						# code...
-						break;
-				}
-			}else{
+		private function muestraCursos(){
 
-			}
-
-			echo $this->head . $this->header . $vista . $this->footer;
-		}
-
-		private function misCursos(){
-			$vista = file_get_contents('app/Vistas/misCursos.html');
-
+			$vista = file_get_contents("Vistas/listas/cursos.html");
+			$diccionario = array(
+			'{tituloPagina}'=>"Cursos",
+			'<!--{otros}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css">');
+			$this->head = strtr($this->head,$diccionario);
 			echo $this->head . $this->header . $vista . $this->footer;
 		}
 	}
