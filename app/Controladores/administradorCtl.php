@@ -8,7 +8,7 @@
 		private $modelo;
 
 		function __construct(){
-			session_start();
+		//	session_start();
 		}
 
 		public function ejecutar(){
