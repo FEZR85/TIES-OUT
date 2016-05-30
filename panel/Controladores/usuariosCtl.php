@@ -267,15 +267,16 @@
 					$_SESSION['nombre'] = $resultado['vchnombre'];
 
 					//$this->header = $this->generalctl->headerSesion($this->header);
+					$header = file_get_contents("Vistas/header.html");
 					$vista = file_get_contents("Vistas/panel.html");
 					$diccionario = array(
 					'{tituloPagina}'=>"Inicio",
-					'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
+					'<!--{otros}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css">');
 					$this->head = strtr($this->head,$diccionario);
-					$vista = $this->head . $this->header . $vista . $this->footer;
+					$vista = $this->head . $header . $vista . $this->footer;
 					echo $vista;
 				}else{
-					$this->mostrarProblemaIniciosesion("El usuario y/o contraseña es incorrecto. Intente de nuevo.$resultado");
+					$this->mostrarProblemaIniciosesion("El usuario y/o contraseña es incorrecto. Intente de nuevo.");
 				}
 			}
 		}
@@ -287,7 +288,7 @@
 			$vista = file_get_contents('Vistas/home.html');
 			$diccionario = array(
 			'{tituloPagina}'=>"Iniciar sesión",
-			'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
+			'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/js/social/bootstrap-social.css">');
 			$diccionarioProblema = array('<!-- Problema -->'=>'<span class="text-danger">'.$string.'</span>');
 			$vista = strtr($vista,$diccionarioProblema);
 			$this->head = strtr($this->head, $diccionario);
