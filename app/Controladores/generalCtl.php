@@ -96,9 +96,9 @@
 			if(empty($_POST)){
 				$vista = file_get_contents("app/Vistas/busqueda.html");
 				$diccionarioBuqueda = array(
-					'<!--{encabezadoBusqueda}-->'=>'<a href="#"><h2>No se encontraron resultados.</h2></a>',
-					'<!--{contenidoBusqueda}-->'=>'Intente con otra busqueda...');
-				$vista = strtr($vista,$diccionarioBusqueda);
+					'<!--{curso}-->'=>'<a href="#"><h2>No se encontraron resultados.</h2></a>',
+					'<!--{contenido}-->'=>'<p>Intente con otra búsqueda...</p>');
+				$vista = strtr($vista,$diccionarioBuqueda);
 				$diccionario = array(
 					'{tituloPagina}' => "Búsqueda");
 				$this->head = strtr($this->head,$diccionario);
@@ -110,28 +110,19 @@
 				$resultado = $this->modelo->buscar($busqueda);
 				if($resultado !== FALSE){
 					$vista = file_get_contents("app/Vistas/busqueda.html");
-					$inicio_fila = strrpos($vista,'<!--{icurso}-->');
-					$final_fila = strrpos($vista,'<!--{fcurso}-->') + 15;
-					$filaCursos = substr($vista,$inicio_fila,$final_fila-$inicio_fila);
-					$inicio_filaU = strrpos($vista,'<!--{iusuario}-->');
-					$final_filaU = strrpos($vista,'<!--{fusuario}-->') + 17;
-					$filaUsuario = substr($vista,$inicio_filaU,$final_filaU-$inicio_filaU);
-					foreach ($alumnos as $row) {
-						$new_filaCurso = $filaCursos;
-						$new_filaUsuario = $filaUsuario;
-						$diccionarioUsuario = array(
-							'<!--{encabezadoBusqueda}-->' => $row['usuario'],
-							'<!--{contenidoBusqueda}-->' => $row['descripcion']);
-						$diccionarioCurso = array(
-							'<!--{encabezadoBusqueda}-->' => $row['curso'],
-							'<!--{contenidoBusqueda}-->' => $row['contenido']);
-						$new_filaCurso = strtr($new_filaCurso,$diccionarioCurso);
-						$new_filaUsuario = strtr($new_filaUsuario,$diccionarioUsuario);
-						$filasCursos .= $new_filaCurso;
-						$filasUsuarios .= $new_filaUsuario;
+					$inicio_fila = strrpos($vista,'<section>');
+					$final_fila = strrpos($vista,'</section>') + 10;
+					$fila = substr($vista,$inicio_fila,$final_fila-$inicio_fila);
+					foreach ($resultado as $row) {
+						$new_fila = $fila;
+						$diccionario = array(
+							'<!--{usuario}-->' => '<a href="#">'.$row['usuario'].'</a>',
+							'<!--{descripcion}-->' => '<p>'.$row['descripcion'].'</p>',
+							'<!--{curso}-->' => '<a href="#">'.$row["curso"].'</a>',
+							'<!--{contenido}-->' => "<p>".$row['contenido']."</p>");
+						$filas .= $new_fila;
 					}
-					$vista = str_replace($filaCursos, $filasCursos, $vista);
-					$vista = str_replace($filaUsuario, $filasUsuarios, $vista);
+					$vista = str_replace($fila, $filas, $vista);
 					$diccionario = array(
 						'{tituloPagina}' => "Búsqueda");
 					$this->head = strtr($this->head,$diccionario);
@@ -162,7 +153,7 @@
 				$finConectado = strrpos($header, '<!--{finconectado}-->') + 21;
 
 				$conectado = substr($header, $inicioConectado, $finConectado - $inicioConectado);
-				
+
 				$header = str_replace($conectado,'<!--{Conectado}-->', $header);
 				$header = str_replace('{banderaSesion}', 'sesion', $header);
 			}
