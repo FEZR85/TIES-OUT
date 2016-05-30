@@ -16,10 +16,15 @@
 
 		function __construct(){
 			//session_start();
+			require('Controladores/generalCtl.php');
 			$this->instancia = Conexion::getInstance();
 			$this->instancia->__construct();
 
 			$this->mysql = $this->instancia->getConnection();
+
+			$this->generalctl = new General();
+			$this->header = file_get_contents("Vistas/header.html");
+			$this->header = $this->generalctl->headerSesion($this->header);
 			$this->head = file_get_contents('Vistas/head.html');
 			$this->footer = file_get_contents('Vistas/footer.html');
 		}
@@ -266,14 +271,13 @@
 					$_SESSION['contrasena'] = $contrasena;
 					$_SESSION['nombre'] = $resultado['vchnombre'];
 
-					//$this->header = $this->generalctl->headerSesion($this->header);
-					$header = file_get_contents("Vistas/header.html");
+					$this->header = $this->generalctl->headerSesion($this->header);
 					$vista = file_get_contents("Vistas/panel.html");
 					$diccionario = array(
 					'{tituloPagina}'=>"Inicio",
 					'<!--{otros}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css">');
 					$this->head = strtr($this->head,$diccionario);
-					$vista = $this->head . $header . $vista . $this->footer;
+					$vista = $this->head . $this->header . $vista . $this->footer;
 					echo $vista;
 				}else{
 					$this->mostrarProblemaIniciosesion("El usuario y/o contraseña es incorrecto. Intente de nuevo.");
