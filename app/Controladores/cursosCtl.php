@@ -13,13 +13,13 @@
 		function __construct(){
 			require('app/Controladores/generalCtl.php');
 
- 			session_start();
+ 			//session_start();
 			$this->header = file_get_contents("app/Vistas/header.html");
-+			$this->footer = file_get_contents("app/Vistas/footer.html");
-+			$this->head = file_get_contents("app/Vistas/head.html");
-+
-+			$this->generalctl = new General();
-+			$this->header = $this->generalctl->headerSesion($this->header);
+			$this->footer = file_get_contents("app/Vistas/footer.html");
+			$this->head = file_get_contents("app/Vistas/head.html");
+
+			$this->generalctl = new General();
+			$this->header = $this->generalctl->headerSesion($this->header);
 		}
 
 		public function ejecutar(){
