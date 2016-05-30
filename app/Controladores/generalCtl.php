@@ -96,7 +96,7 @@
 			if(empty($_POST)){
 				$vista = file_get_contents("app/Vistas/busqueda.html");
 				$diccionarioBuqueda = array(
-					'<!--{curso}-->'=>'<a href="#"><h2>No se encontraron resultados.</h2></a>',
+					'<!--{curso}-->'=>'<a href="#" class="tituloBusqueda"><h2>No se encontraron resultados.</h2></a>',
 					'<!--{contenido}-->'=>'<p>Intente con otra búsqueda...</p>');
 				$vista = strtr($vista,$diccionarioBuqueda);
 				$diccionario = array(
@@ -116,9 +116,9 @@
 					foreach ($resultado as $row) {
 						$new_fila = $fila;
 						$diccionario = array(
-							'<!--{usuario}-->' => '<a href="#">'.$row['usuario'].'</a>',
+							'<!--{usuario}-->' => '<a href="#" class="tituloBusqueda">'.$row['usuario'].'</a>',
 							'<!--{descripcion}-->' => '<p>'.$row['descripcion'].'</p>',
-							'<!--{curso}-->' => '<a href="#">'.$row["curso"].'</a>',
+							'<!--{curso}-->' => '<a href="#" class="tituloBusqueda">'.$row["curso"].'</a>',
 							'<!--{contenido}-->' => "<p>".$row['contenido']."</p>");
 						$filas .= $new_fila;
 					}
