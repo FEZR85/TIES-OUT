@@ -1,4 +1,6 @@
 <?php
+	
+	session_start();
 	$bandera = false;
 	if(isset($_GET['controlador'])){
 		switch ($_GET['controlador']) {

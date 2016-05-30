@@ -14,7 +14,6 @@
 		private $vista;
 
 		function __construct(){
-			//session_start();
 			$this->head = file_get_contents('app/Vistas/head.html');
 +			$this->header = file_get_contents('app/Vistas/header.html');
  			$this->footer = file_get_contents('app/Vistas/footer.html');
@@ -101,7 +100,7 @@
 
 
 			if(isset($_SESSION) && !empty($_SESSION)){
-				var_dump($_SESSION);
+				
 				$inicioDesconectado = strrpos($header, '<!--{iniciodesconectado}-->');
 				$finDesconectado = strrpos($header, '<!--{findesconectado}-->') + 24;
 

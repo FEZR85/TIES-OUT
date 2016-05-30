@@ -15,7 +15,6 @@
 		private $generalctl;
 
 		function __construct(){
-			session_start();
 			require('app/Modelo/singleton.php');
 			require('app/Controladores/generalCtl.php');
 
@@ -69,6 +68,9 @@
 						break;
 					case 'inicioSesion':
 							$this->iniciaSesionUsuario();
+						break;
+					case 'cerrarSesion':
+							$this->cerrarSesion();
 						break;
 					default:
 							require('404.php');
@@ -289,6 +291,21 @@
 				}else{
 					$this->mostrarProblemaIniciosesion("El usuario y/o contraseña es incorrecto. Intente de nuevo.");
 				}
+			}
+		}
+
+		private function cerrarSesion(){
+			if(isset($_SESSION)){
+				session_unset();
+				session_destroy();
+				setcookie(session_name(), '', time()-3600);
+
+				$vista = file_get_contents("app/Vistas/sesion.html");
+				$this->header = file_get_contents("app/Vistas/header.html");
+				$this->header = $this->generalctl->headerSesion($this->header);
+				echo $this->head . $this->header . $vista . $this->footer;
+			}else{
+				//No hay sesión iniciada
 			}
 		}
 
