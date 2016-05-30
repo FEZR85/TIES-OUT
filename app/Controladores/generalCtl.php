@@ -155,13 +155,16 @@
 				$header = str_replace('<!--{nombreUsuario}-->', $_SESSION['nombre'], $header);
 
 				$header = str_replace('{idUsuario}', $_SESSION['idUsuario'], $header);
+				$header = str_replace('{banderaSesion}', 'cerrarSesion', $header);
 
 			}else{
 				$inicioConectado = strrpos($header, '<!--{inicioconectado}-->');
 				$finConectado = strrpos($header, '<!--{finconectado}-->') + 21;
 
 				$conectado = substr($header, $inicioConectado, $finConectado - $inicioConectado);
+				
 				$header = str_replace($conectado,'<!--{Conectado}-->', $header);
+				$header = str_replace('{banderaSesion}', 'sesion', $header);
 			}
 
 			return $header;
