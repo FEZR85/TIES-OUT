@@ -181,7 +181,7 @@
 
 				$contrasena = md5($contrasena); //encriptamos primero para poder comparar con la contraseña de la BD
 				//Revisa si el usuario existe en la base de datos
-				$resultado = $this->modelo->consultaUsuario($correo, $contrasena);
+				$resultado = $this->modelo->consultaUsuario($correo, $contrasena); 
 				if($resultado){
 					$_SESSION['correo'] = $correo;
 					$_SESSION['contrasena'] = $contrasena;

@@ -10,8 +10,16 @@
 		private $footer;
 		private $head;
 
+		private $mysql;
+		private $instancia;
+
 		function __construct(){
 			require('app/Controladores/generalCtl.php');
+
+			$this->instancia = Conexion::getInstance();
+			$this->instancia->__construct();
+
+			$this->mysql = $this->instancia->getConnection();
 
  			//session_start();
 			$this->header = file_get_contents("app/Vistas/header.html");
@@ -48,23 +56,19 @@
 		}
 
 		private function muestraCurso($idcurso){
-			if($idcurso>=0){
-				switch ($idcurso) {
-					case 1:
-						$vista = file_get_contents('app/Vistas/curso1.html');
-						break;
-					case 2:
-						$vista = file_get_contents('app/Vistas/curso2.html');
-						break;
-					default:
-						# code...
-						break;
-				}
-			}else{
+			require('app/Modelo/cursosMdl.php');
+			//echo "D:";
+			$this->modelo = new CursosMdl($this->mysql);
 
-			}
+			$resultado = $this->modelo->traerCursos($idcurso);
 
+			$vista = file_get_contents('app/Vistas/curso1.html');
+
+			$vista = str_replace('{titulo}', $resultado['vchNombre'], $vista);
+			$vista = str_replace('{contenido}', $resultado['ltextContenido'], $vista);
+			//echo "D:";	
 			echo $this->head . $this->header . $vista . $this->footer;
+
 		}
 
 		private function misCursos(){
