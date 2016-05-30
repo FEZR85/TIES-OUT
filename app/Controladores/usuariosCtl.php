@@ -159,7 +159,9 @@
 					$diccionario = array(
 						'{tituloPagina}'=>"Configurar Perfil",
 						'{nombreUsuario}'=>$_SESSION['nombre'],
-						'{correo}'=>$_SESSION['correo']);
+						'{correo}'=>$_SESSION['correo'],
+						'{ocupacion}' => $_SESSION['ocupacion'],
+						'{descripcion}' => $_SESSION['descripcion']);
 
 					$this->head = strtr($this->head,$diccionario);
 					$vista = strtr($vista,$diccionario);
@@ -353,23 +355,18 @@
 				//Revisa en la BD si el correo ya existe
 				if($this->modelo->existecorreo($correo)){					
 					$resultado = $this->modelo->actualiza($nacimiento, $sexo, $ocupacion, $descripcion, $_SESSION['idUsuario']);//damos de alta en la BD
-					/*if($resultado!==FALSE){//Si se pudo insertar muestra la vista
-						require('correos/confirmarRegistro.php');
-						if($exito == false){
-							$this->mostrarProblemaRegistro("No se pudo enviar el correo");
-						}else{
-							$vista = file_get_contents("app/Vistas/home.html");
+					if($resultado!==FALSE){//Si se pudo insertar muestra la vista											
+							$vista = file_get_contents("app/Vistas/configuraPerfil.html");
 							$diccionario = array(
-							'{tituloPagina}'=>"Inicio",
-							'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
+							'{tituloPagina}'=>"Configurar Perfil");
 							$this->head = strtr($this->head,$diccionario);
 							$vista = $this->head . $this->header . $vista . $this->footer;
 							echo $vista;
-						}
+						
 					}
 					else{
 						$this->mostrarProblemaRegistro("No se pudo completar el registro, intente más tarde.");
-					}*/
+					}
 				}
 				else {
 					$this->mostrarProblemaRegistro("El correo ya existe, intente con otro");
