@@ -1,5 +1,5 @@
 <?php
-class UsuarioMdl{
+class GeneralMdl{
 
 	private $mysql;
 
