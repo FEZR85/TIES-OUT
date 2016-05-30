@@ -90,57 +90,60 @@
 		private function mostrarPerfil($id){
 			/*Conecta al modelo correspondiente para consultar con el ID al usuario*/
 			//require('app/Vistas/perfilPublico.html');
+			if(isset($_SESSION) && !empty($_SESSION)){
+				if($id >= 0){
+					$vista = file_get_contents("app/Vistas/perfilPublico.html");
+					//$footer
 
-			if($id >= 0){
-				$vista = file_get_contents("app/Vistas/perfilPublico.html");
-				//$footer
+					$diccionarioUsuario = array(
+						'{correoUsuario}'   => $_SESSION['correo'],
+						'{nombreUsuario}'   => $_SESSION['nombre'],
+						'{ocupacionUsuario}'=> $_SESSION['ocupacion'],
+						'{cumpleUsuario}'   => $_SESSION['fechaNacimiento']);
 
-				$diccionarioUsuario = array(
-					'{correoUsuario}'=>'dancaballeroc@gmail.com',
-					'{nombreUsuario}'=>'Alfonso Caballero');
-
-				$vista = strtr($vista,$diccionarioUsuario);
+					$vista = strtr($vista,$diccionarioUsuario);
 
 
-				$listaTitulos = array(
-					'Arbol',
-					'Algoritmos',
-					'otro');
+					$listaTitulos = array(
+						'Arbol',
+						'Algoritmos',
+						'otro');
 
-				$listaUrl = array(
-					'app/Vistas/curso1.php',
-					'app/Vistas/curso2.php',
-					'app/Vistas/curso2.php');
+					$listaUrl = array(
+						'app/Vistas/curso1.php',
+						'app/Vistas/curso2.php',
+						'app/Vistas/curso2.php');
 
-				$inicioFila = strrpos($vista,'<!--{iniciaCurso}-->');
-				$finalFila = strrpos($vista,'<!--{terminaCurso}-->')+21;
+					$inicioFila = strrpos($vista,'<!--{iniciaCurso}-->');
+					$finalFila = strrpos($vista,'<!--{terminaCurso}-->')+21;
 
-				$fila = substr($vista,$inicioFila,$finalFila-$inicioFila);
-				$filas = "";
+					$fila = substr($vista,$inicioFila,$finalFila-$inicioFila);
+					$filas = "";
 
-				$i = 0;
+					$i = 0;
 
-				foreach ($listaTitulos as $row) {
-					$newFila = $fila;
+					foreach ($listaTitulos as $row) {
+						$newFila = $fila;
 
-					$diccionario = array(
-						'{urlCurso}'=>$listaUrl[$i],
-						'{colorRandom}'=>'naranja',
-						'{Titulo}'=>$row,
-						'{tituloPagina}'=>"Perfil");
+						$diccionario = array(
+							'{urlCurso}'=>$listaUrl[$i],
+							'{colorRandom}'=>'naranja',
+							'{Titulo}'=>$row,
+							'{tituloPagina}'=>"Perfil");
 
-					$newFila = strtr($newFila, $diccionario);
-					$filas .= $newFila;
-					$i++;
+						$newFila = strtr($newFila, $diccionario);
+						$filas .= $newFila;
+						$i++;
+					}
+
+					$vista = str_replace($fila,$filas, $vista);
+					$this->head = strtr($this->head,$diccionario);
+					$vista = $this->head . $this->header . $vista . $this->footer;
+
+					echo $vista;
+				}else{
+					require('404.html');
 				}
-
-				$vista = str_replace($fila,$filas, $vista);
-				$this->head = strtr($this->head,$diccionario);
-				$vista = $this->head . $this->header . $vista . $this->footer;
-
-				echo $vista;
-			}else{
-				require('404.html');
 			}
 		}
 
@@ -286,11 +289,17 @@
 				//Revisa si el usuario existe en la base de datos
 				$resultado = $this->modelo->consultaUsuario($correo, $contrasena);
 				if(!empty($resultado)){
+
 					$_SESSION['correo'] = $correo;
 					$_SESSION['contrasena'] = $contrasena;
 					$_SESSION['nombre'] = $resultado['vchNombre'];
 					$_SESSION['idUsuario'] = $resultado['iidUsuario'];
-
+					$_SESSION['ocupacion'] = $resultado['vchOcupacion'];
+					$_SESSION['fechaNacimiento'] = $resultado['dfechaNacimiento'];
+					$_SESSION['descripcion'] = $resultado['vchdescripcion'];
+					$_SESSION['sexo'] = $resultado['vchSexo'];
+					$_SESSION['rutaFoto'] = $resultado['bRutaFoto'];
+					
 
 					$this->header = $this->generalctl->headerSesion($this->headerOriginal);
 					$vista = file_get_contents("app/Vistas/home.html");
