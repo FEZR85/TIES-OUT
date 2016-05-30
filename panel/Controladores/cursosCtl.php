@@ -30,6 +30,9 @@
 						case 'mostrar':
 								$this->muestraCursos();
 							break;
+						case 'agregar':
+								$this->agregarCursos();
+							break;
 						default:
 							# code...
 							break;
@@ -42,6 +45,16 @@
 			$vista = file_get_contents("Vistas/listas/cursos.html");
 			$diccionario = array(
 			'{tituloPagina}'=>"Cursos",
+			'<!--{otros}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css">');
+			$this->head = strtr($this->head,$diccionario);
+			echo $this->head . $this->header . $vista . $this->footer;
+		}
+
+		private function agregarCursos(){
+
+			$vista = file_get_contents("Vistas/agregarcurso.html");
+			$diccionario = array(
+			'{tituloPagina}'=>"Agregar cursos",
 			'<!--{otros}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css">');
 			$this->head = strtr($this->head,$diccionario);
 			echo $this->head . $this->header . $vista . $this->footer;
