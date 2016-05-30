@@ -25,9 +25,9 @@
 			$this->mysql = $this->instancia->getConnection();
 
 			$this->generalctl = new General();
-+
-+			$this->header = file_get_contents("app/Vistas/header.html");
-+			$this->header = $this->generalctl->headerSesion($this->header);
+
+			$this->header = file_get_contents("app/Vistas/header.html");
+			$this->header = $this->generalctl->headerSesion($this->header);
 			$this->footer = file_get_contents("app/Vistas/footer.html");
 			$this->head = file_get_contents("app/Vistas/head.html");
 		}
@@ -275,10 +275,10 @@
 				$resultado = $this->modelo->consultaUsuario($correo, $contrasena);
 				if(!empty($resultado)){
 					$_SESSION['correo'] = $correo;
-+					$_SESSION['contrasena'] = $contrasena;
-+					$_SESSION['nombre'] = $resultado['vchnombre'];
-+
-+					$this->header = $this->generalctl->headerSesion($this->header);
+					$_SESSION['contrasena'] = $contrasena;
+					$_SESSION['nombre'] = $resultado['vchnombre'];
+
+					$this->header = $this->generalctl->headerSesion($this->header);
 					$vista = file_get_contents("app/Vistas/home.html");
 					$diccionario = array(
 					'{tituloPagina}'=>"Inicio",
