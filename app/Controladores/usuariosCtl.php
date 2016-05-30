@@ -9,13 +9,13 @@
 		private $modelo;
 		private $head;
 		private $header;
+		private $headerOriginal;
 		private $footer;
 		private $instancia;
 		private $mysql;
 		private $generalctl;
 
 		function __construct(){
-			session_start();
 			require('app/Modelo/singleton.php');
 			require('app/Controladores/generalCtl.php');
 
@@ -26,8 +26,8 @@
 
 			$this->generalctl = new General();
 
-			$this->header = file_get_contents("app/Vistas/header.html");
-			$this->header = $this->generalctl->headerSesion($this->header);
+			$this->headerOriginal = file_get_contents("app/Vistas/header.html");
+			$this->header = $this->generalctl->headerSesion($this->headerOriginal);
 			$this->footer = file_get_contents("app/Vistas/footer.html");
 			$this->head = file_get_contents("app/Vistas/head.html");
 		}
@@ -69,6 +69,9 @@
 						break;
 					case 'inicioSesion':
 							$this->iniciaSesionUsuario();
+						break;
+					case 'cerrarSesion':
+							$this->cerrarSesion();
 						break;
 					default:
 							require('404.php');
@@ -278,7 +281,8 @@
 					$_SESSION['contrasena'] = $contrasena;
 					$_SESSION['nombre'] = $resultado['vchnombre'];
 
-					$this->header = $this->generalctl->headerSesion($this->header);
+
+					$this->header = $this->generalctl->headerSesion($this->headerOriginal);
 					$vista = file_get_contents("app/Vistas/home.html");
 					$diccionario = array(
 					'{tituloPagina}'=>"Inicio",
@@ -289,6 +293,25 @@
 				}else{
 					$this->mostrarProblemaIniciosesion("El usuario y/o contraseña es incorrecto. Intente de nuevo.");
 				}
+			}
+		}
+
+		private function cerrarSesion(){
+			if(isset($_SESSION)){
+				session_unset();
+				session_destroy();
+				setcookie(session_name(), '', time()-3600);
+
+				$vista = file_get_contents("app/Vistas/sesion.html");
+
+				$diccionario = array(
+					'{tituloPagina}'=>"Inicio",
+					'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
+				$this->head = strtr($this->head,$diccionario);
+				$this->header = $this->generalctl->headerSesion($this->headerOriginal);
+				echo $this->head . $this->header . $vista . $this->footer;
+			}else{
+				//No hay sesión iniciada
 			}
 		}
 

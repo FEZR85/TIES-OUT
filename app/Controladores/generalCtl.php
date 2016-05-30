@@ -105,7 +105,7 @@
 
 
 			if(isset($_SESSION) && !empty($_SESSION)){
-				var_dump($_SESSION);
+
 				$inicioDesconectado = strrpos($header, '<!--{iniciodesconectado}-->');
 				$finDesconectado = strrpos($header, '<!--{findesconectado}-->') + 24;
 
