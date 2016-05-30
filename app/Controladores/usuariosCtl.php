@@ -16,7 +16,7 @@
 		private $generalctl;
 
 		function __construct(){
-			require('app/Modelo/singleton.php');
+			//require('app/Modelo/singleton.php');
 			require('app/Controladores/generalCtl.php');
 
 			$this->instancia = Conexion::getInstance();

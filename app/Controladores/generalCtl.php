@@ -15,7 +15,7 @@
 
 		function __construct(){
 			//session_start();
-			require('app/Modelo/singleton.php');
+			//require('app/Modelo/singleton.php');
 			$this->instancia = Conexion::getInstance();
 			$this->instancia->__construct();
 
