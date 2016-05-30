@@ -279,7 +279,8 @@
 				if(!empty($resultado)){
 					$_SESSION['correo'] = $correo;
 					$_SESSION['contrasena'] = $contrasena;
-					$_SESSION['nombre'] = $resultado['vchnombre'];
+					$_SESSION['nombre'] = $resultado['vchNombre'];
+					$_SESSION['idUsuario'] = $resultado['iidUsuario'];
 
 
 					$this->header = $this->generalctl->headerSesion($this->headerOriginal);
