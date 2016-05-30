@@ -15,20 +15,11 @@
 		private $generalctl;
 
 		function __construct(){
-			session_start();
-			require('Modelo/singleton.php');
-
-
+			//session_start();
 			$this->instancia = Conexion::getInstance();
 			$this->instancia->__construct();
 
 			$this->mysql = $this->instancia->getConnection();
-
-			//$this->generalctl = new General();
-
-			/*$this->header = file_get_contents("app/Vistas/header.html");
-			$this->header = $this->generalctl->headerSesion($this->header);
-			$this->footer = file_get_contents("app/Vistas/footer.html");*/
 			$this->head = file_get_contents('Vistas/head.html');
 			$this->footer = file_get_contents('Vistas/footer.html');
 		}
@@ -72,11 +63,11 @@
 							$this->iniciaSesionUsuario();
 						break;
 					default:
-							require('404.php');
+							//require('404.php');
 						break;
 				}
 			}else{
-				require('404.html');
+				//require('404.html');
 			}
 		}
 
@@ -256,21 +247,21 @@
 				$contrasena = $_POST['contrasena'];
 
 				//Valida si lo que se recibio es un correo
-				/*if(!preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/',$correo)){
+				if(!preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/',$correo)){
 					$this->mostrarProblemaIniciosesion("Ingrese un correo válido");
 					exit();
-				}*/
+				}
 
 				//Valida si lo que se recibio es una contraseña
-				/*if(!preg_match('/^([a-zA-Z0-9]{6,20})$/',$contrasena)){
+				if(!preg_match('/^([a-zA-Z0-9]{6,20})$/',$contrasena)){
 					$this->mostrarProblemaIniciosesion("La contraseña debe contener minimo 6 caracteres alfanuméricos");
 					exit();
-				}*/
+				}
 
-				//$contrasena = md5($contrasena); //encriptamos primero para poder comparar con la contraseña de la BD
+				$contrasena = md5($contrasena); //encriptamos primero para poder comparar con la contraseña de la BD
 				//Revisa si el usuario existe en la base de datos
 				$resultado = $this->modelo->consultaUsuario($correo, $contrasena);
-				if(!empty($resultado)){
+				if($resultado){
 					$_SESSION['correo'] = $correo;
 					$_SESSION['contrasena'] = $contrasena;
 					$_SESSION['nombre'] = $resultado['vchnombre'];
@@ -284,7 +275,7 @@
 					$vista = $this->head . $this->header . $vista . $this->footer;
 					echo $vista;
 				}else{
-					$this->mostrarProblemaIniciosesion("El usuario y/o contraseña es incorrecto. Intente de nuevo.");
+					$this->mostrarProblemaIniciosesion("El usuario y/o contraseña es incorrecto. Intente de nuevo.$resultado");
 				}
 			}
 		}
