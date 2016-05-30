@@ -14,12 +14,13 @@
 		private $vista;
 
 		function __construct(){
-			//session_start();
+			session_start();
+			require('app/Modelo/singleton.php');
 			$this->head = file_get_contents('app/Vistas/head.html');
-+			$this->header = file_get_contents('app/Vistas/header.html');
+			$this->header = file_get_contents('app/Vistas/header.html');
  			$this->footer = file_get_contents('app/Vistas/footer.html');
 
-+			$this->header = $this->headerSesion($this->header);
+			$this->header = $this->headerSesion($this->header);
 
 		}
 
@@ -86,15 +87,18 @@
 		}
 
 		function busqueda(){
-			$this->vista = file_get_contents("app/Vistas/busqueda.html");
+			require('app/Modelo/generalMdl.php');
+			$this->modelo = new GeneralMdl($this->mysql);
 
-			$diccionario = array(
-				'{tituloPagina}' => "Búsqueda");
-
-			$this->head = strtr($this->head,$diccionario);
-			$this->vista = $this->head . $this->header . $this->vista . $this->footer;
-
-			echo $this->vista;
+			$resultado = $this->modelo->buscar("flor");
+			if($resultado !== FALSE){
+				$this->vista = file_get_contents("app/Vistas/busqueda.html");
+				$diccionario = array(
+					'{tituloPagina}' => "Búsqueda");
+				$this->head = strtr($this->head,$diccionario);
+				$this->vista = $this->head . $this->header . $this->vista . $this->footer;
+				echo $this->vista;
+			}
 		}
 
 		public static function headerSesion($header){
