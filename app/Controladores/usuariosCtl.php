@@ -74,7 +74,7 @@
 							$this->cerrarSesion();
 						break;
 					default:
-							require('404.php');
+							require('404.html');
 						break;
 				}
 			}else{
@@ -165,11 +165,11 @@
 					echo $vista;
 				}else{
 					require('404.html');
-				}				
+				}
 			}else{
 				//error no hay sesion iniciada
 			}
-			
+
 		}
 
 		/**
@@ -299,7 +299,7 @@
 					$_SESSION['descripcion'] = $resultado['vchdescripcion'];
 					$_SESSION['sexo'] = $resultado['vchSexo'];
 					$_SESSION['rutaFoto'] = $resultado['bRutaFoto'];
-					
+
 
 					$this->header = $this->generalctl->headerSesion($this->headerOriginal);
 					$vista = file_get_contents("app/Vistas/home.html");

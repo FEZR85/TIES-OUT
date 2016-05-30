@@ -47,4 +47,17 @@ class UsuarioMdl{
 		return $fila;
 	}
 
+	function traerUsuarios(){
+		$info ="";
+		$query = "SELECT  upper( vchNombre ) AS nombre, vchCorreo FROM usuario WHERE tiActivo =1 AND tiEliminado =0 AND iidTipo =1";
+		$resultado = $this->mysql->query($query);
+		while($fila = $resultado->num_rows){
+			if($fila > 0)
+				while($fila = $resultado->fetch_assoc())
+					$info[] = $fila;
+		return $info;
+		}
+		return false;
+	}
+
 }
