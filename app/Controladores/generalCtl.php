@@ -154,6 +154,8 @@
 
 				$header = str_replace('<!--{nombreUsuario}-->', $_SESSION['nombre'], $header);
 
+				$header = str_replace('{idUsuario}', $_SESSION['idUsuario'], $header);
+
 			}else{
 				$inicioConectado = strrpos($header, '<!--{inicioconectado}-->');
 				$finConectado = strrpos($header, '<!--{finconectado}-->') + 21;
