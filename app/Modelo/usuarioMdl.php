@@ -20,6 +20,14 @@ class UsuarioMdl{
 			return FALSE;
 	}
 
+	function actualiza($nacimiento, $sexo, $ocupacion, $descripcion, $idUsuario){
+		$query = "UPDATE usuario 
+				  SET vchSexo='$sexo', vchOcupacion='$ocupacion', vchdescripcion = '$descripcion'
+				  WHERE iidUsuario='$idUsuario'";
+		$result = $this->mysql->query($query);
+		var_dump($result);
+	}
+
 	function consultaUsuario($correo, $contrasena){
 		$info = "";
 		$query = "SELECT * FROM usuario WHERE vchcorreo='$correo' AND vchcontrasena='$contrasena' AND tiActivo = 1";

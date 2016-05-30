@@ -73,6 +73,9 @@
 					case 'cerrarSesion':
 							$this->cerrarSesion();
 						break;
+					case 'actualizaPerfil':
+							$this->actualizaPerfil();
+						break;
 					default:
 							require('404.html');
 						break;
@@ -294,6 +297,7 @@
 					$_SESSION['contrasena'] = $contrasena;
 					$_SESSION['nombre'] = $resultado['vchNombre'];
 					$_SESSION['idUsuario'] = $resultado['iidUsuario'];
+					echo $_SESSION['idUsuario'];
 					$_SESSION['ocupacion'] = $resultado['vchOcupacion'];
 					$_SESSION['fechaNacimiento'] = $resultado['dfechaNacimiento'];
 					$_SESSION['descripcion'] = $resultado['vchdescripcion'];
@@ -331,6 +335,45 @@
 				echo $this->head . $this->header . $vista . $this->footer;
 			}else{
 				//No hay sesión iniciada
+			}
+		}
+
+		private function actualizaPerfil(){
+			require('app/Modelo/usuarioMdl.php');
+			$this->modelo = new UsuarioMdl($this->mysql);//se le manda la variable con la conexion establecida
+			if(empty($_POST) || empty($_SESSION)){
+				$this->mostrarProblemaRegistro("Favor de llenar los campos requeridos");
+			}else{
+				$nacimiento = $_POST["nacimiento"];
+				$sexo	= $_POST["sexo"];
+				$ocupacion = $_POST["ocupacion"];
+				$descripcion = $_POST["descripcion"];
+				$correo = $_SESSION['correo'];
+
+				//Revisa en la BD si el correo ya existe
+				if($this->modelo->existecorreo($correo)){					
+					$resultado = $this->modelo->actualiza($nacimiento, $sexo, $ocupacion, $descripcion, $_SESSION['idUsuario']);//damos de alta en la BD
+					/*if($resultado!==FALSE){//Si se pudo insertar muestra la vista
+						require('correos/confirmarRegistro.php');
+						if($exito == false){
+							$this->mostrarProblemaRegistro("No se pudo enviar el correo");
+						}else{
+							$vista = file_get_contents("app/Vistas/home.html");
+							$diccionario = array(
+							'{tituloPagina}'=>"Inicio",
+							'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
+							$this->head = strtr($this->head,$diccionario);
+							$vista = $this->head . $this->header . $vista . $this->footer;
+							echo $vista;
+						}
+					}
+					else{
+						$this->mostrarProblemaRegistro("No se pudo completar el registro, intente más tarde.");
+					}*/
+				}
+				else {
+					$this->mostrarProblemaRegistro("El correo ya existe, intente con otro");
+				}
 			}
 		}
 
