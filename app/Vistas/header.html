@@ -73,13 +73,13 @@
 			      	<!--{finconectado}-->
 			    </ul>
 
-			    <form class="navbar-form navbar-right" role="search">
+			    <form action="index.php?controlador=general&act=busqueda" method="post" class="navbar-form navbar-right" id="formularioBusqueda" role="search">
 			      	<div class="input-group">
-			        	<input type="text" class="form-control" placeholder="e.j. Árboles binarios">
+			        	<input id="busqueda" type="text" class="form-control" placeholder="e.j. Árboles binarios">
 						<span class="input-group-btn">
-							<a class="btn btn-default" href="index.php?controlador=general&act=busqueda">
+							<button class="btn btn-default">
 								<span class="glyphicon glyphicon-search"></span>
-							</a>
+							</button>
 						</span>
 			      	</div>
 			    </form>
