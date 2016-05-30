@@ -42,6 +42,15 @@
 						case 'guardar':
 								$this->guardarCursos();
 							break;
+						case 'eliminar':
+								$this->eliminarCursos();
+							break;
+						case 'desactivar':
+								$this->desactivarCursos();
+							break;
+						case 'activar':
+								$this->activarCursos();
+							break;
 						default:
 							# code...
 							break;
@@ -66,7 +75,9 @@
 			foreach ($alumnos as $row) {
 				$new_fila = $fila;
 				$diccionarioCursos = array(
+					'<!--{id}-->' => $row['id'],
 					'<!--{nombre}-->' => $row['nombre'],
+					'<!--{estado}-->' => $row['estado'],
 					'<!--{descripcion}-->' => $row['contenido']);
 					$new_fila = strtr($new_fila,$diccionarioCursos);
 					$filas .= $new_fila;
@@ -117,6 +128,75 @@
 				}
 				else {
 					$this->mostrarProblema("No se pudo guardar el curso. Intente más tarde.");
+				}
+			}
+		}
+
+		private function eliminarCursos($id){
+			require('Modelo/cursosMdl.php');
+			$this->modelo = new CursosMdl($this->mysql);
+			$id = $_GET['id'];
+			if($id == ""){
+				$this->mostrarProblema("Error al eliminar curso.");
+			}
+			else {
+				$resultado = $this->modelo->eliminarCursos($id);
+				if($resultado){
+					$vista = file_get_contents("Vistas/listas/cursos.html");
+					$diccionario = array(
+					'{tituloPagina}'=>"Cursos",
+					'<!--{otros}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css">');
+					$this->head = strtr($this->head,$diccionario);
+					echo $this->head . $this->header . $vista . $this->footer;
+				}
+				else {
+					$this->mostrarProblema("No se puede eliminar el curso.");
+				}
+			}
+		}
+
+		private function desactivarCursos($id){
+			require('Modelo/cursosMdl.php');
+			$this->modelo = new CursosMdl($this->mysql);
+			$id = $_GET['id'];
+			if($id == ""){
+				$this->mostrarProblema("Error al desactivar curso.");
+			}
+			else {
+				$resultado = $this->modelo->desactivarCursos($id);
+				if($resultado){
+					$vista = file_get_contents("Vistas/listas/cursos.html");
+					$diccionario = array(
+					'{tituloPagina}'=>"Cursos",
+					'<!--{otros}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css">');
+					$this->head = strtr($this->head,$diccionario);
+					echo $this->head . $this->header . $vista . $this->footer;
+				}
+				else {
+					$this->mostrarProblema("No se puede desactivar el curso.");
+				}
+			}
+		}
+
+		private function activarCursos($id){
+			require('Modelo/cursosMdl.php');
+			$this->modelo = new CursosMdl($this->mysql);
+			$id = $_GET['id'];
+			if($id == ""){
+				$this->mostrarProblema("Error al activar curso.");
+			}
+			else {
+				$resultado = $this->modelo->activarCursos($id);
+				if($resultado){
+					$vista = file_get_contents("Vistas/listas/cursos.html");
+					$diccionario = array(
+					'{tituloPagina}'=>"Cursos",
+					'<!--{otros}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css">');
+					$this->head = strtr($this->head,$diccionario);
+					echo $this->head . $this->header . $vista . $this->footer;
+				}
+				else {
+					$this->mostrarProblema("No se puede activar el curso.");
 				}
 			}
 		}
