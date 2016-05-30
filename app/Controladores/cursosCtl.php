@@ -69,7 +69,9 @@
 
 		private function misCursos(){
 			$vista = file_get_contents('app/Vistas/misCursos.html');
-
+			$diccionario = array(
+				'{tituloPagina}'=>"Mis cursos");
+			$this->head = strtr($this->head,$diccionario);
 			echo $this->head . $this->header . $vista . $this->footer;
 		}
 	}
