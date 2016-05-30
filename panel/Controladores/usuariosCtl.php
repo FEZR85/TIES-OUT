@@ -58,6 +58,15 @@
 					case 'cerrarSesion':
 							$this->cerrarSesion();
 						break;
+					case 'eliminar':
+							$this->eliminar();
+						break;
+					case 'desactivar':
+							$this->desactivar();
+						break;
+					case 'activar':
+							$this->activar();
+						break;
 					default:
 							//require('404.php');
 						break;
@@ -87,6 +96,8 @@
 			foreach ($alumnos as $row) {
 				$new_fila = $fila;
 				$diccionario = array(
+					'<!--{id}-->' => $row['id'],
+					'<!--{estado}-->' => $row['estado'],
 					'<!--{nombre}-->' => $row['nombre'],
 					'<!--{correo}-->' => $row['vchCorreo']);
 					$new_fila = strtr($new_fila,$diccionario);
@@ -181,7 +192,7 @@
 
 				$contrasena = md5($contrasena); //encriptamos primero para poder comparar con la contraseña de la BD
 				//Revisa si el usuario existe en la base de datos
-				$resultado = $this->modelo->consultaUsuario($correo, $contrasena); 
+				$resultado = $this->modelo->consultaUsuario($correo, $contrasena);
 				if($resultado){
 					$_SESSION['correo'] = $correo;
 					$_SESSION['contrasena'] = $contrasena;
@@ -222,6 +233,75 @@
 			}
 		}
 
+		private function eliminar(){
+			require('Modelo/usuariosMdl.php');
+			$this->modelo = new UsuariosMdl($this->mysql);
+			$id = $_GET['id'];
+			if($id == ""){
+				$this->mostrarProblema("Error al eliminar usuario.");
+			}
+			else {
+				$resultado = $this->modelo->eliminaUsuario($id);
+				if($resultado){
+					$vista = file_get_contents("Vistas/listas/usuarios.html");
+					$diccionario = array(
+					'{tituloPagina}'=>"Usuarios",
+					'<!--{otros}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css">');
+					$this->head = strtr($this->head,$diccionario);
+					echo $this->head . $this->header . $vista . $this->footer;
+				}
+				else {
+					$this->mostrarProblema("No se puede eliminar el usuario.");
+				}
+			}
+		}
+
+		private function desactivar(){
+			require('Modelo/usuarioMdl.php');
+			$this->modelo = new UsuarioMdl($this->mysql);
+			$id = $_GET['id'];
+			if($id == ""){
+				$this->mostrarProblema("Error al desactivar usuario.");
+			}
+			else {
+				$resultado = $this->modelo->desactivarUsuario($id);
+				if($resultado){
+					$vista = file_get_contents("Vistas/listas/usuarios.html");
+					$diccionario = array(
+					'{tituloPagina}'=>"Usuarios",
+					'<!--{otros}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css">');
+					$this->head = strtr($this->head,$diccionario);
+					echo $this->head . $this->header . $vista . $this->footer;
+				}
+				else {
+					$this->mostrarProblema("No se puede desactivar el usuario.");
+				}
+			}
+		}
+
+		private function activar(){
+			require('Modelo/usuariosMdl.php');
+			$this->modelo = new UsuariosMdl($this->mysql);
+			$id = $_GET['id'];
+			if($id == ""){
+				$this->mostrarProblema("Error al activar usuario.");
+			}
+			else {
+				$resultado = $this->modelo->activarUsuario($id);
+				if($resultado){
+					$vista = file_get_contents("Vistas/listas/usuarios.html");
+					$diccionario = array(
+					'{tituloPagina}'=>"Usuarios",
+					'<!--{otros}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css">');
+					$this->head = strtr($this->head,$diccionario);
+					echo $this->head . $this->header . $vista . $this->footer;
+				}
+				else {
+					$this->mostrarProblema("No se puede activar el curso.");
+				}
+			}
+		}
+
 		/**
 		 * Método para mostrar errores o problemas con la información recibida
 		 * @param $string, cadena con el texto a mostrar en la vista. */
@@ -234,6 +314,18 @@
 			$this->head = strtr($this->head, $diccionario);
 			$vista = $this->head . $this->header . $vista . $this->footer;
 			echo $vista;
+		}
+
+		private function mostrarProblema($string){
+			$vista = file_get_contents("Vistas/listas/usuarios.html.html");
+			$diccionarioP = array(
+			'<!--{problema}-->' => '<h4 class="text-danger">'.$string.'</h4>');
+			$vista = strtr($vista,$diccionarioP);
+			$diccionario = array(
+			'{tituloPagina}'=>"Usuarios",
+			'<!--{otros}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css">');
+			$this->head = strtr($this->head,$diccionario);
+			echo $this->head . $this->header . $vista . $this->footer;
 		}
 	}
 ?>

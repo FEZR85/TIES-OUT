@@ -79,10 +79,9 @@
 					'<!--{nombre}-->' => $row['nombre'],
 					'<!--{estado}-->' => $row['estado'],
 					'<!--{descripcion}-->' => $row['contenido']);
-					$new_fila = strtr($new_fila,$diccionarioCursos);
-					$filas .= $new_fila;
-				}
-
+				$new_fila = strtr($new_fila,$diccionarioCursos);
+				$filas .= $new_fila;
+			}
 			//Reemplazo en mi vista una fila por todas las filas
 			$vista = str_replace($fila, $filas, $vista);
 			$diccionario = array(
@@ -132,12 +131,12 @@
 			}
 		}
 
-		private function eliminarCursos($id){
+		private function eliminarCursos(){
 			require('Modelo/cursosMdl.php');
 			$this->modelo = new CursosMdl($this->mysql);
 			$id = $_GET['id'];
 			if($id == ""){
-				$this->mostrarProblema("Error al eliminar curso.");
+				$this->mostrarProblemaC("Error al eliminar curso.");
 			}
 			else {
 				$resultado = $this->modelo->eliminarCursos($id);
@@ -150,17 +149,17 @@
 					echo $this->head . $this->header . $vista . $this->footer;
 				}
 				else {
-					$this->mostrarProblema("No se puede eliminar el curso.");
+					$this->mostrarProblemaC("No se puede eliminar el curso.");
 				}
 			}
 		}
 
-		private function desactivarCursos($id){
+		private function desactivarCursos(){
 			require('Modelo/cursosMdl.php');
 			$this->modelo = new CursosMdl($this->mysql);
 			$id = $_GET['id'];
 			if($id == ""){
-				$this->mostrarProblema("Error al desactivar curso.");
+				$this->mostrarProblemaC("Error al desactivar curso.");
 			}
 			else {
 				$resultado = $this->modelo->desactivarCursos($id);
@@ -173,17 +172,17 @@
 					echo $this->head . $this->header . $vista . $this->footer;
 				}
 				else {
-					$this->mostrarProblema("No se puede desactivar el curso.");
+					$this->mostrarProblemaC("No se puede desactivar el curso.");
 				}
 			}
 		}
 
-		private function activarCursos($id){
+		private function activarCursos(){
 			require('Modelo/cursosMdl.php');
 			$this->modelo = new CursosMdl($this->mysql);
 			$id = $_GET['id'];
 			if($id == ""){
-				$this->mostrarProblema("Error al activar curso.");
+				$this->mostrarProblemaC("Error al activar curso.");
 			}
 			else {
 				$resultado = $this->modelo->activarCursos($id);
@@ -196,7 +195,7 @@
 					echo $this->head . $this->header . $vista . $this->footer;
 				}
 				else {
-					$this->mostrarProblema("No se puede activar el curso.");
+					$this->mostrarProblemaC("No se puede activar el curso.");
 				}
 			}
 		}
@@ -208,6 +207,18 @@
 			$vista = strtr($vista,$diccionarioP);
 			$diccionario = array(
 			'{tituloPagina}'=>"Agregar cursos",
+			'<!--{otros}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css">');
+			$this->head = strtr($this->head,$diccionario);
+			echo $this->head . $this->header . $vista . $this->footer;
+		}
+
+		private function mostrarProblemaC($string){
+			$vista = file_get_contents("Vistas/listas/cursos.html");
+			$diccionarioP = array(
+			'<!--{problema}-->' => '<h4 class="text-danger">'.$string.'</h4>');
+			$vista = strtr($vista,$diccionarioP);
+			$diccionario = array(
+			'{tituloPagina}'=>"Cursos",
 			'<!--{otros}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css">');
 			$this->head = strtr($this->head,$diccionario);
 			echo $this->head . $this->header . $vista . $this->footer;
