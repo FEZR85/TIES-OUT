@@ -145,19 +145,28 @@
 		}
 
 		private function configuraPerfil($id){
-			$vista = file_get_contents('app/Vistas/configurarPerfil.html');
 
-			if($id >= 0){
-				$diccionario = array(
-					'{tituloPagina}'=>"Configurar Perfil");
+			if(isset($_SESSION) && !empty($_SESSION)){
+				$vista = file_get_contents('app/Vistas/configurarPerfil.html');
 
-				$this->head = strtr($this->head,$diccionario);
-				$vista = $this->head . $this->header . $vista . $this->footer;
+				if($id >= 0){
+					$diccionario = array(
+						'{tituloPagina}'=>"Configurar Perfil",
+						'{nombreUsuario}'=>$_SESSION['nombre'],
+						'{correo}'=>$_SESSION['correo']);
 
-				echo $vista;
+					$this->head = strtr($this->head,$diccionario);
+					$vista = strtr($vista,$diccionario);
+					$vista = $this->head . $this->header . $vista . $this->footer;
+
+					echo $vista;
+				}else{
+					require('404.html');
+				}				
 			}else{
-				require('404.html');
+				//error no hay sesion iniciada
 			}
+			
 		}
 
 		/**
