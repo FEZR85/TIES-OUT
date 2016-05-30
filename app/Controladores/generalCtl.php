@@ -15,7 +15,7 @@
 
 		function __construct(){
 			session_start();
-			require('app/Modelo/singleton.php');
+			//require('app/Modelo/singleton.php');
 			$this->head = file_get_contents('app/Vistas/head.html');
 			$this->header = file_get_contents('app/Vistas/header.html');
  			$this->footer = file_get_contents('app/Vistas/footer.html');
