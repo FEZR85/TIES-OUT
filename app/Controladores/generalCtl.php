@@ -14,8 +14,12 @@
 		private $vista;
 
 		function __construct(){
-			session_start();
+			//session_start();
 			require('app/Modelo/singleton.php');
+			$this->instancia = Conexion::getInstance();
+			$this->instancia->__construct();
+
+			$this->mysql = $this->instancia->getConnection();
 			$this->head = file_get_contents('app/Vistas/head.html');
 			$this->header = file_get_contents('app/Vistas/header.html');
  			$this->footer = file_get_contents('app/Vistas/footer.html');
@@ -45,7 +49,7 @@
 				}
 
 			}else{
-				require('app/Vistas/404.php');
+				//require('app/Vistas/404.php');
 			}
 		}
 
@@ -89,15 +93,51 @@
 		function busqueda(){
 			require('app/Modelo/generalMdl.php');
 			$this->modelo = new GeneralMdl($this->mysql);
-
-			$resultado = $this->modelo->buscar("flor");
-			if($resultado !== FALSE){
-				$this->vista = file_get_contents("app/Vistas/busqueda.html");
+			if(empty($_POST)){
+				$vista = file_get_contents("app/Vistas/busqueda.html");
+				$diccionarioBuqueda = array(
+					'<!--{encabezadoBusqueda}-->'=>'<a href="#"><h2>No se encontraron resultados.</h2></a>',
+					'<!--{contenidoBusqueda}-->'=>'Intente con otra busqueda...');
+				$vista = strtr($vista,$diccionarioBusqueda);
 				$diccionario = array(
 					'{tituloPagina}' => "Búsqueda");
 				$this->head = strtr($this->head,$diccionario);
-				$this->vista = $this->head . $this->header . $this->vista . $this->footer;
-				echo $this->vista;
+				$vista = $this->head . $this->header . $vista . $this->footer;
+				echo $vista;
+			}
+			else{
+				$buqueda = $_POST["busqueda"];
+				$resultado = $this->modelo->buscar($busqueda);
+				if($resultado !== FALSE){
+					$vista = file_get_contents("app/Vistas/busqueda.html");
+					$inicio_fila = strrpos($vista,'<!--{icurso}-->');
+					$final_fila = strrpos($vista,'<!--{fcurso}-->') + 15;
+					$filaCursos = substr($vista,$inicio_fila,$final_fila-$inicio_fila);
+					$inicio_filaU = strrpos($vista,'<!--{iusuario}-->');
+					$final_filaU = strrpos($vista,'<!--{fusuario}-->') + 17;
+					$filaUsuario = substr($vista,$inicio_filaU,$final_filaU-$inicio_filaU);
+					foreach ($alumnos as $row) {
+						$new_filaCurso = $filaCursos;
+						$new_filaUsuario = $filaUsuario;
+						$diccionarioUsuario = array(
+							'<!--{encabezadoBusqueda}-->' => $row['usuario'],
+							'<!--{contenidoBusqueda}-->' => $row['descripcion']);
+						$diccionarioCurso = array(
+							'<!--{encabezadoBusqueda}-->' => $row['curso'],
+							'<!--{contenidoBusqueda}-->' => $row['contenido']);
+						$new_filaCurso = strtr($new_filaCurso,$diccionarioCurso);
+						$new_filaUsuario = strtr($new_filaUsuario,$diccionarioUsuario);
+						$filasCursos .= $new_filaCurso;
+						$filasUsuarios .= $new_filaUsuario;
+					}
+					$vista = str_replace($filaCursos, $filasCursos, $vista);
+					$vista = str_replace($filaUsuario, $filasUsuarios, $vista);
+					$diccionario = array(
+						'{tituloPagina}' => "Búsqueda");
+					$this->head = strtr($this->head,$diccionario);
+					$this->vista = $this->head . $this->header . $vista . $this->footer;
+					echo $this->vista;
+				}
 			}
 		}
 
