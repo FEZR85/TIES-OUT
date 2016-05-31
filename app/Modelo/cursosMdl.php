@@ -30,6 +30,15 @@ class CursosMdl{
 		
 	}
 
+	function esCursoUsuario($idcurso, $idUsuario){
+		$query = "SELECT * FROM curso_usuario WHERE iidCurso='$idcurso' AND iidUsuario='$idUsuario'";
+		$resultado = $this->mysql->query($query);
+
+		$info = $resultado->fetch_assoc();
+		return $info;
+	}
+
 
 }
 ?>
+ 

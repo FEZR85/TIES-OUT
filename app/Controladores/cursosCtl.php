@@ -64,6 +64,15 @@
 
 			$vista = file_get_contents('app/Vistas/curso1.html');
 
+			$cursoUsuario = $this->modelo->esCursoUsuario($idcurso, $_SESSION['idUsuario']);
+			
+			if(!empty($cursoUsuario)){
+				$inicio = strrpos($vista,'<!--{inicioNoInscrito}-->');
+				$fin = strrpos($vista,'<!--{finNoInscrito}-->') + 22;
+				$aux = substr($vista, $inicio , $fin - $inicio);
+				$vista = str_replace($aux, "", $vista);
+			}
+
 			$diccionario = array(
 				'{titulo}' => $resultado['vchNombre'],
 				'{contenido}' => $resultado['ltextContenido'],
