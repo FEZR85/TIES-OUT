@@ -22,7 +22,7 @@ class UsuarioMdl{
 
 	function actualiza($nacimiento, $sexo, $ocupacion, $descripcion, $idUsuario){
 		$query = "UPDATE usuario 
-				  SET vchSexo='$sexo', vchOcupacion='$ocupacion', vchdescripcion = '$descripcion'
+				  SET vchSexo='$sexo', vchOcupacion='$ocupacion', vchdescripcion = '$descripcion', dfechaNacimiento = '$nacimiento'
 				  WHERE iidUsuario='$idUsuario'";
 		$result = $this->mysql->query($query);		
 	}
@@ -30,6 +30,14 @@ class UsuarioMdl{
 	function consultaUsuario($correo, $contrasena){
 		$info = "";
 		$query = "SELECT * FROM usuario WHERE vchcorreo='$correo' AND vchcontrasena='$contrasena' AND tiActivo = 1";
+		$resultado = $this->mysql->query($query);
+		$fila = $resultado->fetch_assoc();
+		return $fila;
+	}
+
+	function consultaPerfil($id){
+		$info = "";
+		$query = "SELECT vchCorreo, vchNombre, vchOcupacion, dfechaNacimiento FROM usuario WHERE iidUsuario = '$id' AND tiActivo = 1";
 		$resultado = $this->mysql->query($query);
 		$fila = $resultado->fetch_assoc();
 		return $fila;
