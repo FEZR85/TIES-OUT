@@ -122,20 +122,24 @@
 					$listaCursos = $cursoModelo->getMisCursos($_SESSION['idUsuario']);
 
 					$i = 0;
+					if(!empty($listaCursos)){
+						foreach ($listaCursos as $row) {
+							$newFila = $fila;
 
-					foreach ($listaCursos as $row) {
-						$newFila = $fila;
+							$diccionario = array(
+								'{idcursourl}'=>$listaCursos[$i]['iidCurso'],
+								'{colorRandom}'=>'naranja',
+								'{Titulo}'=>$cursoModelo->traerCursos($listaCursos[$i]['iidCurso'])['vchNombre'],
+								'{tituloPagina}'=>"Perfil");
 
-						$diccionario = array(
-							'{idcursourl}'=>$listaCursos[$i]['iidCurso'],
-							'{colorRandom}'=>'naranja',
-							'{Titulo}'=>$cursoModelo->traerCursos($listaCursos[$i]['iidCurso'])['vchNombre'],
-							'{tituloPagina}'=>"Perfil");
-
-						$newFila = strtr($newFila, $diccionario);
-						$filas .= $newFila;
-						$i++;
+							$newFila = strtr($newFila, $diccionario);
+							$filas .= $newFila;
+							$i++;
+						}
+					}else{
+						$filas="";
 					}
+
 					$this->head = str_replace('{tituloPagina}','Perfil', $this->head);
 					$vista = str_replace($fila,$filas, $vista);
 					//$this->head = strtr($this->head,$diccionario);
@@ -359,7 +363,7 @@
 						$_SESSION['sexo'] = $sexo;
 						$_SESSION['ocupacion'] = $ocupacion;
 						$_SESSION['descripcion'] = $descripcion;
-						
+
 						header('Location: index.php?controlador=usuarios&act=mostrar&iduser='.$_SESSION['idUsuario']);
 						
 					}
