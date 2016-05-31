@@ -136,7 +136,7 @@
 						$filas .= $newFila;
 						$i++;
 					}
-
+					$this->head = str_replace('{tituloPagina}','Perfil', $this->head);
 					$vista = str_replace($fila,$filas, $vista);
 					//$this->head = strtr($this->head,$diccionario);
 					$vista = $this->head . $this->header . $vista . $this->footer;
