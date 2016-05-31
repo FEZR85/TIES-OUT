@@ -37,6 +37,9 @@
 					case 'contacto':
 							$this->contacto();
 						break;
+					case 'contactar':
+							$this->contactar();
+						break;
 					case 'nosotros':
 							$this->nosotros();
 						break;
@@ -76,6 +79,28 @@
 			$this->vista = $this->head . $this->header . $this->vista . $this->footer;
 
 			echo $this->vista;
+		}
+
+		function contactar(){
+			if(empty($_POST)){
+				echo "Favor de llenar los campos";
+			}else{
+				$correo	= $_POST["correo"];
+				$nombre	= $_POST["nombre"];
+				$mensaje = $_POST["mensaje"];
+
+				//Valida si lo que se recibio es un correo
+				if(!preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/',$correo)){
+					echo 'ingrese correo valido';
+				}
+
+						require('correos/contacto.php');
+						if($exito == false){
+							echo "No se pudo enviar el correo";
+						}else{
+							header('Location: index.php');
+						}
+			}
 		}
 
 		function nosotros(){
