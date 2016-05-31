@@ -50,8 +50,8 @@
 							//Aqui llegar para conectarse a la base de datos por medio del modelo
 							$this->agregarExamen();
 						break;
-					case 'inicioSesion':
-							$this->iniciaSesionUsuario();
+					case 'guardar':
+							$this->guardarExamen();
 						break;
 					case 'cerrarSesion':
 							$this->cerrarSesion();
@@ -126,6 +126,42 @@
 			echo $this->head . $this->header . $vista . $this->footer;
 		}
 
+		private function guardarExamen(){
+			require('Modelo/examenMdl.php');
+			$this->modelo = new ExamenMdl($this->mysql);
+
+			if(empty($_POST)){
+				$this->mostrarProblema("Llene los campos para guardar el curso.");
+			}else{
+				$info[] = $_POST;
+				if(!$id = $this->modelo->existeCurso($info["curso"])){
+					$resultado = $this->modelo->guardarExamen($info, $id);
+					/*if($resultado!==FALSE){
+						$vista = file_get_contents("Vistas/listas/cursos.html");
+						$diccionario = array(
+						'{tituloPagina}'=>"Cursos",
+						'<!--{otros}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css">');
+						$this->head = strtr($this->head,$diccionario);
+						echo $this->head . $this->header . $vista . $this->footer;
+					}
+					else {
+						$this->mostrarProblema("No se pudo guardar el curso. Intente más tarde.");
+					}*/
+				}
+			}
+		}
+
+		private function mostrarProblema($string){
+			$vista = file_get_contents("Vistas/listas/examenes.html");
+			$diccionarioP = array(
+			'<!--{problema}-->' => '<h4 class="text-danger">'.$string.'</h4>');
+			$vista = strtr($vista,$diccionarioP);
+			$diccionario = array(
+			'{tituloPagina}'=>"Cursos",
+			'<!--{otros}-->' => '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css">');
+			$this->head = strtr($this->head,$diccionario);
+			echo $this->head . $this->header . $vista . $this->footer;
+		}
     }
 
 ?>
