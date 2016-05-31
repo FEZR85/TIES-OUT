@@ -41,7 +41,7 @@ class CursosMdl{
 	function getMisCursos($idUsuario){
 		$query = "SELECT * FROM curso_usuario WHERE iidUsuario='$idUsuario'";
 		$resultado =  $this->mysql->query($query);
-		
+		$rows="";
 		while($row = $resultado -> fetch_assoc())
 			$rows[] = $row;
 
@@ -51,7 +51,7 @@ class CursosMdl{
 	function getCursos(){
 		$query = "SELECT * FROM curso";
 		$resultado =  $this->mysql->query($query);
-		
+		$rows="";
 		while($row = $resultado -> fetch_assoc())
 			$rows[] = $row;
 

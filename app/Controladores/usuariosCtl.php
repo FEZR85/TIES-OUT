@@ -122,20 +122,24 @@
 					$listaCursos = $cursoModelo->getMisCursos($_SESSION['idUsuario']);
 
 					$i = 0;
+					if(!empty($listaCursos)){
+						foreach ($listaCursos as $row) {
+							$newFila = $fila;
 
-					foreach ($listaCursos as $row) {
-						$newFila = $fila;
+							$diccionario = array(
+								'{idcursourl}'=>$listaCursos[$i]['iidCurso'],
+								'{colorRandom}'=>'naranja',
+								'{Titulo}'=>$cursoModelo->traerCursos($listaCursos[$i]['iidCurso'])['vchNombre'],
+								'{tituloPagina}'=>"Perfil");
 
-						$diccionario = array(
-							'{idcursourl}'=>$listaCursos[$i]['iidCurso'],
-							'{colorRandom}'=>'naranja',
-							'{Titulo}'=>$cursoModelo->traerCursos($listaCursos[$i]['iidCurso'])['vchNombre'],
-							'{tituloPagina}'=>"Perfil");
-
-						$newFila = strtr($newFila, $diccionario);
-						$filas .= $newFila;
-						$i++;
+							$newFila = strtr($newFila, $diccionario);
+							$filas .= $newFila;
+							$i++;
+						}
+					}else{
+						$filas="";
 					}
+
 					$this->head = str_replace('{tituloPagina}','Perfil', $this->head);
 					$vista = str_replace($fila,$filas, $vista);
 					//$this->head = strtr($this->head,$diccionario);
@@ -262,13 +266,7 @@
 						if($exito == false){
 							$this->mostrarProblemaRegistro("No se pudo enviar el correo");
 						}else{
-							$vista = file_get_contents("app/Vistas/home.html");
-							$diccionario = array(
-							'{tituloPagina}'=>"Inicio",
-							'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
-							$this->head = strtr($this->head,$diccionario);
-							$vista = $this->head . $this->header . $vista . $this->footer;
-							echo $vista;
+							header('Location: index.php');
 						}
 					}
 					else{
@@ -319,14 +317,7 @@
 					$_SESSION['rutaFoto'] = $resultado['bRutaFoto'];
 
 
-					$this->header = $this->generalctl->headerSesion($this->headerOriginal);
-					$vista = file_get_contents("app/Vistas/home.html");
-					$diccionario = array(
-					'{tituloPagina}'=>"Inicio",
-					'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
-					$this->head = strtr($this->head,$diccionario);
-					$vista = $this->head . $this->header . $vista . $this->footer;
-					echo $vista;
+					header('Location: index.php');
 				}else{
 					$this->mostrarProblemaIniciosesion("El usuario y/o contraseña es incorrecto. Intente de nuevo.");
 				}
@@ -368,13 +359,12 @@
 				if($this->modelo->existecorreo($correo)){					
 					$resultado = $this->modelo->actualiza($nacimiento, $sexo, $ocupacion, $descripcion, $_SESSION['idUsuario']);//damos de alta en la BD
 					if($resultado!==FALSE){//Si se pudo insertar muestra la vista											
-						$this->configuraPerfil($_SESSION['idUsuario']);
-							/*$vista = file_get_contents("app/Vistas/configuraPerfil.html");
-							$diccionario = array(
-							'{tituloPagina}'=>"Configurar Perfil");
-							$this->head = strtr($this->head,$diccionario);
-							$vista = $this->head . $this->header . $vista . $this->footer;
-							echo $vista;*/
+						$_SESSION['fechaNacimiento'] = $nacimiento;
+						$_SESSION['sexo'] = $sexo;
+						$_SESSION['ocupacion'] = $ocupacion;
+						$_SESSION['descripcion'] = $descripcion;
+
+						header('Location: index.php?controlador=usuarios&act=mostrar&iduser='.$_SESSION['idUsuario']);
 						
 					}
 					else{
@@ -396,13 +386,7 @@
 				$resultado = $this->modelo->registraCursoUsuario($_SESSION['idUsuario'],$_GET['idcurso']);
 				if($resultado!==FALSE){//Si se pudo insertar muestra la vista
 												
-							$vista = file_get_contents("app/Vistas/home.html");
-							$diccionario = array(
-							'{tituloPagina}'=>"Inicio",
-							'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
-							$this->head = strtr($this->head,$diccionario);
-							$vista = $this->head . $this->header . $vista . $this->footer;
-							echo $vista;						
+							header('Location: index.php');				
 					}
 					else{
 						
