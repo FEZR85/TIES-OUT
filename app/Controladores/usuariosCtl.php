@@ -408,6 +408,7 @@
 						
 					}
 			}else{
+				$this->altaUsuario();
 
 			}
 		}
