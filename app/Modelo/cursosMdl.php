@@ -47,6 +47,16 @@ class CursosMdl{
 
 		return $rows;
 	}
+
+	function getCursos(){
+		$query = "SELECT * FROM curso";
+		$resultado =  $this->mysql->query($query);
+		
+		while($row = $resultado -> fetch_assoc())
+			$rows[] = $row;
+
+		return $rows;
+	}
 }
 ?>
  
