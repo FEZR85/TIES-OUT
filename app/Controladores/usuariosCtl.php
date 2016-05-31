@@ -60,6 +60,9 @@
 					case 'registro':
 							$this->muestraFormulario(2);
 						break;
+					case 'recordar':
+							$this->recordar();
+						break;
 					case 'recuperar':
 							$this->muestraFormulario(3);
 						break;
@@ -309,7 +312,7 @@
 					$_SESSION['correo'] = $correo;
 					$_SESSION['contrasena'] = $contrasena;
 					$_SESSION['nombre'] = $resultado['vchNombre'];
-					$_SESSION['idUsuario'] = $resultado['iidUsuario'];					
+					$_SESSION['idUsuario'] = $resultado['iidUsuario'];
 					$_SESSION['ocupacion'] = $resultado['vchOcupacion'];
 					$_SESSION['fechaNacimiento'] = $resultado['dfechaNacimiento'];
 					$_SESSION['descripcion'] = $resultado['vchdescripcion'];
@@ -320,6 +323,41 @@
 					header('Location: index.php');
 				}else{
 					$this->mostrarProblemaIniciosesion("El usuario y/o contraseña es incorrecto. Intente de nuevo.");
+				}
+			}
+		}
+
+		private function recordar(){
+			require('app/Modelo/usuarioMdl.php');
+			$this->modelo = new UsuarioMdl($this->mysql);//se le manda la variable con la conexion establecida
+			if(empty($_POST)){
+				echo "Favor de escribir un correo";
+			}else{
+				$correo	= $_POST["correo"];
+
+				//Valida si lo que se recibio es un correo
+				if(!preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/',$correo)){
+					echo 'ingrese correo valido';
+				}
+
+				//Revisa en la BD si el correo ya existe
+				if($this->modelo->existecorreo($correo)){
+					$contrasena = rand(00000,99999);
+					$contrasenaNueva = md5($contrasena); //se encripta la contraseña
+					if($this->modelo->updateContrasena($correo, $contrasenaNueva)){//Si se pudo insertar muestra la vista
+						require('correos/recordarContrasena.php');
+						if($exito == false){
+							echo "No se pudo enviar el correo";
+						}else{
+							header('Location: index.php');
+						}
+					}
+					else{
+						echo "No se pudo completar el registro, intente más tarde.";
+					}
+				}
+				else {
+					echo "no existe el correo. Registre una cuenta";
 				}
 			}
 		}
@@ -356,16 +394,16 @@
 				$correo = $_SESSION['correo'];
 
 				//Revisa en la BD si el correo ya existe
-				if($this->modelo->existecorreo($correo)){					
+				if($this->modelo->existecorreo($correo)){
 					$resultado = $this->modelo->actualiza($nacimiento, $sexo, $ocupacion, $descripcion, $_SESSION['idUsuario']);//damos de alta en la BD
-					if($resultado!==FALSE){//Si se pudo insertar muestra la vista											
+					if($resultado!==FALSE){//Si se pudo insertar muestra la vista
 						$_SESSION['fechaNacimiento'] = $nacimiento;
 						$_SESSION['sexo'] = $sexo;
 						$_SESSION['ocupacion'] = $ocupacion;
 						$_SESSION['descripcion'] = $descripcion;
 
 						header('Location: index.php?controlador=usuarios&act=mostrar&iduser='.$_SESSION['idUsuario']);
-						
+
 					}
 					else{
 						$this->mostrarProblemaRegistro("No se pudo completar el registro, intente más tarde.");
@@ -385,11 +423,11 @@
 				//if($this->modelo->existeCUrso($_GET['idcurso']))
 				$resultado = $this->modelo->registraCursoUsuario($_SESSION['idUsuario'],$_GET['idcurso']);
 				if($resultado!==FALSE){//Si se pudo insertar muestra la vista
-												
-							header('Location: index.php');				
+
+							header('Location: index.php');
 					}
 					else{
-						
+
 					}
 			}else{
 				$this->altaUsuario();

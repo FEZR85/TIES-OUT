@@ -13,8 +13,8 @@
     $mailer->Password   = "Nyd263UyvVCQ";
     $mailer->SetFrom("no-reply@ties-out.com", "TIESOUT, no responder este correo.");
 
-    $mailer->AddReplyTo("fzarater@gmail.com","Copia de registro");
-    $mailer->Subject = "Confirmar cuenta de TIESOUT";
+    $mailer->AddReplyTo("fzarater@gmail.com","Copia de contraseña");
+    $mailer->Subject = "Reecordar contraseña de TIESOUT";
 
     $mailer->IsHTML(true);
     ob_start();
@@ -28,16 +28,14 @@
                             <img alt="Logo" src="logoTieOut.png" width="50" height="50">
                         </div>
                         <figcaption style="display:inline-block;">
-                            <h2 style="margin:0;"><b>Confirmar registro de cuenta en TIESOUT</b></h2><br>
+                            <h2 style="margin:0;"><b>Reestablecer contraseña</b></h2><br>
                         </figcaption>
                     </figure>
                     <hr style="margin-bottom:30px;">
                 </center>
-                <span style="font-family:'Arial';font-size:16px;">Hola <b><?php echo $nombre; ?></b>,</span><br><br>
-                <span style="font-family:'Arial';font-size:16px;">Te registraste recientemente en TIESOUT, para completar tu registro da clic en confirmar cuenta.</span><br><br>
-                <button onclick="" style="cursor:pointer; padding:10px;background-color:#C34C02;color:#FFF;font-family:'Arial';font-size:16px;border-radius: 9px 9px 9px 9px;-moz-border-radius: 9px 9px 9px 9px;-webkit-border-radius: 9px 9px 9px 9px;border: 0px solid #000000;">
-                    Confirmar cuenta
-                </button><br><br>
+                <span style="font-family:'Arial';font-size:16px;">Hola,</span><br><br>
+                <span style="font-family:'Arial';font-size:16px;">Te mandamos tu nueva contraseña.</span><br><br>
+                <span style="font-family:'Arial';font-size:16px;"><?php echo $contrasena; ?></span><br><br>
                 <hr style="margin-bottom:30px;">
                 <span style="font-family:'Arial';color:#CCC;">Este mensaje se envi&oacute; a <?php echo $correo; ?>. Si no pediste est&aacute; informaci&oacute;n, favor de ignorarla.
                     Para dejar de recibir correos <a>Cancela tu suscripci&oacute;n</a></span>

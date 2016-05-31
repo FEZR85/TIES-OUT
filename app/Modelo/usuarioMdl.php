@@ -7,6 +7,13 @@ class UsuarioMdl{
 		$this->mysql = $mysql;
 	}
 
+	function updateContrasena($correo, $contrasena){
+		$query = "UPDATE usuario SET vchContrasena = '".$contrasena."' WHERE vchCorreo = '".$correo."'";
+		if ($this->mysql->query($query) === TRUE) {
+			return true;
+		}
+		return false;
+	}
 	function alta ($nombre, $correo, $contrasena){
 		/*$query = "INSERT INTO usuario(vchNombre, vchPaterno, vchMaterno, vchCorreo, vchContraseña,tiEliminado, tiActivo, iidTipo)
 				VALUES('$nombre','uno','dos','$correo','$contrasena',0,1,1)";*/
@@ -21,10 +28,10 @@ class UsuarioMdl{
 	}
 
 	function actualiza($nacimiento, $sexo, $ocupacion, $descripcion, $idUsuario){
-		$query = "UPDATE usuario 
+		$query = "UPDATE usuario
 				  SET vchSexo='$sexo', vchOcupacion='$ocupacion', vchdescripcion = '$descripcion', dfechaNacimiento = '$nacimiento'
 				  WHERE iidUsuario='$idUsuario'";
-		$result = $this->mysql->query($query);		
+		$result = $this->mysql->query($query);
 	}
 
 	function consultaUsuario($correo, $contrasena){
