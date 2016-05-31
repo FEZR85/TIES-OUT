@@ -392,6 +392,7 @@
 						
 					}
 			}else{
+				$this->altaUsuario();
 
 			}
 		}
