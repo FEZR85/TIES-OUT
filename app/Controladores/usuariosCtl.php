@@ -164,6 +164,20 @@
 						'<!--{descripcion}-->' => $_SESSION['descripcion']);
 
 					$this->head = strtr($this->head,$diccionario);
+
+					if(isset($_SESSION)){
+						if(strcmp($_SESSION['sexo'],"Femenino") === 0){
+							$vista = str_replace('{femeninoSelect}', 'selected="selected"', $vista);
+							$vista = str_replace('{masculinoSelect}', '', $vista);
+						}elseif (strcmp($_SESSION['sexo'], "Masculino")===0) {
+							$vista = str_replace('{masculinoSelect}', 'selected="selected"', $vista);
+							$vista = str_replace('{femeninoSelect}', '', $vista);
+						}else{
+							$vista = str_replace('{masculinoSelect}', '', $vista);
+							$vista = str_replace('{femeninoSelect}', '', $vista);
+						}
+					}
+
 					$vista = strtr($vista,$diccionario);
 					$vista = $this->head . $this->header . $vista . $this->footer;
 
@@ -298,8 +312,7 @@
 					$_SESSION['correo'] = $correo;
 					$_SESSION['contrasena'] = $contrasena;
 					$_SESSION['nombre'] = $resultado['vchNombre'];
-					$_SESSION['idUsuario'] = $resultado['iidUsuario'];
-					echo $_SESSION['idUsuario'];
+					$_SESSION['idUsuario'] = $resultado['iidUsuario'];					
 					$_SESSION['ocupacion'] = $resultado['vchOcupacion'];
 					$_SESSION['fechaNacimiento'] = $resultado['dfechaNacimiento'];
 					$_SESSION['descripcion'] = $resultado['vchdescripcion'];
@@ -356,12 +369,13 @@
 				if($this->modelo->existecorreo($correo)){					
 					$resultado = $this->modelo->actualiza($nacimiento, $sexo, $ocupacion, $descripcion, $_SESSION['idUsuario']);//damos de alta en la BD
 					if($resultado!==FALSE){//Si se pudo insertar muestra la vista											
-							$vista = file_get_contents("app/Vistas/configuraPerfil.html");
+						$this->configuraPerfil($_SESSION['idUsuario']);
+							/*$vista = file_get_contents("app/Vistas/configuraPerfil.html");
 							$diccionario = array(
 							'{tituloPagina}'=>"Configurar Perfil");
 							$this->head = strtr($this->head,$diccionario);
 							$vista = $this->head . $this->header . $vista . $this->footer;
-							echo $vista;
+							echo $vista;*/
 						
 					}
 					else{
