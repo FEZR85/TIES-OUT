@@ -108,7 +108,8 @@
 			$vista = str_replace($fila, $filas, $vista);
 			$diccionario = array(
 				'{tituloPagina}'=> "Usuarios",
-				'<!--{masLinks}-->'=> '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css"/>');
+				'<!--{masLinks}-->'=> '<link rel="stylesheet" type="text/css" href="../recursos/css/panel/simple-sidebar.css"/>  <link rel="stylesheet" type="text/css" href="../recursos/js/paginacion/simplePagination.css"/>  <script type="text/javascript" src="../recursos/js/paginacion.js"></script>',
+				'<!--{otros}-->' => '<script type="text/javascript" src="../recursos/js/paginacion/jquery.simplePagination.js"></script>');
 
 			$this->head = strtr($this->head,$diccionario);
 			$vista = $this->head . $this->header . $vista . $this->footer;
@@ -234,8 +235,8 @@
 		}
 
 		private function eliminar(){
-			require('Modelo/usuariosMdl.php');
-			$this->modelo = new UsuariosMdl($this->mysql);
+			require('Modelo/usuarioMdl.php');
+			$this->modelo = new UsuarioMdl($this->mysql);
 			$id = $_GET['id'];
 			if($id == ""){
 				$this->mostrarProblema("Error al eliminar usuario.");
@@ -280,8 +281,8 @@
 		}
 
 		private function activar(){
-			require('Modelo/usuariosMdl.php');
-			$this->modelo = new UsuariosMdl($this->mysql);
+			require('Modelo/usuarioMdl.php');
+			$this->modelo = new UsuarioMdl($this->mysql);
 			$id = $_GET['id'];
 			if($id == ""){
 				$this->mostrarProblema("Error al activar usuario.");
