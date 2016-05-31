@@ -26,36 +26,48 @@
 					$bandera = true;
 				break;
 			default:
-			require('app/Controladores/generalCtl.php');
-					$generalctl = new General();
+				require('app/Controladores/generalCtl.php');
+				require('app/Modelo/cursosMdl.php');
+				$generalctl = new General();
+				$instancia = new Conexion();
+				//$instancia = __construct();
 
-					$head = file_get_contents('app/Vistas/head.html');
-					$header = file_get_contents('app/Vistas/header.html');
-					$header = $generalctl->headerSesion($header);
+				$cmysql = $instancia->getConnection();
+				$cursoModelo = new CursosMdl($cmysql);
 
-					$vista = file_get_contents('app/Vistas/home.html');
-					$footer = file_get_contents('app/Vistas/footer.html');
+				$head = file_get_contents('app/Vistas/head.html');
+				$header = file_get_contents('app/Vistas/header.html');
+				$header = $generalctl->headerSesion($header);
 
-					$diccionario = array('{tituloPagina}'=>"Inicio");
+				$vista = file_get_contents('app/Vistas/home.html');
+				$footer = file_get_contents('app/Vistas/footer.html');
 
-					$head = strtr($head, $diccionario);
+				$diccionario = array('{tituloPagina}'=>"Inicio");
 
-							$inicioCurso = strrpos($vista, '<!--{inicioMasVistos}-->');
-							$finCurso    = strrpos($vista, '<!--{finMasVistos}-->') + 21;
-							$curso       = substr($vista, $inicioCurso, $finCurso - $inicioCurso);
-							//$listaCursos = Curso::
-							$cursosGrid = "";
+				$head = strtr($head, $diccionario);
 
-							for ($i=0; $i < 9; $i++) { 
-								$newCurso = $curso;
+				$inicioCurso = strrpos($vista, '<!--{inicioMasVistos}-->');
+				$finCurso    = strrpos($vista, '<!--{finMasVistos}-->') + 21;
+				$curso       = substr($vista, $inicioCurso, $finCurso - $inicioCurso);
+				//$listaCursos = Curso::
+				$cursosGrid = "";
+				
+				$listaCursos = $cursoModelo->getCursos();
+				
+				for ($i=0; $i < 9 && $i < count($listaCursos); $i++) { 
+					$newCurso = $curso;
 
-								$cursosGrid .= $newCurso;			
-							}
-							
-							$vista = str_replace($curso, $cursosGrid, $vista);
-					
-					$vista = $head . $header . $vista . $footer;
-					echo $vista;
+					$diccionario = array(
+						'{titulo}' => $listaCursos[$i]['vchNombre'],
+						'{idcurso}'=> $listaCursos[$i]['iidCurso']);
+
+					$newCurso = strtr($newCurso, $diccionario);
+					$cursosGrid .= $newCurso;			
+				}
+
+				$vista = str_replace($curso, $cursosGrid, $vista);
+				$vista = $head . $header . $vista . $footer;
+				echo $vista;
 				break;
 		}
 
@@ -64,8 +76,13 @@
 		}
 	}else{
 		require('app/Controladores/generalCtl.php');
-		require('app/Controladores/cursosCtl.php');
+		require('app/Modelo/cursosMdl.php');
 		$generalctl = new General();
+		$instancia = new Conexion();
+		//$instancia = __construct();
+
+		$cmysql = $instancia->getConnection();
+		$cursoModelo = new CursosMdl($cmysql);
 
 		$head = file_get_contents('app/Vistas/head.html');
 		$header = file_get_contents('app/Vistas/header.html');
@@ -83,13 +100,20 @@
 		$curso       = substr($vista, $inicioCurso, $finCurso - $inicioCurso);
 		//$listaCursos = Curso::
 		$cursosGrid = "";
-
-		for ($i=0; $i < 9; $i++) { 
+		
+		$listaCursos = $cursoModelo->getCursos();
+		
+		for ($i=0; $i < 9 && $i < count($listaCursos); $i++) { 
 			$newCurso = $curso;
 
+			$diccionario = array(
+				'{titulo}' => $listaCursos[$i]['vchNombre'],
+				'{idcurso}'=> $listaCursos[$i]['iidCurso']);
+
+			$newCurso = strtr($newCurso, $diccionario);
 			$cursosGrid .= $newCurso;			
 		}
-		
+
 		$vista = str_replace($curso, $cursosGrid, $vista);
 		$vista = $head . $header . $vista . $footer;
 		echo $vista;
