@@ -16,11 +16,7 @@
     $mailer->AddReplyTo("fzarater@gmail.com","Copia de registro");
     $mailer->Subject = "Ususario envio correo";
 
-    $mailer->IsHTML(true);
-    ob_start();
-?>
-    <body>
-        <body>
+    $mailer->Body = '<body>
             <div style="width:800px; margin-left:auto; margin-right:auto;">
                 <center >
                     <figure>
@@ -33,16 +29,15 @@
                     </figure>
                     <hr style="margin-bottom:30px;">
                 </center>
-                <span style="font-family:'Arial';font-size:16px;"><?php echo $mensaje; ?></span><br><br>
+                <span style="font-size:16px;"><?php echo $mensaje; ?></span><br><br>
                 <hr style="margin-bottom:30px;">
             </div>
         </body>
     </body>
-<?php
-    $body = ob_get_contents();
-    ob_end_clean();
-	$mail->Body = $body;
+';
 
+
+    $mailer->IsHTML(true);
     if($correo != ""){
         $mailer->AddAddress('contacto@ties-out.com');
     }

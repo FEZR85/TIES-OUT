@@ -16,9 +16,7 @@
     $mailer->AddReplyTo("fzarater@gmail.com","Copia de registro");
     $mailer->Subject = "Confirmar cuenta de TIESOUT";
 
-    $mailer->IsHTML(true);
-    ob_start();
-?>
+    $mailer->Body = '
     <body>
         <body>
             <div style="width:800px; margin-left:auto; margin-right:auto;">
@@ -33,22 +31,19 @@
                     </figure>
                     <hr style="margin-bottom:30px;">
                 </center>
-                <span style="font-family:'Arial';font-size:16px;">Hola <b><?php echo $nombre; ?></b>,</span><br><br>
-                <span style="font-family:'Arial';font-size:16px;">Te registraste recientemente en TIESOUT, para completar tu registro da clic en confirmar cuenta.</span><br><br>
-                <button onclick="" style="cursor:pointer; padding:10px;background-color:#C34C02;color:#FFF;font-family:'Arial';font-size:16px;border-radius: 9px 9px 9px 9px;-moz-border-radius: 9px 9px 9px 9px;-webkit-border-radius: 9px 9px 9px 9px;border: 0px solid #000000;">
+                <span style="font-size:16px;">Hola <b><?php echo $nombre; ?></b>,</span><br><br>
+                <span style="font-size:16px;">Te registraste recientemente en TIESOUT, para completar tu registro da clic en confirmar cuenta.</span><br><br>
+                <button onclick="" style="cursor:pointer; padding:10px;background-color:#C34C02;color:#FFF;font-size:16px;border-radius: 9px 9px 9px 9px;-moz-border-radius: 9px 9px 9px 9px;-webkit-border-radius: 9px 9px 9px 9px;border: 0px solid #000000;">
                     Confirmar cuenta
                 </button><br><br>
                 <hr style="margin-bottom:30px;">
-                <span style="font-family:'Arial';color:#CCC;">Este mensaje se envi&oacute; a <?php echo $correo; ?>. Si no pediste est&aacute; informaci&oacute;n, favor de ignorarla.
+                <span style="color:#CCC;">Este mensaje se envi&oacute; a <?php echo $correo; ?>. Si no pediste est&aacute; informaci&oacute;n, favor de ignorarla.
                     Para dejar de recibir correos <a>Cancela tu suscripci&oacute;n</a></span>
             </div>
         </body>
-    </body>
-<?php
-    $body = ob_get_contents();
-    ob_end_clean();
-	$mail->Body = $body;
+    </body>';
 
+        $mailer->IsHTML(true);
     if($correo != ""){
         $mailer->AddAddress($correo);
     }
