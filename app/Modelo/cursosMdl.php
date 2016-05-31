@@ -38,12 +38,14 @@ class CursosMdl{
 		return $info;
 	}
 
-	function getMisCursos(){
+	function getMisCursos($idUsuario){
 		$query = "SELECT * FROM curso_usuario WHERE iidUsuario='$idUsuario'";
 		$resultado =  $this->mysql->query($query);
+		
+		while($row = $resultado -> fetch_assoc())
+			$rows[] = $row;
 
-		$info = $resultado->fetch_assoc();
-		return $info;
+		return $rows;
 	}
 }
 ?>
