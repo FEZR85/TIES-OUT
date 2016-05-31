@@ -8,6 +8,20 @@
 			bottom: 0;
 	}
 
+	#imgmini{
+    margin: 0;
+	margin-right:20px;
+    pointer-events: none;
+    position: relative;
+    max-width: 25px;
+	border:1px solid #000;
+	max-height: 25px;
+	}
+	#mini{
+		display: block;
+		width: 100%;
+	}
+
 	@media screen and (min-width:320px) and (max-width: 800px){
 		.slide,#tiesOut,#sesion,#tsesion,#inscribete span,#entrar,#salir{
 			display: none;
