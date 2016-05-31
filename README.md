@@ -28,29 +28,52 @@ Las distintas secciones del sistema son:
 
 * Página principal
 * Catálogo de Cursos
- * Muestra de enlaces de todos los cursos disponibles
+ * Muestra de enlaces de todos los cursos disponibles.
 
 * Registro de cuenta  
- * Formulario de información del usuario para crear una nueva cuenta, con opción de crearla con redes sociales (Facebook y Twitter).
+ * Formulario de información del usuario para crear una nueva cuenta.
 
 * Inicio de Sesión
- * Formulario para llenar con _Correo electrónico_ y _Contraseña_ para iniciar sesión, con opción de iniciar con redes sociales (Facebook y Twitter).
+ * Formulario para llenar con _Correo electrónico_ y _Contraseña_ para iniciar sesión.
 
 * Portada del Curso
- * Descripción de lo que se presenta en el curso seleccionado, así como la opción de inscribirse a usuarios que han iniciado sesión
+ * Descripción de lo que se presenta en el curso seleccionado, así como la opción de inscribirse a usuarios que han iniciado sesión.
 
 * Contenido del Curso
- * Toda la información proporcionada en los temas del curso
+ * Toda la información proporcionada en los temas del curso.
 
 * Administración de Cursos
  * Sección donde se lleva a cabo la gestión de los cursos creados así como la consulta de quienes están inscritos en la plataforma.
 
 * Contacto
- * Directorio de los colaboradores del proyecto
-
+ * Directorio de los colaboradores del proyecto.
 
 * Buscar Empleo
  * Lista de enlaces a sitios web que se dedican a mostrar una bolsa de trabajo.
+
+##Manejo de usuarios
+
+El sistema de TIES-OUT se maneja de la siguiente forma:
+
+* Usuarios no registrados
+ * Podran visualizar los cursos que estan disponibles en la plataforma, y para que puedan inscibirse a un curso deberan registrarse.
+
+* Usuarios registrados
+ *  Podran inscribirse en todos los cursos que el usuario desee, revisarlos en su perfil publico, asi como visualizar sus datos, los cuales podra modificar y actualizar en cualquier momento.
+
+*Usuarios administradores
+ * Tendran el control para añadir o quitar cursos en el sistema, asi como verificar la cantidad de usuario que se han inscrito a los cursos.
+
+ ##Componentes necesarios
+  * Servidor web, Apache por ejemplo.
+  * PHP5
+  * mysql5
+
+ ##Instalacion
+  * En esta pagina, seleccionar la opcion "Clone or download" y copiar el enlace para realizar la copia del repositorio de forma local en la carpeta "html" del servidor web.
+  * Verificar que los modulos necesarios de php esten instalados.
+  * Revisar la conexion a la base de datos una vez importado y comenzar con inserciones locales.
+
 
 ##Colaboradores
 * Flor Edith Zárate Rodríguez
