@@ -53,4 +53,13 @@ class UsuarioMdl{
 		return false;
 	}
 
+	function registraCursoUsuario($idUsuario, $idCurso){
+		$query = "INSERT INTO curso_usuario (iidCurso, iidExamen, iidUsuario) VALUES ('$idCurso',1,'$idUsuario')";
+		$result = $this->mysql->query($query);
+		if($this -> mysql-> insert_id){
+			return $this -> mysql -> insert_id;
+		}
+		elseif($result === FALSE)
+			return FALSE;
+	}
 }
