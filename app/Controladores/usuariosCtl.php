@@ -369,12 +369,13 @@
 				if($this->modelo->existecorreo($correo)){					
 					$resultado = $this->modelo->actualiza($nacimiento, $sexo, $ocupacion, $descripcion, $_SESSION['idUsuario']);//damos de alta en la BD
 					if($resultado!==FALSE){//Si se pudo insertar muestra la vista											
-							$vista = file_get_contents("app/Vistas/configuraPerfil.html");
+						$this->configuraPerfil($_SESSION['idUsuario']);
+							/*$vista = file_get_contents("app/Vistas/configuraPerfil.html");
 							$diccionario = array(
 							'{tituloPagina}'=>"Configurar Perfil");
 							$this->head = strtr($this->head,$diccionario);
 							$vista = $this->head . $this->header . $vista . $this->footer;
-							echo $vista;
+							echo $vista;*/
 						
 					}
 					else{

@@ -24,8 +24,7 @@ class UsuarioMdl{
 		$query = "UPDATE usuario 
 				  SET vchSexo='$sexo', vchOcupacion='$ocupacion', vchdescripcion = '$descripcion'
 				  WHERE iidUsuario='$idUsuario'";
-		$result = $this->mysql->query($query);
-		var_dump($result);
+		$result = $this->mysql->query($query);		
 	}
 
 	function consultaUsuario($correo, $contrasena){
