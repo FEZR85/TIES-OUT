@@ -22,7 +22,7 @@ class UsuarioMdl{
 
 	function actualiza($nacimiento, $sexo, $ocupacion, $descripcion, $idUsuario){
 		$query = "UPDATE usuario 
-				  SET vchSexo='$sexo', vchOcupacion='$ocupacion', vchdescripcion = '$descripcion'
+				  SET vchSexo='$sexo', vchOcupacion='$ocupacion', vchdescripcion = '$descripcion', dfechaNacimiento = '$nacimiento'
 				  WHERE iidUsuario='$idUsuario'";
 		$result = $this->mysql->query($query);		
 	}
