@@ -36,6 +36,12 @@ Las distintas secciones del sistema son:
 * Inicio de Sesión
  * Formulario para llenar con _Correo electrónico_ y _Contraseña_ para iniciar sesión.
 
+* Página de perfil
+ * Donde se muestra información que el usuario proporciona así como la lista de los cursos a los que se ha registrado
+
+* Configurar Perfil
+ * Donde se permite agregar información adicional al perfil del usuario así como editar los campos que son permitidos
+
 * Portada del Curso
  * Descripción de lo que se presenta en el curso seleccionado, así como la opción de inscribirse a usuarios que han iniciado sesión.
 
