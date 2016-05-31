@@ -172,6 +172,9 @@
 						}elseif (strcmp($_SESSION['sexo'], "Masculino")===0) {
 							$vista = str_replace('{masculinoSelect}', 'selected="selected"', $vista);
 							$vista = str_replace('{femeninoSelect}', '', $vista);
+						}else{
+							$vista = str_replace('{masculinoSelect}', '', $vista);
+							$vista = str_replace('{femeninoSelect}', '', $vista);
 						}
 					}
 
