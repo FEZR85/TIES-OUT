@@ -76,6 +76,9 @@
 					case 'actualizaPerfil':
 							$this->actualizaPerfil();
 						break;
+					case 'registraCurso':
+							$this->registraCurso();
+						break;
 					default:
 							require('404.html');
 						break;
@@ -390,6 +393,32 @@
 				}
 			}
 		}
+
+		private function registraCurso(){
+			if(isset($_SESSION) && !empty($_SESSION) && isset($_GET['idcurso'])){
+				require('app/Modelo/usuarioMdl.php');
+				$this->modelo = new UsuarioMdl($this->mysql);
+
+				//if($this->modelo->existeCUrso($_GET['idcurso']))
+				$resultado = $this->modelo->registraCursoUsuario($_SESSION['idUsuario'],$_GET['idcurso']);
+				if($resultado!==FALSE){//Si se pudo insertar muestra la vista
+												
+							$vista = file_get_contents("app/Vistas/home.html");
+							$diccionario = array(
+							'{tituloPagina}'=>"Inicio",
+							'<!--{masLinks}-->' => '<link rel="stylesheet" type="text/css" href="recursos/js/social/bootstrap-social.css">');
+							$this->head = strtr($this->head,$diccionario);
+							$vista = $this->head . $this->header . $vista . $this->footer;
+							echo $vista;						
+					}
+					else{
+						
+					}
+			}else{
+
+			}
+		}
+
 
 		/* Método para mostrar errores o problemas con la información recibida
 		 * @param $string, cadena con el texto a mostrar en la vista. */
