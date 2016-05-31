@@ -95,7 +95,9 @@
 		*/
 		private function mostrarPerfil($id){
 			require('app/Modelo/usuarioMdl.php');
+			require('app/Modelo/cursosMdl.php');
 			$this->modelo = new UsuarioMdl($this->mysql);
+			$cursoModelo = new CursosMdl($this->mysql);
 
 			if(isset($_SESSION) && !empty($_SESSION)){
 				if($id >= 0){
@@ -111,41 +113,32 @@
 
 					$vista = strtr($vista,$diccionarioUsuario);
 
-
-					$listaTitulos = array(
-						'Arbol',
-						'Algoritmos',
-						'otro');
-
-					$listaUrl = array(
-						'app/Vistas/curso1.php',
-						'app/Vistas/curso2.php',
-						'app/Vistas/curso2.php');
-
 					$inicioFila = strrpos($vista,'<!--{iniciaCurso}-->');
 					$finalFila = strrpos($vista,'<!--{terminaCurso}-->')+21;
 
 					$fila = substr($vista,$inicioFila,$finalFila-$inicioFila);
 					$filas = "";
 
+					$listaCursos = $cursoModelo->getMisCursos($_SESSION['idUsuario']);
+
 					$i = 0;
 
-					foreach ($listaTitulos as $row) {
+					foreach ($listaCursos as $row) {
 						$newFila = $fila;
 
 						$diccionario = array(
-							'{urlCurso}'=>$listaUrl[$i],
+							'{idcursourl}'=>$listaCursos[$i]['iidCurso'],
 							'{colorRandom}'=>'naranja',
-							'{Titulo}'=>$row,
+							'{Titulo}'=>$cursoModelo->traerCursos($listaCursos[$i]['iidCurso'])['vchNombre'],
 							'{tituloPagina}'=>"Perfil");
 
 						$newFila = strtr($newFila, $diccionario);
 						$filas .= $newFila;
 						$i++;
 					}
-
+					$this->head = str_replace('{tituloPagina}','Perfil', $this->head);
 					$vista = str_replace($fila,$filas, $vista);
-					$this->head = strtr($this->head,$diccionario);
+					//$this->head = strtr($this->head,$diccionario);
 					$vista = $this->head . $this->header . $vista . $this->footer;
 
 					echo $vista;
