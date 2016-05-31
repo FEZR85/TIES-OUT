@@ -35,6 +35,14 @@ class UsuarioMdl{
 		return $fila;
 	}
 
+	function consultaPerfil($id){
+		$info = "";
+		$query = "SELECT vchCorreo, vchNombre, vchOcupacion, dfechaNacimiento FROM usuario WHERE iidUsuario = '$id' AND tiActivo = 1";
+		$resultado = $this->mysql->query($query);
+		$fila = $resultado->fetch_assoc();
+		return $fila;
+	}
+
 	function existecorreo($correo){
 		$query = "SELECT vchCorreo FROM usuario WHERE vchCorreo = '$correo' AND tiActivo = 1 AND tiEliminado = 0";
 		$resultado = $this->mysql->query($query);

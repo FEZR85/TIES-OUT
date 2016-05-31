@@ -91,18 +91,20 @@
 		*
 		*/
 		private function mostrarPerfil($id){
-			/*Conecta al modelo correspondiente para consultar con el ID al usuario*/
-			//require('app/Vistas/perfilPublico.html');
+			require('app/Modelo/usuarioMdl.php');
+			$this->modelo = new UsuarioMdl($this->mysql);
+
 			if(isset($_SESSION) && !empty($_SESSION)){
 				if($id >= 0){
 					$vista = file_get_contents("app/Vistas/perfilPublico.html");
 					//$footer
+					$resultado = $this->modelo->consultaPerfil($id);
 
 					$diccionarioUsuario = array(
-						'{correoUsuario}'   => $_SESSION['correo'],
-						'{nombreUsuario}'   => $_SESSION['nombre'],
-						'{ocupacionUsuario}'=> $_SESSION['ocupacion'],
-						'{cumpleUsuario}'   => $_SESSION['fechaNacimiento']);
+						'{correoUsuario}'   => $resultado['vchCorreo'],
+						'{nombreUsuario}'   => $resultado['vchNombre'],
+						'{ocupacionUsuario}'=> $resultado['vchOcupacion'],
+						'{cumpleUsuario}'   => $resultado['dfechaNacimiento']);
 
 					$vista = strtr($vista,$diccionarioUsuario);
 
