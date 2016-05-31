@@ -61,7 +61,7 @@ El sistema de TIES-OUT se maneja de la siguiente forma:
 * Usuarios registrados
  *  Podran inscribirse en todos los cursos que el usuario desee, revisarlos en su perfil publico, asi como visualizar sus datos, los cuales podra modificar y actualizar en cualquier momento.
 
-*Usuarios administradores
+* Usuarios administradores
  * Tendran el control para añadir o quitar cursos en el sistema, asi como verificar la cantidad de usuario que se han inscrito a los cursos.
 
  ##Componentes necesarios
