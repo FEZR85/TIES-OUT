@@ -35,14 +35,11 @@ if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 } else {
-    $fichero = $_FILES["imagen"]["tmp_name"];
-    $nombre = substr($fichero,8, -1);
-    $fichero = substr($fichero,0,8);
 
-    if (move_uploaded_file($fichero.'/'.$nombre, '/'.$_FILE["imagen"]["name"])) {
+    if (move_uploaded_file($_FILES["imagen"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["imagen"]["name"]). " has been uploaded.";
     } else {
-        echo "Sorry, there was an error uploading your file.". $fichero.'/'.$nombre;
+        echo "Sorry, there was an error uploading your file.";
     }
 }
 
