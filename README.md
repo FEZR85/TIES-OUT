@@ -3,7 +3,7 @@
 Plataforma de entrevistas para el área de sistemas computacionales.
 
 ###Tabla de contenidos
- 
+
 * [Página oficial](http://www.ties-out.com)
 * [Panel administrativo](http://panel.ties-out.com/)
 * [Objetivo](#objetivo)
@@ -15,7 +15,7 @@ Plataforma de entrevistas para el área de sistemas computacionales.
 ##Objetivo
 
 Proporcionar a los usuarios los temas más frecuentes en las entrevistas técnicas del área de sistemas computacionales, así como ofrecer algunas plataformas de empleo donde el usuario pueda subir su currículum, tales como, LinkIn, OCC México, CompuTrabajo, entre otras.
-    
+
 ##Descripción de la plataforma
 
 Consiste en la gestión en línea de cursos enfocados a la orientación en temas introductorios al ámbito laboral de la ingeniería en computación e informática.
@@ -87,6 +87,5 @@ El sistema de TIES-OUT se maneja de la siguiente forma:
 * Daniel Alfonso Caballero Cruz
 
 ##Cómo acceder al panel administrativo
-IMPORTANTE: actualmente el inicio de sesión y recuperar contraseña están deshabilitados, para poder ingresar al panel ve a [inicio del panel](http://panel.ties-out.com/panel.php)
 
 * Para ser administrador y tener registrado el correo será necesario enviar un correo a soporte@ties-out.com donde se te enviará una clave única para poder ingresar.
