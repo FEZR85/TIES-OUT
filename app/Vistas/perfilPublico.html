@@ -1,0 +1,32 @@
+		
+		<!--Contenido de la página-->
+		<div class="content">
+			<h3 class=" encabezado">Perfil de {nombreUsuario}</h3>
+			<div class="row">
+				<section class="infoPersonal col-md-4" >
+						<figure class="foto">
+							<img id="fotoperfil" alt="Sin Foto" src="{fotoUsuario}">	
+						</figure>
+						<br>
+						<ul class="listaInfo">
+							<br>			
+							<li><span>Correo: {correoUsuario}</span></li>
+							<li><span>Cumpleaños: {cumpleUsuario}</span></li>
+							<li><span>Ocupación: {ocupacionUsuario}</span></li>
+						</ul>
+				</section>
+				<section class="cursosCompletados col-md-8">
+					<h2>Cursos del usuario</h2>
+					<div class="row">
+						<!--{iniciaCurso}-->
+						<a href="index.php?controlador=cursos&act=mostrar&idcurso={idcursourl}">
+							<article class="col-md-12 {colorRandom}">
+								<h3>{Titulo}</h3>							
+							</article>
+						</a>
+						<!--{terminaCurso}-->
+					</div>
+				</section>
+			</div>						
+		</div>			
+	</body>

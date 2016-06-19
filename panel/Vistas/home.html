@@ -1,0 +1,35 @@
+
+		<!--Contenido de la página de Login-->
+		<div class="contentSesion">
+			<h2><img src="../recursos/img/logoTieOut.png" alt="Logo" width="35em" >  TIES-OUT</h2>
+			<h3 class="encabezado text-center">Iniciar Sesión</h3><br>
+			<div id="contacto" class="row">
+				<form action="index.php?controlador=usuarios&act=inicioSesion" method="post" id="formulario" name="iniciaSesion"
+				class="form-horizontal col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-9 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6"
+				role="form" novalidate >
+					<div class="form-group">
+						<label for="correo">Correo </label>
+							<input id="correo" name="correo" class="form-control" type="email" placeholder="alguien@ejemplo.com" />
+							<span id="errorCorreo" class="clsError"></span>
+					</div>
+					<div class="form-group">
+						<label for="contrasena">Contraseña </label>
+							<input name="contrasena" id="contrasena" class="form-control" type="password" placeholder="contraseña" />
+							<span id="errorContrasena" class="clsError"></span>
+					</div>
+					<!-- Problema -->
+					<!-- botones y enlaces -->
+
+					<div class="form-group text-center">
+							<button id="iniciar" name="iniciar" class="btn btn-primary" type="submit">Iniciar sesión</button>
+					</div>
+					<div class="form-group text-center">
+							<b>¿Olvidaste tu contraseña?</b>
+							<span><a class="btn-link" href="" >Haz clic aquí</a>
+							para cambiar tu contraseña</span>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript" src="../recursos/js/valida.js" ></script>
+	</body>
