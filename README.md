@@ -4,8 +4,6 @@ Plataforma de entrevistas para el área de sistemas computacionales.
 
 ###Tabla de contenidos
 
-* [Página oficial](http://www.ties-out.com)
-* [Panel administrativo](http://panel.ties-out.com/)
 * [Objetivo](#objetivo)
 * [Descripción](#descripción-de-la-plataforma)
 * [Partes del Sistema](#partes-del-sistema)
@@ -85,7 +83,3 @@ El sistema de TIES-OUT se maneja de la siguiente forma:
 * Flor Edith Zárate Rodríguez
 * Noel Vela Larios
 * Daniel Alfonso Caballero Cruz
-
-##Cómo acceder al panel administrativo
-
-* Para ser administrador y tener registrado el correo será necesario enviar un correo a soporte@ties-out.com donde se te enviará una clave única para poder ingresar.
